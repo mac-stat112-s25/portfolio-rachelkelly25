@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "685cd4e3"
+  },
+  "bw/bw-uni.qmd": {
+    "bw-uni.html": "fb33ca34"
+  },
+  "bw/bw-bi.qmd": {
+    "bw-bi.html": "de52f807"
+  },
+  "bw/bw-tri.qmd": {
+    "bw-tri.html": "541e7d33"
+  },
+  "bw/bw-quad.qmd": {
+    "bw-quad.html": "e87a5472"
+  },
+  "bw/bw-spatial.qmd": {
+    "bw-spatial.html": "68ca07f0"
+  },
+  "ica/ica-uni.qmd": {
+    "ica-uni.html": "cd80aa95"
+  },
+  "ica/ica-bi.qmd": {
+    "ica-bi.html": "07de46b1"
+  },
+  "ica/ica-multi.qmd": {
+    "ica-multi.html": "597b91e6"
+  },
+  "ica/ica-spatial.qmd": {
+    "ica-spatial.html": "8fa4606c"
+  }
+}
