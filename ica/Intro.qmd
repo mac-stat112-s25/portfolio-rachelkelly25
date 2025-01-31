@@ -1,0 +1,384 @@
+---
+title: "Intro"
+format: html
+---
+
+
+## Exercises
+
+{{< include activity-instructions.qmd >}}
+
+### Exercise 1: RStudio {-}
+
+Launch RStudio.  Notice that there are four panes, each serving a different purpose. Today, we'll work within the **console** and will *not* save any work.
+
+```{r fig-main, fig.cap="RStudio Interface"}
+#| echo: false
+
+knitr::include_graphics("../images/RStudioImage.jpg")
+```
+
+::: {.callout-warning title="Problem with RStudio?"}
+
+If you have problem running RStudio on your machine, you can temporarily use [Mac's RStudio server](https://rstudio.macalester.edu/) after logging in using your Mac credentials.
+
+:::
+
+### Exercise 2: Console {-}
+
+We can use RStudio to do simple calculations using R.  Type the following lines in the **console**, one by one, hitting Return/Enter after each. Take note of what you get. In some cases you might get an error! This error is *important* to learning how R code does and doesn't work.
+
+```{r}
+#| eval: false
+
+4 + 2
+4/2
+4^2
+4*2
+4(2)
+```
+
+{{< include activity-check-with-partner.qmd >}}
+
+### Exercise 3: Functions {-}
+
+Having a calculator is nice, but we'll typically use **built-in functions** to perform common (repetitive) and specific tasks. These functions have *names* and require information, called *arguments*, in order to run.  Functions are called as follows:
+
+`function(argument)`
+
+Try out the following functions in the **console**. Note each function's *name*,  *argument* (information it needs to run), and *output* (i.e. what the function does and produce):
+
+```{r}
+#| eval: false
+
+sqrt(9)
+sqrt(25)
+nchar("snow")
+nchar("macalester")
+sqrt(nchar("snow"))
+```
+
+Some functions require *more than 1 argument*, separated by commas. To keep these straight, we often specify the arguments by name as follows:
+
+`function(argument1 = ___, argument2 = ___)`
+
+Try out the following functions in the **console**. Note each function's *name*,  *argument* (information it needs to run), and *output* (i.e. what the function does and produce):
+
+```{r}
+#| eval: false
+
+rep(x = 2, times = 5)
+rep(times = 5, x = 2)
+rep(2, 5)
+rep(5, 2)
+seq(from = 2, to = 10, by = 2)
+seq(2, 10, 2)
+seq(from = 2, to = 10, length = 3)
+seq(2, 10, 3)
+```
+
+Note that R is **case-sensitive**. Try the following code which uses `Seq()` instead of `seq()` (capital case `S` instead of lower case `s`). Read the **error message** and make sure to understand it--you will experience this type of error message a lot! It will happen any time you misspell a function among other reasons we'll experience later.
+
+```{r}
+#| eval: false
+
+Seq(2, 10, 3)
+```
+
+### Exercise 4: Grammer {-}
+
+We'll learn lots and lots of functions this semester. Nobody has every function memorized. That said, it does help to connect function names with their purpose. Do that for each function you used above.
+
+-   `sqrt()` = square root
+-   `nchar()` = ???
+-   `rep()` = ???
+-   `seq()` = ???
+
+{{< include activity-check-with-partner.qmd >}}
+
+### Exercise 5: Practice {-}
+
+Use the functions you learned above to do the following:
+
+-   Count the number of letters in the word `data`.
+-   Create the sequence `3, 6, 9, 12`--do it in more than one ways to do.
+-   Create a sequence of `4` numbers that start at `1` and end at `10`--do it in more than one ways to do.
+-   Repeat the number `5` 8 times.
+-   Produce the sequence `3, 6, 9, 12, 3, 6, 9, 12`--you need to combine 2 functions
+
+### Exercise 6: Variables {-}
+
+For reasons that will become clear in the future, we'll often want to store some R output for later.  We can so so using the assignment operator as follows:
+
+`name <- output`
+
+In the above assignment statement:
+
+-   `name` is the name under which to store a result
+-   `output` is the result we wish to store
+-   `<-` is the **assignment operator**--you can think of this as an arrow pointing the `output` into the `name`.
+
+Try out each line one at a time. Some lines will not show any output. Why?
+
+```{r}
+#| eval: false
+
+degrees_c <- -13
+degrees_c
+```
+
+::: {.callout-tip title="Runing Code Line by Line"}
+
+To run a single line of code, place the cursor at any position of that line then hit <kbd>ctrl/cmd+enter/return</kbd>
+
+:::
+
+Let's now use what we stored. Again, do this one by one.
+
+```{r}
+#| eval: false
+
+degrees_c * (9/5) + 32
+degrees_f <- degrees_c * (9/5) + 32
+degrees_f
+```
+
+Finally, try to print `degrees_tomorrow`. Take time to read the **error message**. You will experience this type of error message a *lot*! It will happen when you either haven't yet defined the object you're trying to use or you've misspelled its name among other reasons we'll experience later.
+
+```{r}
+#| eval: false
+
+degrees_tomorrow
+```
+
+{{< include activity-check-with-partner.qmd >}}
+
+### Exercise 7: Practice {-}
+
+-   Name and store your current age in years.
+-   Confirm that your age is stored correctly by typing the name and pressing return/enter.
+-   Use your stored age to calculate how old you'll be in 17 years.
+
+### Exercise 8: Code Styling {-}
+
+It's important to recognize that **code is a form of communication**, both to yourself and others. Code structure and details are important to readability and clarity just as grammar, punctuation, spelling, paragraphs, and line spacing are important in written essays. All of the code below *works*, but has bad structure. Discuss with your partner what is unfortunate about each line.
+
+```{r}
+#| eval: false
+
+seq(from=1,to=9,by=2)
+seq(from = 1, to=9,by=2)
+my_output <- -13
+thisisthetemperaturetodayincelsius <- -13
+this_is_the_temperature_today_in_celsius <- -13
+```
+
+
+When writing code, avoid smooshy ones similar to the following:
+
+```{r}
+#| eval: false
+
+# BAD: tough to read
+seq(from=1,to=9,by=2)
+
+# GOOD: spaces between "words" and punctuation helps
+seq(from = 1, to = 9, by = 2)
+```
+
+
+When naming your variables:
+
+-   use meaningful names,
+-   make them short if possible
+-   split up multiple-word names using `snake_case` or `camelCase`
+
+```{r}
+#| eval: false
+
+# BAD: too smooshy and hard to read
+degreescelsius <- -13
+
+# BETTER but not the R-way of naming variables
+# Why is it called camel case?
+degreesCelsius <- -13
+
+# BETTER
+degrees_celsius <- -13
+```
+
+It's also *impossible*, not just ill-advised to start names with numbers or symbols, or to use certain symbols in our names. Try the followings:
+
+```{r}
+#| eval: false
+
+1_18_24_degrees_c <- -13
+_degrees_c <- -13
+Jan/18/24/degrees <- -13
+```
+
+
+### Exercise 9: Mistakes & Help {-}
+
+Mistakes are common when learning any new language. You'll get better and better at interpreting error messages, finding help, and fixing errors. These are all important skills in computer programming in general.
+
+::: {.callout-tip title="Console Shortcut"}
+
+With your cursor at the next prompt in the console (`>`), press the up arrow *multiple times*. What does this do?! This shortcut will be very handy when you make mistakes and want to *modify* your code without having to start over.
+:::
+
+
+::: {.callout-tip title="Help Files"}
+
+You'll often forget how functions are used. Luckily, there's typically built-in documentation for built-in functions that can be invoked using the `?` operator.
+:::
+
+Let's practice:
+
+-   In the console, type `?rep` and press return/enter.
+-   Check out the documentation file that pops up in the **Help** pane.
+-   Quickly scroll through, noting the type of information provided.
+-   Stop at the **Examples** at the bottom. Perhaps the most useful section, this is where a function's functionality is demonstrated! Try out a couple of the provided examples in your console.
+
+### Exercise 10: History & Environment {-}
+
+Finally, let's leave the console.
+
+-   Check out the **Environment** pane of RStudio. What do you observe there and when might this be helpful?
+-   Similarly, check out the **History** pane of RStudio. What do you observe there and when might this be helpful?
+
+### Optional Excersise: Watch Explaination {-}
+
+If you've finished the above exercises, you can watch [Dr. Alicia Johnson talks through the concepts learned today (YouTube)](http://www.youtube.com/embed/JfIo2Ua_oqQ/).
+
+
+## Solutions
+
+<details>
+
+<summary>Click for Solutions</summary>
+
+### Exercise 2: Concole {-}
+
+```{r}
+4 + 2
+4/2
+4^2
+4*2
+```
+
+```{r}
+#| eval: false
+
+# This code gives an error! Multiplication requires *
+4(2)
+```
+
+### Exercise 3: Functions {-}
+
+```{r}
+# sqrt calculates square root
+sqrt(9)
+sqrt(25)
+
+# nchar counts up the number of characters
+nchar("cat")
+nchar("macalester")
+```
+
+```{r}
+# rep repeats the value "x" the number of "times" indicated
+# Order doesn't matter
+rep(x = 2, times = 5)
+rep(times = 5, x = 2)
+
+
+# We don't need to label the arguments
+# But the order matters! It assumes an order of "x" then "times"
+rep(2, 5)
+rep(5, 2)
+
+# Create a sequence of numbers
+# Removing the argument labels gives the same result 
+seq(from = 2, to = 10, by = 2)
+seq(2, 10, 2)
+
+# We can also define a sequence by its length, not increments
+# But can't remove the argument labels (R assumes the 3rd argument is length)
+seq(from = 2, to = 10, length = 3)
+seq(2, 10, 3)
+```
+
+### Exercise 4: Grammer {-}
+
+-   `sqrt()` = square root
+-   `nchar()` = number of characters
+-   `rep()` = repeat / repetition
+-   `seq()` = sequence
+
+### Exercise 5: Practice {-}
+
+```{r}
+# Count the number of letters in "data"
+nchar("data")
+
+# Create the sequence 3, 6, 9, 12
+seq(from = 3, to = 12, by = 3)
+seq(from = 3, to = 12, length = 4)
+
+# Create a sequence of 4 numbers that start at 1 and end at 10
+seq(from = 1, to = 10, length = 4)
+seq(from = 1, to = 10, by = 3)
+
+# Repeat the number "5" 8 times
+rep(x = 5, times = 8)
+rep(5, 8)
+
+# Combine 2 functions to produce the sequence 3, 6, 9, 12, 3, 6, 9, 12
+rep(x = seq(from = 3, to = 12, by = 3), times = 2)
+```
+
+### Exercise 6: Variables {-}
+
+```{r}
+degrees_c <-13
+degrees_c
+degrees_c * (9/5) + 32
+degrees_f <- degrees_c * (9/5) + 32
+degrees_f
+```
+
+### Exercise 7: Practice {-}
+
+```{r My Age}
+my_age <- 22
+my_age
+my_age + 17
+```
+
+### Exercise 8: Code Styling {-}
+
+```{r eval = FALSE}
+# This is too smooshy and hard to read
+seq(from=1,to=9,by=2)
+
+# The use of spacing is inconsistent, hence hard to read
+seq(from = 1, to=9,by=2)
+
+# Too vague
+my_output <- -13
+
+# Too smooshy
+thisisthetemperaturetodayincelsius <- -13
+
+# Easier to read, but too long
+this_is_the_temperature_today_in_celsius <- -13
+```
+
+### Exercise 10: History & Environment {-}
+
+-   Environment: shows what objects you've stored (eg: `degrees_c`)
+-   History: shows what R code you've typed
+
+</details>
+
