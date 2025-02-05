@@ -4,7 +4,7 @@ title: "Univariate Viz"
 
 Use this file for practice with the **univariate viz** in-class activity.  Refer to the class website for details.
 ---
-### Exercise 1: Research Questions {.unnumbered}
+### Exercise 1: Research Questions
 ```{r}
 # Import data
 hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
