@@ -3,7 +3,7 @@ title: "Univariate Viz"
 ---
 
 Use this file for practice with the **univariate viz** in-class activity.  Refer to the class website for details.
----
+
 ### Exercise 1: Research Questions
 ```{r}
 # Import data
