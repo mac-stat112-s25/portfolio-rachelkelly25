@@ -3,3 +3,42 @@ title: "Trivariate Viz"
 ---
 
 Use this file to generate a professional looking **trivariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+```{r}
+# Import and check out data
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+head(education)
+
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r}
+ggplot(education, aes(x = expend, y = sat, color = fracCat)) + 
+  geom_point(alpha = 0.5) +
+  labs(
+    title = "Relationship Between Educational Expenditure and SAT Scores",
+    x = "Per-Student Expenditure (in USD)",
+    y = "Average SAT Score",
+    color = "Fraction Category",
+    caption = "Data Source: https://mac-stat.github.io/data/sat.csv",
+    alt = "A scatter plot showing the relationship between per-student expenditure and SAT scores, with points colored by fraction category."
+  ) +
+  scale_color_viridis_d(option = "plasma") +
+  theme_minimal()
+
+ggplot(education, aes(x = expend, y = sat, color = fracCat)) + 
+  geom_point(alpha = 0.5) + 
+  geom_smooth(se = TRUE, method = "loess") +  
+  labs(
+    title = "Educational Expenditure vs. SAT Scores with Trend Line",
+    x = "Per-Student Expenditure (in USD)",
+    y = "Average SAT Score",
+    color = "Fraction Category",
+    caption = "Data Source: https://mac-stat.github.io/data/sat.csv",
+    alt = "A scatter plot with a trend line showing the relationship between per-student expenditure and SAT scores. A smooth line with a shaded confidence interval represents the trend."
+  ) +
+  scale_color_viridis_d(option = "plasma") + 
+  theme_minimal()
+```
+

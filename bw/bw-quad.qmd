@@ -3,3 +3,43 @@ title: "Quadvariate Viz"
 ---
 
 Use this file to generate a professional looking **quadvariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+
+```{r}
+library(tidyverse)
+library(mosaic)
+library(mosaicData)
+library(fivethirtyeight)
+```
+
+```{r}
+# Create the daily_births dataset
+# Don't worry about the code. We'll learn this in the next unit!
+data("Birthdays")
+daily_births <- Birthdays |> 
+  group_by(date) |> 
+  summarize(births = sum(births)) |> 
+  mutate(year = year(date), 
+         month = month(date, label = TRUE),
+         day_of_month = mday(date),
+         day_of_week = wday(date, label = TRUE))
+```
+
+```{r}
+ggplot(daily_births, aes(x = year, y = births, color = day_of_week)) +
+  geom_line() +
+  facet_wrap(~ month) + 
+  labs(
+    title = "Yearly Birth Trends by Month and Day of the Week",
+    x = "Year",
+    y = "Number of Births",
+    color = "Day of the Week",
+    caption = "Data Source: Mosaic Data - Daily Births",
+    alt = "A line plot showing the trend of daily births from 1969 to 1988, faceted by month. Each line represents a different day of the week, showing variations in births across different days.") +
+  scale_color_viridis_d(option = "plasma") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+

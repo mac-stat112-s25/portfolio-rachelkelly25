@@ -3,3 +3,61 @@ title: "Spatial Viz"
 ---
 
 Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+```{r}
+#Rachel's favorite places in the U.S. - used google maps for coordinates
+
+favorite_stp <- tibble::tribble (
+  ~place, ~long, ~lat, ~favorite,
+  "Macalester College", -93.1712321, 44.9378965, "no",
+  "Ramona California", -116.910632, 33.047826, "yes",
+  "Old Town San Diego", -117.196867, 32.754349, "no",
+  "Ototo", -104.980954, 39.689367, "yes", 
+  "Portland Japanese Garden",-122.707993, 45.518796, "no",
+  "ABQ Golf Course", -106.618545, 35.098119, "yes", 
+  "Boulder Hiking", -105.308957, 39.996407, "no", 
+  "Lookout Mountain", -105.248476, 39.729449, "no",
+  "Mt Blue Sky", -105.641860, 39.587974, "no",
+  "Fern Canyon", -124.065181, 41.400873, "no")
+
+```
+
+```{r}
+#Load packaages
+library("tibble")
+library(ggplot2)
+library(ggmap)
+library(dplyr)
+library(leaflet)
+library("rnaturalearth")
+library(ggrepel)
+
+```
+
+
+
+
+
+```{r}
+leaflet(data = favorite_stp) |> 
+  addTiles() |> 
+  addMarkers()
+```
+
+
+```{r}
+leaflet(data = favorite_stp) |> 
+  addTiles() |> 
+  addMarkers(popup = ~place, label = ~place) |> 
+  addControl(
+    html = "<h2 style='font-family: Times New Roman; text-align: center; color: purple;'>Rachel's Favorite Places Map</h2>", 
+    position = "topleft"
+  ) |>  
+  addLegend(
+    position = "bottomright",
+    title = "Legend",
+    labels = "Favorite Places",
+    colors = "blue") 
+
+```
+

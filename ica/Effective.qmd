@@ -220,10 +220,9 @@ Think about the following questions:
 -   Can the data graphic be described in terms of the Grammar of Graphics (frame, glyphs, aesthetics, facet, scale, guide)? If so, please describe.
 -   Critique and/or praise the visualization choices made by the designer. Do they work? Are they misleading? Thought-provoking? Are there things that you would have done differently?
 
-\
-\
-\
-\
+\ I chose Obama's budget graphic. The size of the bubble is how much money goes to that cause. The color shows the cut or increase from previous budgets.  The projected deficit looks like a huge problem, but it was actually getting significantly better since 2008, so that could be misleading. 
+\ I really like the visual choices of this one. The movement between tabs is super cool and I think it's easy to understand and interact with.
+\ Great way to show some complex data.
 
 ### Exercise 5: Design Details {.unnumbered}
 
@@ -236,7 +235,7 @@ In refining the details of our data viz, [Visualize This](https://www.amazon.com
 -   Vary color and style to emphasize the viz elements that are most important to the story you're telling.
 -   It is easier to judge length than it is to judge area or angles.
 -   Be thoughtful about how your categories are ordered for categorical data.
-
+We talked about these as a table in class. 
 Getting into even more of the nitty gritty, we need to be mindful of what geometric elements and aesthetics we use. The following elements/aesthetics are listed in roughly descending order of human ability to perceive and compare nearby objects:[^07-effective-viz-2]
 
 [^07-effective-viz-2]: B. S. Baumer, D. T. Kaplan, and N. J. Horton, *Modern Data Science with R*, 2017, p. 15.
@@ -277,7 +276,7 @@ Our eyes are drawn to familiar patterns. We observe what we know and expect.
 
 Revisit Part b. Do you notice anything in the shadows? Go to <https://mac-stat.github.io/images/112/rose2.png> for an image.
 
-\
+\ a dolphin? Hidden in the shadows?
 \
 \
 \
