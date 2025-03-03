@@ -31,5 +31,14 @@
   },
   "ica/Effective.qmd": {
     "Effective.html": "ad65437d"
+  },
+  "ica/ica-wrangling.qmd": {
+    "ica-wrangling.html": "2eef9431"
+  },
+  "ica/ica-data.qmd": {
+    "ica-data.html": "f65df1da"
+  },
+  "ica/ica-reshaping.qmd": {
+    "ica-reshaping.html": "73e2264d"
   }
 }
