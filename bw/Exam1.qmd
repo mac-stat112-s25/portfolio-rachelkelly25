@@ -1,0 +1,151 @@
+---
+title: "Exam Grand Research Question Exploration"
+format: html
+---
+Grand Research Question: What does the consumption of each food category in each country look like?
+
+## Understanding the Data 
+```{r}
+#Load proper packages (no need to reinstall them)
+library(tidytuesdayR)
+library(tidyverse)
+```
+
+```{r}
+#Load the data
+tuesdata <- tt_load('2020-02-18')
+fc <- tuesdata$food_consumption
+```
+
+```{r}
+#Look at data - initial steps
+head(fc)
+dim(fc)
+str(fc)
+nrow(fc)
+tail(fc)
+head(fc, 22)
+```
+Conclusions: There are 11 food categories and 130 countries.
+
+The GRQ has 3 variables involved: consumption (density plot or histogram), food category (bar graph), and country (bar graph or map). 
+
+##Visualize the data - Understanding consumption
+
+```{r}
+library(ggplot2)
+
+# Bar Graph showing overall food consumption and food category correlation
+ggplot(fc, aes(x = food_category, y = consumption)) +
+  geom_bar(stat = "identity", fill = "purple") +
+  theme_minimal() +
+  labs(title = "Food Consumption by Category",
+       x = "Food Category",
+       y = "Consumption") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
+```{r}
+#Boxplot showing relationship between overall food consumption and country
+ggplot(fc, aes(x = country, y = consumption)) +  
+  geom_boxplot(fill = "darkorange", color = "black") +  
+  theme_minimal() +
+  labs(title = "Distribution of Food Consumption",
+       x = "Country",
+       y = "Consumption") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 3.5))
+
+#Observations: Milk and Cheese is consumed the most, with Wheat and Rice following behind. Soybeans are consumed the least globally which is actually sort of surprising to me given how much soy is used in products. 
+```
+Not a great visualization of the data since there are so many countries. Really hard to draw conclusions. 
+
+
+##Spatial Visualization of Grand Research Question
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+# Get info about country boundaries across the world
+world_boundaries <- ne_countries(returnclass = "sf")
+```
+
+
+```{r}
+#| fig-height: 22
+#| fig-width: 11
+
+#Don't think I'm using the above plot dimensions correctly.
+
+# Summarize data to get total consumption per country per food category
+fc_summary <- fc |>
+  group_by(country, food_category) |>
+  summarize(total_consumption = sum(consumption, na.rm = TRUE), .groups = "drop")
+
+#Get world map
+world <- ne_countries(scale = "medium", returnclass = "sf") |>
+  select(name, geometry) |>
+  rename(country = name) #Renames a column (new name to old name) syntax
+
+fc_map_data <- world |>
+  right_join(fc_summary, by = "country") 
+
+fc_map_data <- fc_map_data |>
+  filter(!is.na(geometry)) #making sure geometry is available for the maping to actually happen. I got geometry errors a bunch so had to mess around to try to fix that. 
+
+#Map Visualization
+ggplot(fc_map_data) +
+  geom_sf(aes(fill = total_consumption), color = "white") +
+  scale_fill_viridis_c(option = "plasma", name = "Consumption", na.value = "grey80") + #Color friendly palette
+  theme_minimal() +
+  labs(title = "Food Consumption by Country and Category", 
+    subtitle = "Total food consumption across different countries, displayed by category",
+    caption = "Source: TidyTuesday 2020-02-18 | Data on global food consumption",
+    alt = "A world map showing food consumption by country and category. Each country is color-coded based on total consumption, with different facets representing various food categories.") + #Accessible labeling
+  facet_wrap(~food_category) #make the facets
+
+```
+This map shows the food consumption of each food category in each country with data given. Wheat and Milk including cheese have the highest global consumptions. It would be nice if the visualization wasn't so small. I will try non-spatial visualization below to see if I can better visualize the data. 
+
+## Bar Graph Visualization of Grand Research Question
+```{r}
+#Stacked Bar Graph
+
+#| fig-height: 35 
+#| fig-width: 15
+
+# Compute total consumption of each food category for each country
+fc_stacked <- fc |>
+  group_by(food_category) |>
+  mutate(category_total = sum(consumption, na.rm = TRUE)) |>
+  ungroup() |>
+  mutate(percent = (consumption / category_total) * 100)
+
+# Plot stacked bar graph
+ggplot(fc_stacked, aes(x = food_category, y = consumption, fill = percent)) +
+  geom_bar(stat = "identity", position = "fill") + 
+  geom_text(aes(label = country), 
+            position = position_fill(vjust = 0.5), 
+            size = 1, color = "white", check_overlap = TRUE) +
+  scale_fill_viridis_c(option = "plasma", name = "Country % of Consumption") +
+  theme_minimal() +
+  labs(title = "Food Consumption by Category",
+       x = "Food Category",
+       y = "Consumption (Proportion of Total)", 
+       caption = "Source: TidyTuesday 2020-02-18 - Data on global food consumption",
+       alt = "A stacked bar chart showing food consumption by category. Each bar is divided into country proportions, with labels inside indicating the country names.") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+#It's relatively hard to see country names, so this is also not an ideal visualization. It is nice to see the countries that are responsible for a lot of consumption like Taiwan for soybeans, up there with Japan, Cuba, South Korea and Zambia. I do think I like this better than the spatial visualization, although if I could zoom in on either of them, that would be helpful. 
+
+```
+
+
+##Additional Questions
+
+1. How does CO2 emissions impact data visualizations by country?
+2. What is the link between CO2 emissions and consumption per country?
+    a. Which countries have the highest CO2 emissions and do they also have the highest consumption rate?
+3. Which countries have the highest rice consumption?

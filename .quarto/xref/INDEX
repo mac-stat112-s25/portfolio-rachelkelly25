@@ -40,5 +40,14 @@
   },
   "ica/ica-reshaping.qmd": {
     "ica-reshaping.html": "73e2264d"
+  },
+  "ica/ica-joining.qmd": {
+    "ica-joining.html": "f53c44ce"
+  },
+  "bw/Exam1.qmd": {
+    "Exam1.html": "10bdc5c2"
+  },
+  "bw/exam1-summarysheets.qmd": {
+    "exam1-summarysheets.html": "bf3809ec"
   }
 }
