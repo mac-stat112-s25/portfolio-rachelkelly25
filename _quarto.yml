@@ -43,6 +43,7 @@ book:
       - ica/ica-data.qmd
       - ica/ica-reshaping.qmd
       - ica/ica-joining.qmd
+      - ica/ica-strings.qmd
       
     - part: "Summary"
       chapters: 

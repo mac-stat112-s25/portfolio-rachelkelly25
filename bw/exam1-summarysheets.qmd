@@ -4,15 +4,11 @@ format: html
 ---
 
 ## Original Summary Sheet
-```{r}
 
-```
-
-
+![Original summary sheet](../bw/Summary_sheet_original.jpg)
 
 ## Revised Summary Sheet
 
-```{r}
+![Revised summary sheet](../bw/Summary_sheet_revised.jpg)
 
-```
 
