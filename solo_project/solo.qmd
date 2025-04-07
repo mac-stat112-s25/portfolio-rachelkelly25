@@ -1,0 +1,61 @@
+---
+title: "Solo Project"
+format: html
+---
+
+```{r}
+library(tidytuesdayR)
+```
+
+```{r}
+library(tidycensus)
+library(tidyverse)
+library(sf)
+library(ggplot2)
+```
+
+```{r}
+
+#This is how I got Census data for CO
+
+census_api_key("adf87e468258cd4568fc47061d8b6cf2cfc31b81", overwrite = TRUE, install = TRUE)
+
+readRenviron("~/.Renviron") 
+```
+
+```{r}
+# Load median household income data for every Colorado county
+co_income <- get_acs(
+  geography = "county",
+  state = "CO",
+  variables = "B19013_001",  
+  year = 2022,
+  survey = "acs5",
+  geometry = TRUE,
+  cache_geometry = TRUE)
+
+# variable category is the median household income variable name
+# the geometry load county boundaries
+#the survey chooses the data coded
+
+head(co_income)
+```
+
+
+```{r}
+# Plot choropleth map
+ggplot(co_income) +
+  geom_sf(aes(fill = estimate), color = "white") +
+  scale_fill_viridis_c(option = "magma", na.value = "gray90") +  
+  labs(
+    title = "Median Household Income by County in Colorado (2022)",
+    fill = "Income ($)",
+    caption = "Source: U.S. Census Bureau ACS 5-Year Estimates") +
+  theme_minimal()
+```
+
+I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/ 
+
+#Observations
+
+The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. 

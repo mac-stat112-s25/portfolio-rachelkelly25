@@ -49,5 +49,17 @@
   },
   "bw/exam1-summarysheets.qmd": {
     "exam1-summarysheets.html": "bf3809ec"
+  },
+  "bw/Exam2.qmd": {
+    "Exam2.html": "9172cb0b"
+  },
+  "ica/ica-strings.qmd": {
+    "ica-strings.html": "aa35808d"
+  },
+  "ica/ica-import.qmd": {
+    "ica-import.html": "5306878a"
+  },
+  "bw/Exam2_summary_sheet.qmd": {
+    "Exam2_summary_sheet.html": "1630ae4e"
   }
 }

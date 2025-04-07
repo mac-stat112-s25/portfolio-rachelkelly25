@@ -31,6 +31,7 @@ book:
       - bw/bw-quad.qmd
       - bw/bw-spatial.qmd
       - bw/Exam1.qmd
+      - bw/Exam2.qmd
 
     - part: "In-class Activities"
       chapters: 
@@ -44,10 +45,16 @@ book:
       - ica/ica-reshaping.qmd
       - ica/ica-joining.qmd
       - ica/ica-strings.qmd
+      - ica/ica-import.qmd
       
     - part: "Summary"
       chapters: 
         - bw/exam1-summarysheets.qmd
+        - bw/Exam2_summary_sheet.qmd
+        
+    - part: "Solo Project"
+      chapters:
+        - solo_project/solo.qmd
   
 
 format:
