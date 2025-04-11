@@ -1,0 +1,48 @@
+---
+title: "final"
+format: html
+---
+
+```{r}
+library(tidycensus)
+library(tidyverse)
+library(sf)
+```
+
+```{r}
+readRenviron("~/.Renviron")
+```
+
+```{r}
+tx_income <- get_acs(
+  geography = "county",
+  state = "TX",
+  variables = "B19013_001",  # Median household income
+  year = 2009,               # Most recent available
+  survey = "acs5",
+  output = "wide")
+
+head(tx_income)
+```
+```{r}
+tx_income <- get_acs(
+  geography = "county",
+  state = "TX",
+  variables = "B19013_001",  # Median household income
+  year = 2009,
+  survey = "acs5",
+  output = "wide",
+  geometry = TRUE
+)
+```
+```{r}
+ggplot(tx_income) +
+  geom_sf(aes(fill = B19013_001E), color = "white") +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey90") +
+  labs(
+    title = "Median Household Income by County (Texas, 2009)",
+    fill = "Income ($)"
+  ) +
+  theme_minimal()
+```
+
