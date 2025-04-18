@@ -21,7 +21,7 @@ ggplot(weather, aes(x = temp3pm, fill = location)) +
     x = "Temperature at 3 PM (°C)",
     y = "Density",
     fill = "Location",
-    caption = "Data Source: https://mac-stat.github.io/data/weather_3_locations.csv",
+    caption = "Data Source: https://mac-stat.github.io/data/weather_3_locations.csv, Plot by: Rachel Kelly, 2/19/2025",
     alt = "A density plot showing temperature distributions at 3 PM for different locations in Australian cities. Each location is represented by a different color."
   ) +
   theme_minimal()

@@ -21,7 +21,7 @@ ggplot(education, aes(x = expend, y = sat, color = fracCat)) +
     x = "Per-Student Expenditure (in USD)",
     y = "Average SAT Score",
     color = "Fraction Category",
-    caption = "Data Source: https://mac-stat.github.io/data/sat.csv",
+    caption = "Data Source: https://mac-stat.github.io/data/sat.csv, Plot by: Rachel Kelly, 3/12/2025",
     alt = "A scatter plot showing the relationship between per-student expenditure and SAT scores, with points colored by fraction category."
   ) +
   scale_color_viridis_d(option = "plasma") +
@@ -35,7 +35,7 @@ ggplot(education, aes(x = expend, y = sat, color = fracCat)) +
     x = "Per-Student Expenditure (in USD)",
     y = "Average SAT Score",
     color = "Fraction Category",
-    caption = "Data Source: https://mac-stat.github.io/data/sat.csv",
+    caption = "Data Source: https://mac-stat.github.io/data/sat.csv, Plot by: Rachel Kelly, 3/12/2025",
     alt = "A scatter plot with a trend line showing the relationship between per-student expenditure and SAT scores. A smooth line with a shaded confidence interval represents the trend."
   ) +
   scale_color_viridis_d(option = "plasma") + 

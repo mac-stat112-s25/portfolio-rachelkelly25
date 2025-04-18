@@ -1,5 +1,5 @@
 ---
-title: "Exam Grand Research Question Exploration"
+title: "Exam 1"
 format: html
 ---
 Grand Research Question: What does the consumption of each food category in each country look like?
@@ -102,9 +102,9 @@ ggplot(fc_map_data) +
   theme_minimal() +
   labs(title = "Food Consumption by Country and Category", 
     subtitle = "Total food consumption across different countries, displayed by category",
-    caption = "Source: TidyTuesday 2020-02-18 | Data on global food consumption",
+    caption = "Source: TidyTuesday 2020-02-18 | Data on global food consumption, Plot by: Rachel Kelly, 3/7/2025",
     alt = "A world map showing food consumption by country and category. Each country is color-coded based on total consumption, with different facets representing various food categories.") + #Accessible labeling
-  facet_wrap(~food_category) #make the facets
+  facet_wrap(~food_category, ncol = 3) #make the facets
 
 ```
 This map shows the food consumption of each food category in each country with data given. Wheat and Milk including cheese have the highest global consumptions. It would be nice if the visualization wasn't so small. I will try non-spatial visualization below to see if I can better visualize the data. 

@@ -34,7 +34,7 @@ ggplot(daily_births, aes(x = year, y = births, color = day_of_week)) +
     x = "Year",
     y = "Number of Births",
     color = "Day of the Week",
-    caption = "Data Source: Mosaic Data - Daily Births",
+    caption = "Data Source: Mosaic Data - Daily Births, Plot by: Rachel Kelly, 3/12/2025",
     alt = "A line plot showing the trend of daily births from 1969 to 1988, faceted by month. Each line represents a different day of the week, showing variations in births across different days.") +
   scale_color_viridis_d(option = "plasma") +
   theme_minimal() +

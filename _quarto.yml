@@ -32,7 +32,13 @@ book:
       - bw/bw-spatial.qmd
       - bw/Exam1.qmd
       - bw/Exam2.qmd
-
+      - solo_project/solo.qmd
+      
+    - part: "Summary Sheets"
+      chapters: 
+        - bw/exam1-summarysheets.qmd
+        - bw/Exam2_summary_sheet.qmd
+        
     - part: "In-class Activities"
       chapters: 
       - ica/ica-uni.qmd
@@ -47,15 +53,8 @@ book:
       - ica/ica-strings.qmd
       - ica/ica-import.qmd
       
-    - part: "Summary"
-      chapters: 
-        - bw/exam1-summarysheets.qmd
-        - bw/Exam2_summary_sheet.qmd
-        
-    - part: "Solo Project"
-      chapters:
-        - solo_project/solo.qmd
-  
+
+
 
 format:
   html:
@@ -70,10 +69,14 @@ format:
     code-link: true
     code-line-numbers: true
     code-tools: true
+    code-fold: true
 
 execute:
   cache: false
   freeze: auto
+  echo: true
+  warning: false
+  error: false
 
 editor: 
   markdown:

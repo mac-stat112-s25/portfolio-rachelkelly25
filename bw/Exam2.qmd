@@ -1,5 +1,5 @@
 ---
-title: "Food Consumption 2 - Exam 2"
+title: "Exam 2"
 format: html
 ---
 
@@ -76,10 +76,14 @@ top_countries_per_food <- fcc |>
 
 ```{r}
 #Plot it
+
+#| fig-height: 22
+#| fig-width: 11
+
 ggplot(top_countries_per_food, aes(x = reorder(country, total_consumption), y = total_consumption, fill = country)) +
   geom_bar(stat = "identity") +
   coord_flip() +  #Hard to see countries the other way
-  facet_wrap(~ food_category, scales = "free_y") +
+  facet_wrap(~ food_category, scales = "free_y", ncol = 3) +
   labs(
     title = "Top 5 Countries by Food Consumption per Category",
     x = "Country",
@@ -112,7 +116,57 @@ ggplot(map_data) +
   labs(
     title = "Food Consumption by Country",
     fill = "Total Consumption (kg per capita)") +
-  theme_minimal()
+  theme_minimal() +
+  theme(legend.position = "bottom")
+  
+```
+```{r}
+#Viz Attempt 2
 
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  mutate(name = ifelse(name == "United States of America", "USA", name)) |>
+  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) |>
+  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) |>
+  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name)) |>
+  left_join(fcc |> select(-co2_emmission), 
+            join_by(name == country)) |>
+  pivot_wider(names_from = food_category,
+              values_from = consumption) |>
+  select(-"NA") |>
+  pivot_longer(cols = c(-name, -geometry),
+               names_to = "food_category", 
+               values_to = "consumption") |>
+  ggplot()+
+  geom_sf(aes(fill = consumption)) +
+  facet_wrap(~food_category, ncol = 3) +
+  theme(legend.position = "bottom")
+```
+```{r}
+#Visualization Attempt 3
+
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  mutate(name = ifelse(name == "United States of America", "USA", name)) |>
+  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) |>
+  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) |>
+  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name)) |>
+  left_join(
+    fcc |> 
+      select(-co2_emmission) |>
+      group_by(food_category) |>
+      mutate(consumption = (consumption - mean(consumption))/sd(consumption)),
+    join_by(name == country)) |>
+  pivot_wider(names_from = food_category,
+              values_from = consumption) |>
+  select(-"NA") |>
+  pivot_longer(cols = c(-name, -geometry),
+               names_to = "food_category", 
+               values_to = "consumption") |>
+  ggplot()+
+  geom_sf(aes(fill = consumption)) +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey90") +
+  facet_wrap(~food_category, ncol = 3) +
+  theme(legend.position = "bottom")
 ```
 
