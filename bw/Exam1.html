@@ -491,9 +491,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb19-23"><a href="#cb19-23"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb19-24"><a href="#cb19-24"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Food Consumption by Country and Category"</span>, </span>
 <span id="cb19-25"><a href="#cb19-25"></a>    <span class="at">subtitle =</span> <span class="st">"Total food consumption across different countries, displayed by category"</span>,</span>
-<span id="cb19-26"><a href="#cb19-26"></a>    <span class="at">caption =</span> <span class="st">"Source: TidyTuesday 2020-02-18 | Data on global food consumption"</span>,</span>
+<span id="cb19-26"><a href="#cb19-26"></a>    <span class="at">caption =</span> <span class="st">"Source: TidyTuesday 2020-02-18 | Data on global food consumption, Plot by: Rachel Kelly, 3/7/2025"</span>,</span>
 <span id="cb19-27"><a href="#cb19-27"></a>    <span class="at">alt =</span> <span class="st">"A world map showing food consumption by country and category. Each country is color-coded based on total consumption, with different facets representing various food categories."</span>) <span class="sc">+</span> <span class="co">#Accessible labeling</span></span>
-<span id="cb19-28"><a href="#cb19-28"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category) <span class="co">#make the facets</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-28"><a href="#cb19-28"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="co">#make the facets</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="Exam1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="1056"></p>
@@ -1288,9 +1288,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-116"><a href="#cb22-116"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb22-117"><a href="#cb22-117"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Food Consumption by Country and Category"</span>, </span>
 <span id="cb22-118"><a href="#cb22-118"></a>    <span class="at">subtitle =</span> <span class="st">"Total food consumption across different countries, displayed by category"</span>,</span>
-<span id="cb22-119"><a href="#cb22-119"></a>    <span class="at">caption =</span> <span class="st">"Source: TidyTuesday 2020-02-18 | Data on global food consumption"</span>,</span>
+<span id="cb22-119"><a href="#cb22-119"></a>    <span class="at">caption =</span> <span class="st">"Source: TidyTuesday 2020-02-18 | Data on global food consumption, Plot by: Rachel Kelly, 3/7/2025"</span>,</span>
 <span id="cb22-120"><a href="#cb22-120"></a>    <span class="at">alt =</span> <span class="st">"A world map showing food consumption by country and category. Each country is color-coded based on total consumption, with different facets representing various food categories."</span>) <span class="sc">+</span> <span class="co">#Accessible labeling</span></span>
-<span id="cb22-121"><a href="#cb22-121"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category) <span class="co">#make the facets</span></span>
+<span id="cb22-121"><a href="#cb22-121"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="co">#make the facets</span></span>
 <span id="cb22-122"><a href="#cb22-122"></a></span>
 <span id="cb22-123"><a href="#cb22-123"></a><span class="in">```</span></span>
 <span id="cb22-124"><a href="#cb22-124"></a>This map shows the food consumption of each food category in each country with data given. Wheat and Milk including cheese have the highest global consumptions. It would be nice if the visualization wasn't so small. I will try non-spatial visualization below to see if I can better visualize the data. </span>
