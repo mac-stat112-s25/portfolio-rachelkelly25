@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>21&nbsp; ica-import – COMP/STAT112 Notebook</title>
+<title>21&nbsp; Import – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-import.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ica-import</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-import.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Import</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -288,13 +288,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ica-strings</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-import.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ica-import</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Import</span></span></a>
   </div>
 </li>
       </ul>
@@ -333,9 +333,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-import.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ica-import</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-import.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Import</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ica-import</span>
+<span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Import</span>
 </h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
@@ -389,37 +389,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Putting this together, use <code>read_csv()</code> with the appropriate absolute file path to import your data into RStudio. Save this as <code>imdb_messy</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a> imdb_messy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"~/Desktop/Data_Science/portfolio-rachelkelly25/data/imdb_5000_messy.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 5043 Columns: 29
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(12): color, director_name, actor_2_name, genres, actor_1_name, movie_ti... dbl
-(17): ...1, num_critic_for_reviews, duration, director_facebook_likes, a...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`</code></pre>
-</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a> imdb_messy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"~/Desktop/Data_Science/portfolio-rachelkelly25/data/imdb_5000_messy.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section><section id="part-b-1" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-1">Part b</h4>
 <p>Absolute file paths can get really long, depending upon our number of sub-folders, and they should not be used when sharing code with other and instead <strong>relative file paths</strong> should be used. A <strong>relative file path</strong> describes the location of a file from the current “working directory”, i.e.&nbsp;where RStudio would currently look for on your computer. Check what your working directory is <em>inside this qmd</em>:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># This should be the folder where you stored this qmd!</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># This should be the folder where you stored this qmd!</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] "/Users/ramke/Desktop/Data_Science/portfolio-rachelkelly25/ica"</code></pre>
 </div>
@@ -437,18 +415,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p><strong>NOTE</strong>: <code>..</code> means go up one level in the file hierarchy, ie, go to the parent folder/directory.</p>
 <p>Putting this together, use <code>read_csv()</code> with the appropriate relative file path to import your data into RStudio. Save this as <code>imdb_temp</code> (<code>temp</code> for “temporary”). Convince yourself that this worked, i.e.&nbsp;you get the same dataset as <code>imdb_messy</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 5043 Columns: 29
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(12): color, director_name, actor_2_name, genres, actor_1_name, movie_ti... dbl
-(17): ...1, num_critic_for_reviews, duration, director_facebook_likes, a...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`</code></pre>
-</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="File Paths">
 <div class="callout-header d-flex align-content-center">
@@ -472,20 +440,9 @@ File Paths
 </ul>
 <p>The “data import cheat sheet” at the top of this qmd, or Google, are handy resources here. As one example…</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Try importing only the first 5 rows</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>, <span class="at">n_max =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 5 Columns: 29
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(12): color, director_name, actor_2_name, genres, actor_1_name, movie_ti... dbl
-(17): ...1, num_critic_for_reviews, duration, director_facebook_likes, a...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Try importing only the first 5 rows</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>, <span class="at">n_max =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 29
    ...1 color director_name     num_critic_for_reviews duration
   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;                              &lt;dbl&gt;    &lt;dbl&gt;
@@ -524,9 +481,9 @@ Commenting/Uncommenting Code
 </section><section id="part-b-2" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-2">Part b</h4>
 <p>Do a quick <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> of each variable in the dataset. <em>One</em> way to do this is below:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a> imdb_messy <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>   <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>   <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a> imdb_messy <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>   <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>   <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>      ...1                  color               director_name 
  Min.   :   1   B&amp;W            :  10   Steven Spielberg:  26  
@@ -630,8 +587,8 @@ Commenting/Uncommenting Code
 <li>More specifically, what different categories does the <code>color</code> variable take, and how many movies fall into each of these categories?</li>
 </ul>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   color               n
@@ -643,7 +600,7 @@ Commenting/Uncommenting Code
 5 color              30
 6 &lt;NA&gt;               19</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co">#There are in reality, three categories, but the difference in caps and spelling makes way more catgories, so that needs to be combined. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#There are in reality, three categories, but the difference in caps and spelling makes way more catgories, so that needs to be combined. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section><section id="exercise-5-clean-data-factor-variables-2" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-5-clean-data-factor-variables-2">Exercise 5: Clean Data: Factor Variables 2</h3>
@@ -656,15 +613,15 @@ Commenting/Uncommenting Code
 <p><code>fct_relevel()</code>, <code>fct_recode()</code>, <code>fct_reorder()</code></p>
 <p>Store your results in <code>imdb_temp</code> (don’t overwrite <code>imdb_messy</code>). To check your work, print out a <code>count()</code> table of the <code>color</code> variable in <code>imdb_temp</code>.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
-<span id="cb17-3"><a href="#cb17-3"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
-<span id="cb17-4"><a href="#cb17-4"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
-<span id="cb17-5"><a href="#cb17-5"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
-<span id="cb17-6"><a href="#cb17-6"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
-<span id="cb17-7"><a href="#cb17-7"></a></span>
-<span id="cb17-8"><a href="#cb17-8"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb17-9"><a href="#cb17-9"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
+<span id="cb12-3"><a href="#cb12-3"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb12-9"><a href="#cb12-9"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   color           n
@@ -678,14 +635,14 @@ Commenting/Uncommenting Code
 <p>Repeat Part b using one of our string functions from the <strong>String</strong> lesson:</p>
 <p><code>str_replace()</code>, <code>str_replace_all()</code>, <code>str_to_lower()</code>, <code>str_sub()</code>, <code>str_length()</code>, <code>str_detect()</code></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb19-3"><a href="#cb19-3"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb19-4"><a href="#cb19-4"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
-<span id="cb19-5"><a href="#cb19-5"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
-<span id="cb19-6"><a href="#cb19-6"></a></span>
-<span id="cb19-7"><a href="#cb19-7"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb19-8"><a href="#cb19-8"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb14-3"><a href="#cb14-3"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb14-4"><a href="#cb14-4"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
+<span id="cb14-5"><a href="#cb14-5"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   color           n
@@ -709,14 +666,14 @@ Commenting/Uncommenting Code
 <section id="part-a-4" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-a-4">Part a</h4>
 <p>As a first step, let’s simply understand the <em>volume</em> of NAs. Specifically:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="co">#___(imdb_messy)</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="fu">nrow</span>(imdb_messy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="co">#___(imdb_messy)</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">nrow</span>(imdb_messy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5043</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Then count the number of NAs in each column</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Then count the number of NAs in each column</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                     ...1                     color             director_name 
                         0                        19                       104 
@@ -739,11 +696,11 @@ Commenting/Uncommenting Code
              aspect_ratio      movie_facebook_likes 
                       329                         0 </code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Then count the number of NAs in a specific column</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="co">#imdb_messy |&gt; </span></span>
-<span id="cb25-3"><a href="#cb25-3"></a><span class="co">#  ___(___(is.na(actor_1_facebook_likes)))</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Then count the number of NAs in a specific column</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="co">#imdb_messy |&gt; </span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co">#  ___(___(is.na(actor_1_facebook_likes)))</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 29
    ...1 color director_name     num_critic_for_reviews duration
@@ -769,8 +726,8 @@ Commenting/Uncommenting Code
 </section><section id="part-c-2" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-c-2">Part c</h4>
 <p>Consider a more specific example. Obtain a dataset of movies that are missing data on <code>actor_1_facebook_likes</code>. Then explain why you think there are NAs. HINT: <code>is.na(___)</code></p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 29
    ...1 color director_name     num_critic_for_reviews duration
@@ -801,8 +758,8 @@ Commenting/Uncommenting Code
 <section id="part-a-5" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-a-5">Part a</h4>
 <p>Calculate the average duration of a film. THINK: How can we deal with the NA’s?</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `mean(duration, na.rm = TRUE)`
@@ -815,14 +772,14 @@ Commenting/Uncommenting Code
 </section><section id="part-b-5" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-5">Part b</h4>
 <p>Try out the <code>drop_na()</code> function:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># imdb_temp &lt;- drop_na(imdb_messy)</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a></span>
-<span id="cb31-3"><a href="#cb31-3"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
-<span id="cb31-4"><a href="#cb31-4"></a><span class="fu">nrow</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># imdb_temp &lt;- drop_na(imdb_messy)</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a></span>
+<span id="cb26-3"><a href="#cb26-3"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="fu">nrow</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 3756</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                     ...1                     color             director_name 
                         0                         0                         0 
@@ -854,13 +811,9 @@ Commenting/Uncommenting Code
 </ul></section><section id="part-c-3" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-c-3">Part c</h4>
 <p><code>drop_na()</code> removes data points that have <em>any</em> NA values, even if we don’t care about the variable(s) for which data is missing. This can result in losing a lot of data points that <em>do</em> have data on the variables we actually care about! For example, suppose we only want to explore the relationship between film <code>duration</code> and whether it’s in <code>color</code>. Check out a plot:</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a> <span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb35-2"><a href="#cb35-2"></a>   <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 15 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a> <span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb30-2"><a href="#cb30-2"></a>   <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-import_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -874,24 +827,24 @@ Commenting/Uncommenting Code
 <li>How many movies remain in your new dataset? Hence why this is better than using the dataset from part b?</li>
 </ul>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># 1</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb37-3"><a href="#cb37-3"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="fu">drop_na</span>()</span>
-<span id="cb37-5"><a href="#cb37-5"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># 1</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5010    2</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># 2</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb39-3"><a href="#cb39-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
-<span id="cb39-4"><a href="#cb39-4"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># 2</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5010   29</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co"># Plot it</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb41-3"><a href="#cb41-3"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># Plot it</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-import_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
@@ -902,12 +855,12 @@ Commenting/Uncommenting Code
 </section><section id="part-d" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-d">Part d</h4>
 <p>In some cases, missing data is more <em>non</em>-data than <em>unknown</em> data. For example, the films with NAs for <code>actor_1_facebook_likes</code> actually have <em>0</em> Facebook likes–they don’t even have actors! In these cases, we can <em>replace</em> the NAs with a 0. Use the <code>replace_na()</code> function to create a new dataset (<code>imdb_temp</code>) that replaces the NAs in <code>actor_1_facebook_likes</code> with 0. You’ll have to check out the help file for this function.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
-<span id="cb42-3"><a href="#cb42-3"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
-<span id="cb42-4"><a href="#cb42-4"></a></span>
-<span id="cb42-5"><a href="#cb42-5"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb42-6"><a href="#cb42-6"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
+<span id="cb36-4"><a href="#cb36-4"></a></span>
+<span id="cb36-5"><a href="#cb36-5"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb36-6"><a href="#cb36-6"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `sum(is.na(actor_1_facebook_likes))`
@@ -926,26 +879,13 @@ Commenting/Uncommenting Code
 <span class="header-section-number">21.2</span> Solutions</h2>
 <details><summary>
 Click for Solutions
-</summary><div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 5043 Columns: 29
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(12): color, director_name, actor_2_name, genres, actor_1_name, movie_ti... dbl
-(17): ...1, num_critic_for_reviews, duration, director_facebook_likes, a...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`</code></pre>
-</div>
-</div>
-<section id="exercise-3-check-data-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-3-check-data-1">Exercise 3: Check Data</h3>
+</summary><section id="exercise-3-check-data-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-3-check-data-1">Exercise 3: Check Data</h3>
 <section id="part-b-6" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-6">Part b</h4>
 <p>There are many NA’s, the <code>color</code> variable is goofy…</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>imdb_messy <span class="sc">|&gt;</span></span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
-<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>imdb_messy <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>      ...1                  color               director_name 
  Min.   :   1   B&amp;W            :  10   Steven Spielberg:  26  
@@ -1039,8 +979,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section></section><section id="exercise-4-clean-data-factor-variables-1-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-4-clean-data-factor-variables-1-1">Exercise 4: Clean Data: Factor Variables 1</h3>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb47-2"><a href="#cb47-2"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   color               n
@@ -1058,15 +998,15 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>That wouldn’t be <strong>reproducible</strong>. It’s important to log all steps in our data cleaning, so that we and others know and could reproduce those steps.</p>
 </section><section id="part-b-7" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-7">Part b</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
-<span id="cb49-3"><a href="#cb49-3"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
-<span id="cb49-4"><a href="#cb49-4"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
-<span id="cb49-5"><a href="#cb49-5"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
-<span id="cb49-6"><a href="#cb49-6"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
-<span id="cb49-7"><a href="#cb49-7"></a></span>
-<span id="cb49-8"><a href="#cb49-8"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb49-9"><a href="#cb49-9"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
+<span id="cb42-3"><a href="#cb42-3"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
+<span id="cb42-4"><a href="#cb42-4"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
+<span id="cb42-5"><a href="#cb42-5"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
+<span id="cb42-6"><a href="#cb42-6"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
+<span id="cb42-7"><a href="#cb42-7"></a></span>
+<span id="cb42-8"><a href="#cb42-8"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb42-9"><a href="#cb42-9"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   color           n
@@ -1078,14 +1018,14 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section><section id="part-c-4" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-c-4">Part c</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb51-3"><a href="#cb51-3"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb51-4"><a href="#cb51-4"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
-<span id="cb51-5"><a href="#cb51-5"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
-<span id="cb51-6"><a href="#cb51-6"></a></span>
-<span id="cb51-7"><a href="#cb51-7"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb51-8"><a href="#cb51-8"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb44-3"><a href="#cb44-3"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb44-4"><a href="#cb44-4"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
+<span id="cb44-5"><a href="#cb44-5"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
+<span id="cb44-6"><a href="#cb44-6"></a></span>
+<span id="cb44-7"><a href="#cb44-7"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb44-8"><a href="#cb44-8"></a>  <span class="fu">count</span>(color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   color           n
@@ -1098,13 +1038,13 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section></section><section id="exercise-6-clean-data-missing-data-1-1" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-6-clean-data-missing-data-1-1">Exercise 6: Clean Data: Missing Data 1</h3>
 <section id="part-a-7" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-a-7">Part a</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
-<span id="cb53-2"><a href="#cb53-2"></a><span class="fu">nrow</span>(imdb_messy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a><span class="fu">nrow</span>(imdb_messy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5043</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="co"># Then count the number of NAs in each column</span></span>
-<span id="cb55-2"><a href="#cb55-2"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># Then count the number of NAs in each column</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                     ...1                     color             director_name 
                         0                        19                       104 
@@ -1131,8 +1071,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section><section id="part-c-5" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-c-5">Part c</h4>
 <p>These are all documentaries that don’t have any actors.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 29
    ...1 color director_name     num_critic_for_reviews duration
@@ -1156,8 +1096,8 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section></section><section id="exercise-7-clean-missing-data-2" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-7-clean-missing-data-2">Exercise 7: Clean: Missing Data 2</h3>
 <section id="part-a-8" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-a-8">Part a</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb59-2"><a href="#cb59-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `mean(duration, na.rm = TRUE)`
@@ -1170,12 +1110,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section><section id="part-b-8" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-b-8">Part b</h4>
 <p>This gets rid of any movie with any NAs. There are only 3756 movies left! This approach is heavy-handed. It’s typically only a good idea when we need complete info on every variable for every part of our analysis.</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
-<span id="cb61-2"><a href="#cb61-2"></a><span class="fu">nrow</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
+<span id="cb54-2"><a href="#cb54-2"></a><span class="fu">nrow</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 3756</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>                     ...1                     color             director_name 
                         0                         0                         0 
@@ -1201,13 +1141,9 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section><section id="part-c-6" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-c-6">Part c</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb65-2"><a href="#cb65-2"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 15 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-import_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -1216,24 +1152,24 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 <p>We keep most of the movies!</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="co"># Approach 1</span></span>
-<span id="cb67-2"><a href="#cb67-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb67-3"><a href="#cb67-3"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
-<span id="cb67-4"><a href="#cb67-4"></a>  <span class="fu">drop_na</span>()</span>
-<span id="cb67-5"><a href="#cb67-5"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co"># Approach 1</span></span>
+<span id="cb59-2"><a href="#cb59-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb59-3"><a href="#cb59-3"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
+<span id="cb59-4"><a href="#cb59-4"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb59-5"><a href="#cb59-5"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5010    2</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="co"># Approach 2</span></span>
-<span id="cb69-2"><a href="#cb69-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb69-3"><a href="#cb69-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
-<span id="cb69-4"><a href="#cb69-4"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># Approach 2</span></span>
+<span id="cb61-2"><a href="#cb61-2"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb61-3"><a href="#cb61-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
+<span id="cb61-4"><a href="#cb61-4"></a><span class="fu">dim</span>(imdb_temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>[1] 5010   29</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="co"># Plot</span></span>
-<span id="cb71-2"><a href="#cb71-2"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb71-3"><a href="#cb71-3"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="co"># Plot</span></span>
+<span id="cb63-2"><a href="#cb63-2"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb63-3"><a href="#cb63-3"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-import_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
@@ -1243,12 +1179,12 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </div>
 </section><section id="part-d-1" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="part-d-1">Part d</h4>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb72-2"><a href="#cb72-2"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
-<span id="cb72-3"><a href="#cb72-3"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
-<span id="cb72-4"><a href="#cb72-4"></a></span>
-<span id="cb72-5"><a href="#cb72-5"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb72-6"><a href="#cb72-6"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb64-2"><a href="#cb64-2"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
+<span id="cb64-3"><a href="#cb64-3"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
+<span id="cb64-4"><a href="#cb64-4"></a></span>
+<span id="cb64-5"><a href="#cb64-5"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb64-6"><a href="#cb64-6"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   `sum(is.na(actor_1_facebook_likes))`
@@ -1880,523 +1816,523 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../ica/ica-strings.html" class="pagination-link" aria-label="ica-strings">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">ica-strings</span></span>
+      <a href="../ica/ica-strings.html" class="pagination-link" aria-label="Strings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb74" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb74-1"><a href="#cb74-1"></a><span class="co">---</span></span>
-<span id="cb74-2"><a href="#cb74-2"></a><span class="an">title:</span><span class="co"> "ica-import"</span></span>
-<span id="cb74-3"><a href="#cb74-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb74-4"><a href="#cb74-4"></a><span class="co">---</span></span>
-<span id="cb74-5"><a href="#cb74-5"></a></span>
-<span id="cb74-6"><a href="#cb74-6"></a><span class="fu">## Exercises</span></span>
-<span id="cb74-7"><a href="#cb74-7"></a></span>
-<span id="cb74-8"><a href="#cb74-8"></a></span>
-<span id="cb74-9"><a href="#cb74-9"></a>Suppose our goal is to work with data on movie reviews, and that we've already gone through the work to find a dataset. The <span class="in">`imdb_5000_messy.csv`</span> file is posted on Moodle. Let's work with it!</span>
-<span id="cb74-10"><a href="#cb74-10"></a></span>
-<span id="cb74-11"><a href="#cb74-11"></a></span>
-<span id="cb74-12"><a href="#cb74-12"></a><span class="fu">### Exercise 1: Save Data Locally {.unnumbered}</span></span>
-<span id="cb74-13"><a href="#cb74-13"></a></span>
-<span id="cb74-14"><a href="#cb74-14"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-15"><a href="#cb74-15"></a></span>
-<span id="cb74-16"><a href="#cb74-16"></a>On your laptop:</span>
-<span id="cb74-17"><a href="#cb74-17"></a></span>
-<span id="cb74-18"><a href="#cb74-18"></a><span class="ss">-   </span>Download the "imdb_5000_messy.csv" file from Moodle</span>
-<span id="cb74-19"><a href="#cb74-19"></a><span class="ss">-   </span>Move it to the *data* folder in your portfolio repository</span>
-<span id="cb74-20"><a href="#cb74-20"></a></span>
-<span id="cb74-21"><a href="#cb74-21"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-22"><a href="#cb74-22"></a></span>
-<span id="cb74-23"><a href="#cb74-23"></a>Hot tip: After saving your data file, it's important to record appropriate citations and info in either a new qmd (eg: "imdb_5000_messy_README.qmd") or in the qmd where you'll analyze the data. These citations should include:</span>
-<span id="cb74-24"><a href="#cb74-24"></a></span>
-<span id="cb74-25"><a href="#cb74-25"></a><span class="ss">-   </span>the data *source*, i.e. where you *found* the data</span>
-<span id="cb74-26"><a href="#cb74-26"></a><span class="ss">-   </span>the data *creator*, i.e. who / what group *collected* the original data</span>
-<span id="cb74-27"><a href="#cb74-27"></a><span class="ss">-   </span>possibly a data *codebook*, i.e. descriptions of the data variables</span>
-<span id="cb74-28"><a href="#cb74-28"></a></span>
-<span id="cb74-29"><a href="#cb74-29"></a>To this end, check out where we originally got our IMDB data:</span>
-<span id="cb74-30"><a href="#cb74-30"></a></span>
-<span id="cb74-31"><a href="#cb74-31"></a>https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata</span>
-<span id="cb74-32"><a href="#cb74-32"></a></span>
-<span id="cb74-33"><a href="#cb74-33"></a>After visiting that website, take some quick notes here on the data *source* and *creator*.</span>
-<span id="cb74-34"><a href="#cb74-34"></a></span>
-<span id="cb74-35"><a href="#cb74-35"></a>The creator of the data is The Movie Database (TMDb). They are the owner of the data and therefore the source of the data.  </span>
-<span id="cb74-36"><a href="#cb74-36"></a></span>
-<span id="cb74-37"><a href="#cb74-37"></a></span>
-<span id="cb74-38"><a href="#cb74-38"></a><span class="fu">### Exercise 2: Import Data to RStudio {.unnumbered}</span></span>
-<span id="cb74-39"><a href="#cb74-39"></a></span>
-<span id="cb74-40"><a href="#cb74-40"></a>Now that we have a local copy of our data file, let's get it into RStudio! Remember that this process depends on 2 things: the file *type* and *location*. Since our file *type* is a csv, we can import it using `read_csv()`. But we have to supply the file *location* through a file path. To this end, we can either use an **absolute file path** or a **relative file path**.</span>
-<span id="cb74-41"><a href="#cb74-41"></a></span>
-<span id="cb74-42"><a href="#cb74-42"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-43"><a href="#cb74-43"></a></span>
-<span id="cb74-44"><a href="#cb74-44"></a>An absolute file path describes the location of a file starting from the root or home directory. How we refer to the user root directory depends upon your machine:</span>
-<span id="cb74-45"><a href="#cb74-45"></a></span>
-<span id="cb74-46"><a href="#cb74-46"></a><span class="ss">-   </span>On a Mac: <span class="in">`~`</span></span>
-<span id="cb74-47"><a href="#cb74-47"></a><span class="ss">-   </span>On Windows: typically <span class="in">`C:\`</span></span>
-<span id="cb74-48"><a href="#cb74-48"></a></span>
-<span id="cb74-49"><a href="#cb74-49"></a>Then the complete file path to the IMDB data file in the data folder, depending on your machine an where you created your portfolio project, can be:</span>
-<span id="cb74-50"><a href="#cb74-50"></a></span>
-<span id="cb74-51"><a href="#cb74-51"></a><span class="ss">-   </span>On a Mac: <span class="in">`~/Desktop/portfolio/data/imdb_5000_messy.csv`</span></span>
-<span id="cb74-52"><a href="#cb74-52"></a><span class="ss">-   </span>On Windows: <span class="in">`C:\Desktop\portfolio\data\imdb_5000_messy.csv`</span> or <span class="in">`C:\\Desktop\\portfolio\\data\\imdb_5000_messy.csv`</span></span>
-<span id="cb74-53"><a href="#cb74-53"></a></span>
-<span id="cb74-54"><a href="#cb74-54"></a>Putting this together, use <span class="in">`read_csv()`</span> with the appropriate absolute file path to import your data into RStudio. Save this as <span class="in">`imdb_messy`</span>.</span>
-<span id="cb74-55"><a href="#cb74-55"></a></span>
-<span id="cb74-58"><a href="#cb74-58"></a><span class="in">```{r}</span></span>
-<span id="cb74-59"><a href="#cb74-59"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb74-60"><a href="#cb74-60"></a> imdb_messy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"~/Desktop/Data_Science/portfolio-rachelkelly25/data/imdb_5000_messy.csv"</span>)</span>
-<span id="cb74-61"><a href="#cb74-61"></a><span class="in">```</span></span>
-<span id="cb74-62"><a href="#cb74-62"></a></span>
-<span id="cb74-63"><a href="#cb74-63"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-64"><a href="#cb74-64"></a></span>
-<span id="cb74-65"><a href="#cb74-65"></a>Absolute file paths can get really long, depending upon our number of sub-folders, and they should not be used when sharing code with other and instead **relative file paths** should be used.  A **relative file path** describes the location of a file from the current "working directory", i.e. where RStudio would currently look for on your computer. Check what your working directory is *inside this qmd*:</span>
-<span id="cb74-66"><a href="#cb74-66"></a></span>
-<span id="cb74-69"><a href="#cb74-69"></a><span class="in">```{r}</span></span>
-<span id="cb74-70"><a href="#cb74-70"></a><span class="co"># This should be the folder where you stored this qmd!</span></span>
-<span id="cb74-71"><a href="#cb74-71"></a><span class="fu">getwd</span>()</span>
-<span id="cb74-72"><a href="#cb74-72"></a><span class="in">```</span></span>
-<span id="cb74-73"><a href="#cb74-73"></a></span>
-<span id="cb74-74"><a href="#cb74-74"></a>Next, check what the working directory is for the *console* by typing `getwd()` in the *console*. This is probably different, meaning that the relative file paths that will work in your qmd won't work in the console! You can either exclusively work inside your qmd, or change the working directory in your console, by navigating to the following in the upper toolbar: Session <span class="sc">\&gt;</span> Set Working Directory <span class="sc">\&gt;</span> To Source File location.</span>
-<span id="cb74-75"><a href="#cb74-75"></a></span>
-<span id="cb74-76"><a href="#cb74-76"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-77"><a href="#cb74-77"></a></span>
-<span id="cb74-78"><a href="#cb74-78"></a>As a good practice, we created a <span class="in">`data`</span> folder and saved our data file (<span class="in">`imdb_5000_messy.csv`</span>) into.</span>
-<span id="cb74-79"><a href="#cb74-79"></a></span>
-<span id="cb74-80"><a href="#cb74-80"></a>Since our .qmd analysis and .csv data live in the same project, we don't have to write out *absolute file paths* that go all the way to the root directory. We can use *relative file paths* that start from where our code file exists to where the data file exist:</span>
-<span id="cb74-81"><a href="#cb74-81"></a></span>
-<span id="cb74-82"><a href="#cb74-82"></a><span class="ss">-   </span>On a Mac: <span class="in">`../data/imdb_5000_messy.csv`</span></span>
-<span id="cb74-83"><a href="#cb74-83"></a><span class="ss">-   </span>On Windows: <span class="in">`..\data\imdb_5000_messy.csv`</span> or <span class="in">`..\\data\\imdb_5000_messy.csv`</span></span>
-<span id="cb74-84"><a href="#cb74-84"></a></span>
-<span id="cb74-85"><a href="#cb74-85"></a>**NOTE**: <span class="in">`..`</span> means go up one level in the file hierarchy, ie, go to the parent folder/directory.</span>
-<span id="cb74-86"><a href="#cb74-86"></a></span>
-<span id="cb74-87"><a href="#cb74-87"></a>Putting this together, use <span class="in">`read_csv()`</span> with the appropriate relative file path to import your data into RStudio. Save this as <span class="in">`imdb_temp`</span> (<span class="in">`temp`</span> for "temporary"). Convince yourself that this worked, i.e. you get the same dataset as <span class="in">`imdb_messy`</span>.</span>
-<span id="cb74-88"><a href="#cb74-88"></a></span>
-<span id="cb74-91"><a href="#cb74-91"></a><span class="in">```{r}</span></span>
-<span id="cb74-92"><a href="#cb74-92"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>)</span>
-<span id="cb74-93"><a href="#cb74-93"></a><span class="in">```</span></span>
-<span id="cb74-94"><a href="#cb74-94"></a></span>
-<span id="cb74-95"><a href="#cb74-95"></a>::: {.callout-tip title="File Paths"}</span>
-<span id="cb74-96"><a href="#cb74-96"></a></span>
-<span id="cb74-97"><a href="#cb74-97"></a>Absolute file paths should be used when referring to files hosed on the web, eg, <span class="in">`https://mac-stat.github.io/data/kiva_partners2.csv`</span>.  In all other instances, relative file paths should be used.</span>
-<span id="cb74-98"><a href="#cb74-98"></a></span>
-<span id="cb74-99"><a href="#cb74-99"></a>:::</span>
-<span id="cb74-100"><a href="#cb74-100"></a></span>
-<span id="cb74-101"><a href="#cb74-101"></a><span class="fu">#### Part d: OPTIONAL {.unnumbered}</span></span>
-<span id="cb74-102"><a href="#cb74-102"></a></span>
-<span id="cb74-103"><a href="#cb74-103"></a>Sometimes, we don't want to import the *entire* dataset. For example, we might want to...</span>
-<span id="cb74-104"><a href="#cb74-104"></a></span>
-<span id="cb74-105"><a href="#cb74-105"></a><span class="ss">-   </span>skips some rows, eg, if they're just "filler"</span>
-<span id="cb74-106"><a href="#cb74-106"></a><span class="ss">-   </span>only import the *first* "n" rows, eg, if the dataset is really large</span>
-<span id="cb74-107"><a href="#cb74-107"></a><span class="ss">-   </span>only import a *random* subset of "n" rows, eg, if the dataset is really large</span>
-<span id="cb74-108"><a href="#cb74-108"></a></span>
-<span id="cb74-109"><a href="#cb74-109"></a>The "data import cheat sheet" at the top of this qmd, or Google, are handy resources here. As one example...</span>
-<span id="cb74-110"><a href="#cb74-110"></a></span>
-<span id="cb74-113"><a href="#cb74-113"></a><span class="in">```{r}</span></span>
-<span id="cb74-114"><a href="#cb74-114"></a><span class="co"># Try importing only the first 5 rows</span></span>
-<span id="cb74-115"><a href="#cb74-115"></a><span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>, <span class="at">n_max =</span> <span class="dv">5</span>)</span>
-<span id="cb74-116"><a href="#cb74-116"></a><span class="in">```</span></span>
-<span id="cb74-117"><a href="#cb74-117"></a></span>
-<span id="cb74-118"><a href="#cb74-118"></a>::: {.callout-tip title="Commenting/Uncommenting Code"}</span>
-<span id="cb74-119"><a href="#cb74-119"></a></span>
-<span id="cb74-120"><a href="#cb74-120"></a>To comment/uncomment several lines of code at once, highlight them then click &lt;kbd&gt;ctrl/cmd+shift+c&lt;/kbd&gt;.</span>
-<span id="cb74-121"><a href="#cb74-121"></a></span>
-<span id="cb74-122"><a href="#cb74-122"></a>:::</span>
-<span id="cb74-123"><a href="#cb74-123"></a></span>
-<span id="cb74-124"><a href="#cb74-124"></a></span>
-<span id="cb74-125"><a href="#cb74-125"></a><span class="fu">### Exercise 3: Check Data {.unnumbered}</span></span>
-<span id="cb74-126"><a href="#cb74-126"></a></span>
-<span id="cb74-127"><a href="#cb74-127"></a>After importing new data into RStudio, you MUST do some quick checks of the data. Here are two first steps that are especially useful.</span>
-<span id="cb74-128"><a href="#cb74-128"></a></span>
-<span id="cb74-129"><a href="#cb74-129"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-130"><a href="#cb74-130"></a></span>
-<span id="cb74-131"><a href="#cb74-131"></a>Open <span class="in">`imdb_messy`</span> in the spreadsheet-like viewer by typing <span class="in">`View(imdb_messy)`</span> in the console. Sort this "spreadsheet" by different variables by clicking on the arrows next to the variable names. Do you notice anything unexpected?</span>
-<span id="cb74-132"><a href="#cb74-132"></a></span>
-<span id="cb74-133"><a href="#cb74-133"></a>The arrows help sort by least to most or opposite, or alphabetical. Whichever arrow you click determines how the rest of the data is sorted. </span>
-<span id="cb74-134"><a href="#cb74-134"></a></span>
-<span id="cb74-135"><a href="#cb74-135"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-136"><a href="#cb74-136"></a></span>
-<span id="cb74-137"><a href="#cb74-137"></a>Do a quick <span class="in">`summary()`</span> of each variable in the dataset. *One* way to do this is below:</span>
-<span id="cb74-138"><a href="#cb74-138"></a></span>
-<span id="cb74-141"><a href="#cb74-141"></a><span class="in">```{r}</span></span>
-<span id="cb74-142"><a href="#cb74-142"></a> imdb_messy <span class="sc">|&gt;</span></span>
-<span id="cb74-143"><a href="#cb74-143"></a>   <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
-<span id="cb74-144"><a href="#cb74-144"></a>   <span class="fu">summary</span>()</span>
-<span id="cb74-145"><a href="#cb74-145"></a><span class="in">```</span></span>
-<span id="cb74-146"><a href="#cb74-146"></a></span>
-<span id="cb74-147"><a href="#cb74-147"></a>Follow-up:</span>
-<span id="cb74-148"><a href="#cb74-148"></a></span>
-<span id="cb74-149"><a href="#cb74-149"></a><span class="ss">-   </span>What type of info is provided on quantitative variables?</span>
-<span id="cb74-150"><a href="#cb74-150"></a>minimum, median, mean, max, NAs.</span>
-<span id="cb74-151"><a href="#cb74-151"></a><span class="ss">-   </span>What type of info is provided on categorical variables?</span>
-<span id="cb74-152"><a href="#cb74-152"></a>The categories, like country, language, names</span>
-<span id="cb74-153"><a href="#cb74-153"></a><span class="ss">-   </span>What stands out to you in these summaries? Is there anything you'd need to clean before using this data? </span>
-<span id="cb74-154"><a href="#cb74-154"></a>Lots of NAs, the genre category seems messy, stuff like that. </span>
-<span id="cb74-155"><a href="#cb74-155"></a></span>
-<span id="cb74-156"><a href="#cb74-156"></a></span>
-<span id="cb74-157"><a href="#cb74-157"></a></span>
-<span id="cb74-158"><a href="#cb74-158"></a><span class="fu">### Exercise 4: Clean Data: Factor Variables 1 {.unnumbered}</span></span>
-<span id="cb74-159"><a href="#cb74-159"></a></span>
-<span id="cb74-160"><a href="#cb74-160"></a>If you didn't already in Exercise 3, check out the <span class="in">`color`</span> variable in the <span class="in">`imdb_messy`</span> dataset.</span>
-<span id="cb74-161"><a href="#cb74-161"></a></span>
-<span id="cb74-162"><a href="#cb74-162"></a><span class="ss">-   </span>What's goofy about this / what do we need to fix?</span>
-<span id="cb74-163"><a href="#cb74-163"></a><span class="ss">-   </span>More specifically, what different categories does the <span class="in">`color`</span> variable take, and how many movies fall into each of these categories?</span>
-<span id="cb74-164"><a href="#cb74-164"></a></span>
-<span id="cb74-167"><a href="#cb74-167"></a><span class="in">```{r}</span></span>
-<span id="cb74-168"><a href="#cb74-168"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-169"><a href="#cb74-169"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-170"><a href="#cb74-170"></a><span class="co">#There are in reality, three categories, but the difference in caps and spelling makes way more catgories, so that needs to be combined. </span></span>
-<span id="cb74-171"><a href="#cb74-171"></a><span class="in">```</span></span>
-<span id="cb74-172"><a href="#cb74-172"></a></span>
-<span id="cb74-173"><a href="#cb74-173"></a></span>
-<span id="cb74-174"><a href="#cb74-174"></a></span>
-<span id="cb74-175"><a href="#cb74-175"></a><span class="fu">### Exercise 5: Clean Data: Factor Variables 2 {.unnumbered}</span></span>
-<span id="cb74-176"><a href="#cb74-176"></a></span>
-<span id="cb74-177"><a href="#cb74-177"></a>When working with categorical variables like <span class="in">`color`</span>, the categories must be "clean", i.e. consistent and in the correct format. Let's make that happen.</span>
-<span id="cb74-178"><a href="#cb74-178"></a></span>
-<span id="cb74-179"><a href="#cb74-179"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-180"><a href="#cb74-180"></a></span>
-<span id="cb74-181"><a href="#cb74-181"></a>We *could* open the .csv file in, say, Excel or Google sheets, clean up the <span class="in">`color`</span> variable, save a clean copy, and then reimport that into RStudio. BUT that would be the wrong thing to do. Why is it important to use R code, which we then save inside this qmd, to clean our data?</span>
-<span id="cb74-182"><a href="#cb74-182"></a></span>
-<span id="cb74-183"><a href="#cb74-183"></a>So that the original data is untouched and others can reproduce the steps we make.</span>
-<span id="cb74-184"><a href="#cb74-184"></a></span>
-<span id="cb74-185"><a href="#cb74-185"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-186"><a href="#cb74-186"></a></span>
-<span id="cb74-187"><a href="#cb74-187"></a>Let's use R code to change the <span class="in">`color`</span> variable so that it appropriately combines the various categories into only 2: <span class="in">`Color`</span> and <span class="in">`Black_White`</span>. We've learned a couple sets of string-related tools that could be handy here. First, starting with the <span class="in">`imdb_messy`</span> data, change the <span class="in">`color`</span> variable using one of the functions we learned in the **Factors** lesson.</span>
-<span id="cb74-188"><a href="#cb74-188"></a></span>
-<span id="cb74-189"><a href="#cb74-189"></a><span class="in">`fct_relevel()`</span>, <span class="in">`fct_recode()`</span>, <span class="in">`fct_reorder()`</span></span>
-<span id="cb74-190"><a href="#cb74-190"></a></span>
-<span id="cb74-191"><a href="#cb74-191"></a>Store your results in <span class="in">`imdb_temp`</span> (don't overwrite <span class="in">`imdb_messy`</span>). To check your work, print out a <span class="in">`count()`</span> table of the <span class="in">`color`</span> variable in <span class="in">`imdb_temp`</span>.</span>
-<span id="cb74-192"><a href="#cb74-192"></a></span>
-<span id="cb74-195"><a href="#cb74-195"></a><span class="in">```{r}</span></span>
-<span id="cb74-196"><a href="#cb74-196"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-197"><a href="#cb74-197"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
-<span id="cb74-198"><a href="#cb74-198"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
-<span id="cb74-199"><a href="#cb74-199"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
-<span id="cb74-200"><a href="#cb74-200"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
-<span id="cb74-201"><a href="#cb74-201"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
-<span id="cb74-202"><a href="#cb74-202"></a></span>
-<span id="cb74-203"><a href="#cb74-203"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-204"><a href="#cb74-204"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-205"><a href="#cb74-205"></a><span class="in">```</span></span>
-<span id="cb74-206"><a href="#cb74-206"></a></span>
-<span id="cb74-207"><a href="#cb74-207"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-208"><a href="#cb74-208"></a></span>
-<span id="cb74-209"><a href="#cb74-209"></a>Repeat Part b using one of our string functions from the **String** lesson:</span>
-<span id="cb74-210"><a href="#cb74-210"></a></span>
-<span id="cb74-211"><a href="#cb74-211"></a><span class="in">`str_replace()`</span>, <span class="in">`str_replace_all()`</span>, <span class="in">`str_to_lower()`</span>, <span class="in">`str_sub()`</span>, <span class="in">`str_length()`</span>, <span class="in">`str_detect()`</span></span>
-<span id="cb74-212"><a href="#cb74-212"></a></span>
-<span id="cb74-215"><a href="#cb74-215"></a><span class="in">```{r}</span></span>
-<span id="cb74-216"><a href="#cb74-216"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-217"><a href="#cb74-217"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb74-218"><a href="#cb74-218"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb74-219"><a href="#cb74-219"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
-<span id="cb74-220"><a href="#cb74-220"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
-<span id="cb74-221"><a href="#cb74-221"></a></span>
-<span id="cb74-222"><a href="#cb74-222"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-223"><a href="#cb74-223"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-224"><a href="#cb74-224"></a><span class="in">```</span></span>
-<span id="cb74-225"><a href="#cb74-225"></a></span>
-<span id="cb74-226"><a href="#cb74-226"></a></span>
-<span id="cb74-227"><a href="#cb74-227"></a><span class="fu">### Exercise 6: Clean Data: Missing Data 1 {.unnumbered}</span></span>
-<span id="cb74-228"><a href="#cb74-228"></a></span>
-<span id="cb74-229"><a href="#cb74-229"></a>Throughout these exercises, you've probably noticed that there's a bunch of missing data. This is encoded as <span class="in">`NA`</span> (not available) in R. There are a few questions to address about missing data:</span>
-<span id="cb74-230"><a href="#cb74-230"></a></span>
-<span id="cb74-231"><a href="#cb74-231"></a><span class="ss">-   </span>*How many* values are missing data? What's the volume of the missingness?</span>
-<span id="cb74-232"><a href="#cb74-232"></a><span class="ss">-   </span>*Why* are some values missing?</span>
-<span id="cb74-233"><a href="#cb74-233"></a><span class="ss">-   </span>*What* should we do about the missing values?</span>
-<span id="cb74-234"><a href="#cb74-234"></a></span>
-<span id="cb74-235"><a href="#cb74-235"></a>Let's consider the first 2 questions in this exercise.</span>
-<span id="cb74-236"><a href="#cb74-236"></a></span>
-<span id="cb74-237"><a href="#cb74-237"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-238"><a href="#cb74-238"></a></span>
-<span id="cb74-239"><a href="#cb74-239"></a>As a first step, let's simply understand the *volume* of NAs. Specifically:</span>
-<span id="cb74-240"><a href="#cb74-240"></a></span>
-<span id="cb74-243"><a href="#cb74-243"></a><span class="in">```{r}</span></span>
-<span id="cb74-244"><a href="#cb74-244"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
-<span id="cb74-245"><a href="#cb74-245"></a><span class="co">#___(imdb_messy)</span></span>
-<span id="cb74-246"><a href="#cb74-246"></a><span class="fu">nrow</span>(imdb_messy)</span>
-<span id="cb74-247"><a href="#cb74-247"></a></span>
-<span id="cb74-248"><a href="#cb74-248"></a><span class="co"># Then count the number of NAs in each column</span></span>
-<span id="cb74-249"><a href="#cb74-249"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span>
-<span id="cb74-250"><a href="#cb74-250"></a></span>
-<span id="cb74-251"><a href="#cb74-251"></a><span class="co"># Then count the number of NAs in a specific column</span></span>
-<span id="cb74-252"><a href="#cb74-252"></a><span class="co">#imdb_messy |&gt; </span></span>
-<span id="cb74-253"><a href="#cb74-253"></a><span class="co">#  ___(___(is.na(actor_1_facebook_likes)))</span></span>
-<span id="cb74-254"><a href="#cb74-254"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-255"><a href="#cb74-255"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
-<span id="cb74-256"><a href="#cb74-256"></a><span class="in">```</span></span>
-<span id="cb74-257"><a href="#cb74-257"></a></span>
-<span id="cb74-258"><a href="#cb74-258"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-259"><a href="#cb74-259"></a></span>
-<span id="cb74-260"><a href="#cb74-260"></a>As a second step, let's think about *why* some values are missing. Study the individual observations with NAs carefully. Why do you think they are missing? Are certain films more likely to have more NAs than others?</span>
-<span id="cb74-261"><a href="#cb74-261"></a>Some categories that don't have data or are more likely to have NAs, like budget is more like to contain NAs than movie title - all the movies in the data set have a title, else they wouldn't be listed.</span>
-<span id="cb74-262"><a href="#cb74-262"></a></span>
-<span id="cb74-263"><a href="#cb74-263"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-264"><a href="#cb74-264"></a></span>
-<span id="cb74-265"><a href="#cb74-265"></a>Consider a more specific example. Obtain a dataset of movies that are missing data on <span class="in">`actor_1_facebook_likes`</span>. Then explain why you think there are NAs. HINT: <span class="in">`is.na(___)`</span></span>
-<span id="cb74-266"><a href="#cb74-266"></a></span>
-<span id="cb74-269"><a href="#cb74-269"></a><span class="in">```{r}</span></span>
-<span id="cb74-270"><a href="#cb74-270"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-271"><a href="#cb74-271"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
-<span id="cb74-272"><a href="#cb74-272"></a><span class="in">```</span></span>
-<span id="cb74-273"><a href="#cb74-273"></a></span>
-<span id="cb74-274"><a href="#cb74-274"></a></span>
-<span id="cb74-275"><a href="#cb74-275"></a></span>
-<span id="cb74-276"><a href="#cb74-276"></a><span class="fu">### Exercise 7: Clean Data: Missing Data 2 {.unnumbered}</span></span>
-<span id="cb74-277"><a href="#cb74-277"></a></span>
-<span id="cb74-278"><a href="#cb74-278"></a>Next, let's think about what to *do* about the missing values. There is no perfect or universal approach here. Rather, we must think carefully about...</span>
-<span id="cb74-279"><a href="#cb74-279"></a></span>
-<span id="cb74-280"><a href="#cb74-280"></a><span class="ss">-   </span>Why the values are missing?</span>
-<span id="cb74-281"><a href="#cb74-281"></a><span class="ss">-   </span>What we want to do with our data?</span>
-<span id="cb74-282"><a href="#cb74-282"></a><span class="ss">-   </span>What is the impact of removing or replacing missing data on our work / conclusions?</span>
-<span id="cb74-283"><a href="#cb74-283"></a></span>
-<span id="cb74-284"><a href="#cb74-284"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-285"><a href="#cb74-285"></a></span>
-<span id="cb74-286"><a href="#cb74-286"></a>Calculate the average duration of a film. THINK: How can we deal with the NA's?</span>
-<span id="cb74-287"><a href="#cb74-287"></a></span>
-<span id="cb74-290"><a href="#cb74-290"></a><span class="in">```{r}</span></span>
-<span id="cb74-291"><a href="#cb74-291"></a> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-292"><a href="#cb74-292"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb74-293"><a href="#cb74-293"></a><span class="in">```</span></span>
-<span id="cb74-294"><a href="#cb74-294"></a></span>
-<span id="cb74-295"><a href="#cb74-295"></a>Follow-up:</span>
-<span id="cb74-296"><a href="#cb74-296"></a></span>
-<span id="cb74-297"><a href="#cb74-297"></a>How are the NAs dealt with here? Did we have to create and save a new dataset in order to do this analysis?</span>
-<span id="cb74-298"><a href="#cb74-298"></a>We just removed the NAs from the data calculations.</span>
-<span id="cb74-299"><a href="#cb74-299"></a></span>
-<span id="cb74-300"><a href="#cb74-300"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-301"><a href="#cb74-301"></a></span>
-<span id="cb74-302"><a href="#cb74-302"></a>Try out the <span class="in">`drop_na()`</span> function:</span>
-<span id="cb74-303"><a href="#cb74-303"></a></span>
-<span id="cb74-306"><a href="#cb74-306"></a><span class="in">```{r}</span></span>
-<span id="cb74-307"><a href="#cb74-307"></a><span class="co"># imdb_temp &lt;- drop_na(imdb_messy)</span></span>
-<span id="cb74-308"><a href="#cb74-308"></a></span>
-<span id="cb74-309"><a href="#cb74-309"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
-<span id="cb74-310"><a href="#cb74-310"></a><span class="fu">nrow</span>(imdb_temp)</span>
-<span id="cb74-311"><a href="#cb74-311"></a></span>
-<span id="cb74-312"><a href="#cb74-312"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span>
-<span id="cb74-313"><a href="#cb74-313"></a></span>
-<span id="cb74-314"><a href="#cb74-314"></a><span class="in">```</span></span>
-<span id="cb74-315"><a href="#cb74-315"></a></span>
-<span id="cb74-316"><a href="#cb74-316"></a>Follow-up questions:</span>
-<span id="cb74-317"><a href="#cb74-317"></a></span>
-<span id="cb74-318"><a href="#cb74-318"></a><span class="ss">-   </span>What did <span class="in">`drop_na()`</span> do? How many data points are left?</span>
-<span id="cb74-319"><a href="#cb74-319"></a>Gets rid of all movies with an NA which only leaves 3756 movies. </span>
-<span id="cb74-320"><a href="#cb74-320"></a><span class="ss">-   </span>In what situations might this function be a good idea?</span>
-<span id="cb74-321"><a href="#cb74-321"></a>When we need complete analysis but it's very harsh.</span>
-<span id="cb74-322"><a href="#cb74-322"></a><span class="ss">-   </span>In what situations might this function be a bad idea?</span>
-<span id="cb74-323"><a href="#cb74-323"></a>When the data can still be used even when incomplete.</span>
-<span id="cb74-324"><a href="#cb74-324"></a></span>
-<span id="cb74-325"><a href="#cb74-325"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-326"><a href="#cb74-326"></a></span>
-<span id="cb74-327"><a href="#cb74-327"></a><span class="in">`drop_na()`</span> removes data points that have *any* NA values, even if we don't care about the variable(s) for which data is missing. This can result in losing a lot of data points that *do* have data on the variables we actually care about! For example, suppose we only want to explore the relationship between film <span class="in">`duration`</span> and whether it's in <span class="in">`color`</span>. Check out a plot:</span>
-<span id="cb74-328"><a href="#cb74-328"></a></span>
-<span id="cb74-331"><a href="#cb74-331"></a><span class="in">```{r}</span></span>
-<span id="cb74-332"><a href="#cb74-332"></a> <span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb74-333"><a href="#cb74-333"></a>   <span class="fu">geom_density</span>()</span>
-<span id="cb74-334"><a href="#cb74-334"></a><span class="in">```</span></span>
-<span id="cb74-335"><a href="#cb74-335"></a></span>
-<span id="cb74-336"><a href="#cb74-336"></a>Follow-up:</span>
-<span id="cb74-337"><a href="#cb74-337"></a></span>
-<span id="cb74-338"><a href="#cb74-338"></a><span class="ss">-   </span>Create a new dataset with *only* and *all* movies that have complete info on <span class="in">`duration`</span> and <span class="in">`color`</span>. HINT: You could use <span class="in">`!is.na(___)`</span> or <span class="in">`drop_na()`</span> (differently than above)</span>
-<span id="cb74-339"><a href="#cb74-339"></a><span class="ss">-   </span>Use this new dataset to create a new and improved plot.</span>
-<span id="cb74-340"><a href="#cb74-340"></a><span class="ss">-   </span>How many movies remain in your new dataset? Hence why this is better than using the dataset from part b?</span>
-<span id="cb74-341"><a href="#cb74-341"></a></span>
-<span id="cb74-344"><a href="#cb74-344"></a><span class="in">```{r}</span></span>
-<span id="cb74-345"><a href="#cb74-345"></a><span class="co"># 1</span></span>
-<span id="cb74-346"><a href="#cb74-346"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-347"><a href="#cb74-347"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
-<span id="cb74-348"><a href="#cb74-348"></a>  <span class="fu">drop_na</span>()</span>
-<span id="cb74-349"><a href="#cb74-349"></a><span class="fu">dim</span>(imdb_temp)</span>
-<span id="cb74-350"><a href="#cb74-350"></a></span>
-<span id="cb74-351"><a href="#cb74-351"></a><span class="co"># 2</span></span>
-<span id="cb74-352"><a href="#cb74-352"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-353"><a href="#cb74-353"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
-<span id="cb74-354"><a href="#cb74-354"></a><span class="fu">dim</span>(imdb_temp)</span>
-<span id="cb74-355"><a href="#cb74-355"></a></span>
-<span id="cb74-356"><a href="#cb74-356"></a><span class="co"># Plot it</span></span>
-<span id="cb74-357"><a href="#cb74-357"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb74-358"><a href="#cb74-358"></a>  <span class="fu">geom_density</span>()</span>
-<span id="cb74-359"><a href="#cb74-359"></a><span class="in">```</span></span>
-<span id="cb74-360"><a href="#cb74-360"></a></span>
-<span id="cb74-361"><a href="#cb74-361"></a><span class="fu">#### Part d {.unnumbered}</span></span>
-<span id="cb74-362"><a href="#cb74-362"></a></span>
-<span id="cb74-363"><a href="#cb74-363"></a>In some cases, missing data is more *non*-data than *unknown* data. For example, the films with NAs for `actor_1_facebook_likes` actually have *0* Facebook likes--they don't even have actors! In these cases, we can *replace* the NAs with a 0. Use the <span class="in">`replace_na()`</span> function to create a new dataset (<span class="in">`imdb_temp`</span>) that replaces the NAs in <span class="in">`actor_1_facebook_likes`</span> with 0. You'll have to check out the help file for this function.</span>
-<span id="cb74-364"><a href="#cb74-364"></a></span>
-<span id="cb74-367"><a href="#cb74-367"></a><span class="in">```{r}</span></span>
-<span id="cb74-368"><a href="#cb74-368"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-369"><a href="#cb74-369"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
-<span id="cb74-370"><a href="#cb74-370"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
-<span id="cb74-371"><a href="#cb74-371"></a></span>
-<span id="cb74-372"><a href="#cb74-372"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-373"><a href="#cb74-373"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span>
-<span id="cb74-374"><a href="#cb74-374"></a><span class="in">```</span></span>
-<span id="cb74-375"><a href="#cb74-375"></a></span>
-<span id="cb74-376"><a href="#cb74-376"></a></span>
-<span id="cb74-377"><a href="#cb74-377"></a><span class="fu">### Exercise 8: New Data + Projects {.unnumbered}</span></span>
-<span id="cb74-378"><a href="#cb74-378"></a></span>
-<span id="cb74-379"><a href="#cb74-379"></a>Let's practice the above ideas while also planting some seeds for the course project. Each group will pick and analyze their own dataset. The people you're sitting with today aren't necessarily your project groups! BUT do some brainstorming together:</span>
-<span id="cb74-380"><a href="#cb74-380"></a></span>
-<span id="cb74-381"><a href="#cb74-381"></a><span class="ss">-   </span>Share with each other: What are some personal hobbies or passions or things you've been thinking about or things you'd like to learn more about? Don't think too hard about this! Just share what's at the top of mind today.</span>
-<span id="cb74-382"><a href="#cb74-382"></a></span>
-<span id="cb74-383"><a href="#cb74-383"></a><span class="ss">-   </span>Each individual: Find a dataset online that's related to one of the topics you shared in the above prompt.</span>
-<span id="cb74-384"><a href="#cb74-384"></a><span class="ss">-   </span>Discuss what data you found with your group!</span>
-<span id="cb74-385"><a href="#cb74-385"></a><span class="ss">-   </span>Load the data into RStudio, perform some basic checks, and perform some preliminary cleaning, as necessary.</span>
-<span id="cb74-386"><a href="#cb74-386"></a></span>
-<span id="cb74-387"><a href="#cb74-387"></a></span>
-<span id="cb74-388"><a href="#cb74-388"></a></span>
-<span id="cb74-389"><a href="#cb74-389"></a><span class="fu">## Solutions</span></span>
-<span id="cb74-390"><a href="#cb74-390"></a></span>
-<span id="cb74-391"><a href="#cb74-391"></a>&lt;details&gt;</span>
-<span id="cb74-392"><a href="#cb74-392"></a></span>
-<span id="cb74-393"><a href="#cb74-393"></a>&lt;summary&gt;Click for Solutions&lt;/summary&gt;</span>
-<span id="cb74-394"><a href="#cb74-394"></a></span>
-<span id="cb74-395"><a href="#cb74-395"></a><span class="in">```{r echo = FALSE}</span></span>
-<span id="cb74-396"><a href="#cb74-396"></a><span class="in">imdb_messy &lt;- read_csv("../data/imdb_5000_messy.csv")</span></span>
-<span id="cb74-397"><a href="#cb74-397"></a><span class="in">```</span></span>
-<span id="cb74-398"><a href="#cb74-398"></a></span>
-<span id="cb74-399"><a href="#cb74-399"></a><span class="fu">### Exercise 3: Check Data {.unnumbered}</span></span>
-<span id="cb74-400"><a href="#cb74-400"></a></span>
-<span id="cb74-401"><a href="#cb74-401"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-402"><a href="#cb74-402"></a></span>
-<span id="cb74-403"><a href="#cb74-403"></a>There are many NA's, the <span class="in">`color`</span> variable is goofy...</span>
-<span id="cb74-404"><a href="#cb74-404"></a></span>
-<span id="cb74-407"><a href="#cb74-407"></a><span class="in">```{r}</span></span>
-<span id="cb74-408"><a href="#cb74-408"></a>imdb_messy <span class="sc">|&gt;</span></span>
-<span id="cb74-409"><a href="#cb74-409"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
-<span id="cb74-410"><a href="#cb74-410"></a>  <span class="fu">summary</span>()</span>
-<span id="cb74-411"><a href="#cb74-411"></a><span class="in">```</span></span>
-<span id="cb74-412"><a href="#cb74-412"></a></span>
-<span id="cb74-413"><a href="#cb74-413"></a></span>
-<span id="cb74-414"><a href="#cb74-414"></a></span>
-<span id="cb74-415"><a href="#cb74-415"></a><span class="fu">### Exercise 4: Clean Data: Factor Variables 1 {.unnumbered}</span></span>
-<span id="cb74-416"><a href="#cb74-416"></a></span>
-<span id="cb74-419"><a href="#cb74-419"></a><span class="in">```{r}</span></span>
-<span id="cb74-420"><a href="#cb74-420"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-421"><a href="#cb74-421"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-422"><a href="#cb74-422"></a><span class="in">```</span></span>
-<span id="cb74-423"><a href="#cb74-423"></a></span>
-<span id="cb74-424"><a href="#cb74-424"></a></span>
-<span id="cb74-425"><a href="#cb74-425"></a></span>
-<span id="cb74-426"><a href="#cb74-426"></a><span class="fu">### Exercise 5: Clean Data: Factor Variables 2 {.unnumbered}</span></span>
-<span id="cb74-427"><a href="#cb74-427"></a></span>
-<span id="cb74-428"><a href="#cb74-428"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-429"><a href="#cb74-429"></a></span>
-<span id="cb74-430"><a href="#cb74-430"></a>That wouldn't be **reproducible**. It's important to log all steps in our data cleaning, so that we and others know and could reproduce those steps.</span>
-<span id="cb74-431"><a href="#cb74-431"></a></span>
-<span id="cb74-432"><a href="#cb74-432"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-433"><a href="#cb74-433"></a></span>
-<span id="cb74-436"><a href="#cb74-436"></a><span class="in">```{r}</span></span>
-<span id="cb74-437"><a href="#cb74-437"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-438"><a href="#cb74-438"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
-<span id="cb74-439"><a href="#cb74-439"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
-<span id="cb74-440"><a href="#cb74-440"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
-<span id="cb74-441"><a href="#cb74-441"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
-<span id="cb74-442"><a href="#cb74-442"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
-<span id="cb74-443"><a href="#cb74-443"></a></span>
-<span id="cb74-444"><a href="#cb74-444"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-445"><a href="#cb74-445"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-446"><a href="#cb74-446"></a><span class="in">```</span></span>
-<span id="cb74-447"><a href="#cb74-447"></a></span>
-<span id="cb74-448"><a href="#cb74-448"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-449"><a href="#cb74-449"></a></span>
-<span id="cb74-452"><a href="#cb74-452"></a><span class="in">```{r}</span></span>
-<span id="cb74-453"><a href="#cb74-453"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-454"><a href="#cb74-454"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb74-455"><a href="#cb74-455"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
-<span id="cb74-456"><a href="#cb74-456"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
-<span id="cb74-457"><a href="#cb74-457"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
-<span id="cb74-458"><a href="#cb74-458"></a></span>
-<span id="cb74-459"><a href="#cb74-459"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-460"><a href="#cb74-460"></a>  <span class="fu">count</span>(color)</span>
-<span id="cb74-461"><a href="#cb74-461"></a><span class="in">```</span></span>
-<span id="cb74-462"><a href="#cb74-462"></a></span>
-<span id="cb74-463"><a href="#cb74-463"></a></span>
-<span id="cb74-464"><a href="#cb74-464"></a></span>
-<span id="cb74-465"><a href="#cb74-465"></a><span class="fu">### Exercise 6: Clean Data: Missing Data 1 {.unnumbered}</span></span>
-<span id="cb74-466"><a href="#cb74-466"></a></span>
-<span id="cb74-467"><a href="#cb74-467"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-468"><a href="#cb74-468"></a></span>
-<span id="cb74-471"><a href="#cb74-471"></a><span class="in">```{r}</span></span>
-<span id="cb74-472"><a href="#cb74-472"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
-<span id="cb74-473"><a href="#cb74-473"></a><span class="fu">nrow</span>(imdb_messy)</span>
-<span id="cb74-474"><a href="#cb74-474"></a></span>
-<span id="cb74-475"><a href="#cb74-475"></a><span class="co"># Then count the number of NAs in each column</span></span>
-<span id="cb74-476"><a href="#cb74-476"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span>
-<span id="cb74-477"><a href="#cb74-477"></a><span class="in">```</span></span>
-<span id="cb74-478"><a href="#cb74-478"></a></span>
-<span id="cb74-479"><a href="#cb74-479"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-480"><a href="#cb74-480"></a></span>
-<span id="cb74-481"><a href="#cb74-481"></a>These are all documentaries that don't have any actors.</span>
-<span id="cb74-482"><a href="#cb74-482"></a></span>
-<span id="cb74-485"><a href="#cb74-485"></a><span class="in">```{r}</span></span>
-<span id="cb74-486"><a href="#cb74-486"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-487"><a href="#cb74-487"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
-<span id="cb74-488"><a href="#cb74-488"></a><span class="in">```</span></span>
-<span id="cb74-489"><a href="#cb74-489"></a></span>
-<span id="cb74-490"><a href="#cb74-490"></a></span>
-<span id="cb74-491"><a href="#cb74-491"></a></span>
-<span id="cb74-492"><a href="#cb74-492"></a><span class="fu">### Exercise 7: Clean: Missing Data 2 {.unnumbered}</span></span>
-<span id="cb74-493"><a href="#cb74-493"></a></span>
-<span id="cb74-494"><a href="#cb74-494"></a><span class="fu">#### Part a {.unnumbered}</span></span>
-<span id="cb74-495"><a href="#cb74-495"></a></span>
-<span id="cb74-498"><a href="#cb74-498"></a><span class="in">```{r}</span></span>
-<span id="cb74-499"><a href="#cb74-499"></a>imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-500"><a href="#cb74-500"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb74-501"><a href="#cb74-501"></a><span class="in">```</span></span>
-<span id="cb74-502"><a href="#cb74-502"></a></span>
-<span id="cb74-503"><a href="#cb74-503"></a>Follow-up:</span>
-<span id="cb74-504"><a href="#cb74-504"></a></span>
-<span id="cb74-505"><a href="#cb74-505"></a>We just remove the NAs from the calculation. No need to entirely remove the related movies from the dataset.</span>
-<span id="cb74-506"><a href="#cb74-506"></a></span>
-<span id="cb74-507"><a href="#cb74-507"></a><span class="fu">#### Part b {.unnumbered}</span></span>
-<span id="cb74-508"><a href="#cb74-508"></a></span>
-<span id="cb74-509"><a href="#cb74-509"></a>This gets rid of any movie with any NAs. There are only 3756 movies left! This approach is heavy-handed. It's typically only a good idea when we need complete info on every variable for every part of our analysis.</span>
-<span id="cb74-510"><a href="#cb74-510"></a></span>
-<span id="cb74-513"><a href="#cb74-513"></a><span class="in">```{r}</span></span>
-<span id="cb74-514"><a href="#cb74-514"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
-<span id="cb74-515"><a href="#cb74-515"></a><span class="fu">nrow</span>(imdb_temp)</span>
-<span id="cb74-516"><a href="#cb74-516"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span>
-<span id="cb74-517"><a href="#cb74-517"></a><span class="in">```</span></span>
-<span id="cb74-518"><a href="#cb74-518"></a></span>
-<span id="cb74-519"><a href="#cb74-519"></a><span class="fu">#### Part c {.unnumbered}</span></span>
-<span id="cb74-520"><a href="#cb74-520"></a></span>
-<span id="cb74-523"><a href="#cb74-523"></a><span class="in">```{r}</span></span>
-<span id="cb74-524"><a href="#cb74-524"></a><span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb74-525"><a href="#cb74-525"></a>  <span class="fu">geom_density</span>()</span>
-<span id="cb74-526"><a href="#cb74-526"></a><span class="in">```</span></span>
-<span id="cb74-527"><a href="#cb74-527"></a></span>
-<span id="cb74-528"><a href="#cb74-528"></a>We keep most of the movies!</span>
-<span id="cb74-529"><a href="#cb74-529"></a></span>
-<span id="cb74-532"><a href="#cb74-532"></a><span class="in">```{r}</span></span>
-<span id="cb74-533"><a href="#cb74-533"></a><span class="co"># Approach 1</span></span>
-<span id="cb74-534"><a href="#cb74-534"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-535"><a href="#cb74-535"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
-<span id="cb74-536"><a href="#cb74-536"></a>  <span class="fu">drop_na</span>()</span>
-<span id="cb74-537"><a href="#cb74-537"></a><span class="fu">dim</span>(imdb_temp)</span>
-<span id="cb74-538"><a href="#cb74-538"></a></span>
-<span id="cb74-539"><a href="#cb74-539"></a><span class="co"># Approach 2</span></span>
-<span id="cb74-540"><a href="#cb74-540"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-541"><a href="#cb74-541"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
-<span id="cb74-542"><a href="#cb74-542"></a><span class="fu">dim</span>(imdb_temp)</span>
-<span id="cb74-543"><a href="#cb74-543"></a></span>
-<span id="cb74-544"><a href="#cb74-544"></a><span class="co"># Plot</span></span>
-<span id="cb74-545"><a href="#cb74-545"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
-<span id="cb74-546"><a href="#cb74-546"></a>  <span class="fu">geom_density</span>()</span>
-<span id="cb74-547"><a href="#cb74-547"></a><span class="in">```</span></span>
-<span id="cb74-548"><a href="#cb74-548"></a></span>
-<span id="cb74-549"><a href="#cb74-549"></a><span class="fu">#### Part d {.unnumbered}</span></span>
-<span id="cb74-550"><a href="#cb74-550"></a></span>
-<span id="cb74-553"><a href="#cb74-553"></a><span class="in">```{r}</span></span>
-<span id="cb74-554"><a href="#cb74-554"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
-<span id="cb74-555"><a href="#cb74-555"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
-<span id="cb74-556"><a href="#cb74-556"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
-<span id="cb74-557"><a href="#cb74-557"></a></span>
-<span id="cb74-558"><a href="#cb74-558"></a>imdb_temp <span class="sc">|&gt;</span> </span>
-<span id="cb74-559"><a href="#cb74-559"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span>
-<span id="cb74-560"><a href="#cb74-560"></a><span class="in">```</span></span>
-<span id="cb74-561"><a href="#cb74-561"></a></span>
-<span id="cb74-562"><a href="#cb74-562"></a>&lt;/details&gt;</span>
+<div class="sourceCode" id="cb66" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb66-1"><a href="#cb66-1"></a><span class="co">---</span></span>
+<span id="cb66-2"><a href="#cb66-2"></a><span class="an">title:</span><span class="co"> "Import"</span></span>
+<span id="cb66-3"><a href="#cb66-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb66-4"><a href="#cb66-4"></a><span class="co">---</span></span>
+<span id="cb66-5"><a href="#cb66-5"></a></span>
+<span id="cb66-6"><a href="#cb66-6"></a><span class="fu">## Exercises</span></span>
+<span id="cb66-7"><a href="#cb66-7"></a></span>
+<span id="cb66-8"><a href="#cb66-8"></a></span>
+<span id="cb66-9"><a href="#cb66-9"></a>Suppose our goal is to work with data on movie reviews, and that we've already gone through the work to find a dataset. The <span class="in">`imdb_5000_messy.csv`</span> file is posted on Moodle. Let's work with it!</span>
+<span id="cb66-10"><a href="#cb66-10"></a></span>
+<span id="cb66-11"><a href="#cb66-11"></a></span>
+<span id="cb66-12"><a href="#cb66-12"></a><span class="fu">### Exercise 1: Save Data Locally {.unnumbered}</span></span>
+<span id="cb66-13"><a href="#cb66-13"></a></span>
+<span id="cb66-14"><a href="#cb66-14"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-15"><a href="#cb66-15"></a></span>
+<span id="cb66-16"><a href="#cb66-16"></a>On your laptop:</span>
+<span id="cb66-17"><a href="#cb66-17"></a></span>
+<span id="cb66-18"><a href="#cb66-18"></a><span class="ss">-   </span>Download the "imdb_5000_messy.csv" file from Moodle</span>
+<span id="cb66-19"><a href="#cb66-19"></a><span class="ss">-   </span>Move it to the *data* folder in your portfolio repository</span>
+<span id="cb66-20"><a href="#cb66-20"></a></span>
+<span id="cb66-21"><a href="#cb66-21"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-22"><a href="#cb66-22"></a></span>
+<span id="cb66-23"><a href="#cb66-23"></a>Hot tip: After saving your data file, it's important to record appropriate citations and info in either a new qmd (eg: "imdb_5000_messy_README.qmd") or in the qmd where you'll analyze the data. These citations should include:</span>
+<span id="cb66-24"><a href="#cb66-24"></a></span>
+<span id="cb66-25"><a href="#cb66-25"></a><span class="ss">-   </span>the data *source*, i.e. where you *found* the data</span>
+<span id="cb66-26"><a href="#cb66-26"></a><span class="ss">-   </span>the data *creator*, i.e. who / what group *collected* the original data</span>
+<span id="cb66-27"><a href="#cb66-27"></a><span class="ss">-   </span>possibly a data *codebook*, i.e. descriptions of the data variables</span>
+<span id="cb66-28"><a href="#cb66-28"></a></span>
+<span id="cb66-29"><a href="#cb66-29"></a>To this end, check out where we originally got our IMDB data:</span>
+<span id="cb66-30"><a href="#cb66-30"></a></span>
+<span id="cb66-31"><a href="#cb66-31"></a>https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata</span>
+<span id="cb66-32"><a href="#cb66-32"></a></span>
+<span id="cb66-33"><a href="#cb66-33"></a>After visiting that website, take some quick notes here on the data *source* and *creator*.</span>
+<span id="cb66-34"><a href="#cb66-34"></a></span>
+<span id="cb66-35"><a href="#cb66-35"></a>The creator of the data is The Movie Database (TMDb). They are the owner of the data and therefore the source of the data.  </span>
+<span id="cb66-36"><a href="#cb66-36"></a></span>
+<span id="cb66-37"><a href="#cb66-37"></a></span>
+<span id="cb66-38"><a href="#cb66-38"></a><span class="fu">### Exercise 2: Import Data to RStudio {.unnumbered}</span></span>
+<span id="cb66-39"><a href="#cb66-39"></a></span>
+<span id="cb66-40"><a href="#cb66-40"></a>Now that we have a local copy of our data file, let's get it into RStudio! Remember that this process depends on 2 things: the file *type* and *location*. Since our file *type* is a csv, we can import it using `read_csv()`. But we have to supply the file *location* through a file path. To this end, we can either use an **absolute file path** or a **relative file path**.</span>
+<span id="cb66-41"><a href="#cb66-41"></a></span>
+<span id="cb66-42"><a href="#cb66-42"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-43"><a href="#cb66-43"></a></span>
+<span id="cb66-44"><a href="#cb66-44"></a>An absolute file path describes the location of a file starting from the root or home directory. How we refer to the user root directory depends upon your machine:</span>
+<span id="cb66-45"><a href="#cb66-45"></a></span>
+<span id="cb66-46"><a href="#cb66-46"></a><span class="ss">-   </span>On a Mac: <span class="in">`~`</span></span>
+<span id="cb66-47"><a href="#cb66-47"></a><span class="ss">-   </span>On Windows: typically <span class="in">`C:\`</span></span>
+<span id="cb66-48"><a href="#cb66-48"></a></span>
+<span id="cb66-49"><a href="#cb66-49"></a>Then the complete file path to the IMDB data file in the data folder, depending on your machine an where you created your portfolio project, can be:</span>
+<span id="cb66-50"><a href="#cb66-50"></a></span>
+<span id="cb66-51"><a href="#cb66-51"></a><span class="ss">-   </span>On a Mac: <span class="in">`~/Desktop/portfolio/data/imdb_5000_messy.csv`</span></span>
+<span id="cb66-52"><a href="#cb66-52"></a><span class="ss">-   </span>On Windows: <span class="in">`C:\Desktop\portfolio\data\imdb_5000_messy.csv`</span> or <span class="in">`C:\\Desktop\\portfolio\\data\\imdb_5000_messy.csv`</span></span>
+<span id="cb66-53"><a href="#cb66-53"></a></span>
+<span id="cb66-54"><a href="#cb66-54"></a>Putting this together, use <span class="in">`read_csv()`</span> with the appropriate absolute file path to import your data into RStudio. Save this as <span class="in">`imdb_messy`</span>.</span>
+<span id="cb66-55"><a href="#cb66-55"></a></span>
+<span id="cb66-58"><a href="#cb66-58"></a><span class="in">```{r}</span></span>
+<span id="cb66-59"><a href="#cb66-59"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb66-60"><a href="#cb66-60"></a> imdb_messy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"~/Desktop/Data_Science/portfolio-rachelkelly25/data/imdb_5000_messy.csv"</span>)</span>
+<span id="cb66-61"><a href="#cb66-61"></a><span class="in">```</span></span>
+<span id="cb66-62"><a href="#cb66-62"></a></span>
+<span id="cb66-63"><a href="#cb66-63"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-64"><a href="#cb66-64"></a></span>
+<span id="cb66-65"><a href="#cb66-65"></a>Absolute file paths can get really long, depending upon our number of sub-folders, and they should not be used when sharing code with other and instead **relative file paths** should be used.  A **relative file path** describes the location of a file from the current "working directory", i.e. where RStudio would currently look for on your computer. Check what your working directory is *inside this qmd*:</span>
+<span id="cb66-66"><a href="#cb66-66"></a></span>
+<span id="cb66-69"><a href="#cb66-69"></a><span class="in">```{r}</span></span>
+<span id="cb66-70"><a href="#cb66-70"></a><span class="co"># This should be the folder where you stored this qmd!</span></span>
+<span id="cb66-71"><a href="#cb66-71"></a><span class="fu">getwd</span>()</span>
+<span id="cb66-72"><a href="#cb66-72"></a><span class="in">```</span></span>
+<span id="cb66-73"><a href="#cb66-73"></a></span>
+<span id="cb66-74"><a href="#cb66-74"></a>Next, check what the working directory is for the *console* by typing `getwd()` in the *console*. This is probably different, meaning that the relative file paths that will work in your qmd won't work in the console! You can either exclusively work inside your qmd, or change the working directory in your console, by navigating to the following in the upper toolbar: Session <span class="sc">\&gt;</span> Set Working Directory <span class="sc">\&gt;</span> To Source File location.</span>
+<span id="cb66-75"><a href="#cb66-75"></a></span>
+<span id="cb66-76"><a href="#cb66-76"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-77"><a href="#cb66-77"></a></span>
+<span id="cb66-78"><a href="#cb66-78"></a>As a good practice, we created a <span class="in">`data`</span> folder and saved our data file (<span class="in">`imdb_5000_messy.csv`</span>) into.</span>
+<span id="cb66-79"><a href="#cb66-79"></a></span>
+<span id="cb66-80"><a href="#cb66-80"></a>Since our .qmd analysis and .csv data live in the same project, we don't have to write out *absolute file paths* that go all the way to the root directory. We can use *relative file paths* that start from where our code file exists to where the data file exist:</span>
+<span id="cb66-81"><a href="#cb66-81"></a></span>
+<span id="cb66-82"><a href="#cb66-82"></a><span class="ss">-   </span>On a Mac: <span class="in">`../data/imdb_5000_messy.csv`</span></span>
+<span id="cb66-83"><a href="#cb66-83"></a><span class="ss">-   </span>On Windows: <span class="in">`..\data\imdb_5000_messy.csv`</span> or <span class="in">`..\\data\\imdb_5000_messy.csv`</span></span>
+<span id="cb66-84"><a href="#cb66-84"></a></span>
+<span id="cb66-85"><a href="#cb66-85"></a>**NOTE**: <span class="in">`..`</span> means go up one level in the file hierarchy, ie, go to the parent folder/directory.</span>
+<span id="cb66-86"><a href="#cb66-86"></a></span>
+<span id="cb66-87"><a href="#cb66-87"></a>Putting this together, use <span class="in">`read_csv()`</span> with the appropriate relative file path to import your data into RStudio. Save this as <span class="in">`imdb_temp`</span> (<span class="in">`temp`</span> for "temporary"). Convince yourself that this worked, i.e. you get the same dataset as <span class="in">`imdb_messy`</span>.</span>
+<span id="cb66-88"><a href="#cb66-88"></a></span>
+<span id="cb66-91"><a href="#cb66-91"></a><span class="in">```{r}</span></span>
+<span id="cb66-92"><a href="#cb66-92"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>)</span>
+<span id="cb66-93"><a href="#cb66-93"></a><span class="in">```</span></span>
+<span id="cb66-94"><a href="#cb66-94"></a></span>
+<span id="cb66-95"><a href="#cb66-95"></a>::: {.callout-tip title="File Paths"}</span>
+<span id="cb66-96"><a href="#cb66-96"></a></span>
+<span id="cb66-97"><a href="#cb66-97"></a>Absolute file paths should be used when referring to files hosed on the web, eg, <span class="in">`https://mac-stat.github.io/data/kiva_partners2.csv`</span>.  In all other instances, relative file paths should be used.</span>
+<span id="cb66-98"><a href="#cb66-98"></a></span>
+<span id="cb66-99"><a href="#cb66-99"></a>:::</span>
+<span id="cb66-100"><a href="#cb66-100"></a></span>
+<span id="cb66-101"><a href="#cb66-101"></a><span class="fu">#### Part d: OPTIONAL {.unnumbered}</span></span>
+<span id="cb66-102"><a href="#cb66-102"></a></span>
+<span id="cb66-103"><a href="#cb66-103"></a>Sometimes, we don't want to import the *entire* dataset. For example, we might want to...</span>
+<span id="cb66-104"><a href="#cb66-104"></a></span>
+<span id="cb66-105"><a href="#cb66-105"></a><span class="ss">-   </span>skips some rows, eg, if they're just "filler"</span>
+<span id="cb66-106"><a href="#cb66-106"></a><span class="ss">-   </span>only import the *first* "n" rows, eg, if the dataset is really large</span>
+<span id="cb66-107"><a href="#cb66-107"></a><span class="ss">-   </span>only import a *random* subset of "n" rows, eg, if the dataset is really large</span>
+<span id="cb66-108"><a href="#cb66-108"></a></span>
+<span id="cb66-109"><a href="#cb66-109"></a>The "data import cheat sheet" at the top of this qmd, or Google, are handy resources here. As one example...</span>
+<span id="cb66-110"><a href="#cb66-110"></a></span>
+<span id="cb66-113"><a href="#cb66-113"></a><span class="in">```{r}</span></span>
+<span id="cb66-114"><a href="#cb66-114"></a><span class="co"># Try importing only the first 5 rows</span></span>
+<span id="cb66-115"><a href="#cb66-115"></a><span class="fu">read_csv</span>(<span class="st">"../data/imdb_5000_messy.csv"</span>, <span class="at">n_max =</span> <span class="dv">5</span>)</span>
+<span id="cb66-116"><a href="#cb66-116"></a><span class="in">```</span></span>
+<span id="cb66-117"><a href="#cb66-117"></a></span>
+<span id="cb66-118"><a href="#cb66-118"></a>::: {.callout-tip title="Commenting/Uncommenting Code"}</span>
+<span id="cb66-119"><a href="#cb66-119"></a></span>
+<span id="cb66-120"><a href="#cb66-120"></a>To comment/uncomment several lines of code at once, highlight them then click &lt;kbd&gt;ctrl/cmd+shift+c&lt;/kbd&gt;.</span>
+<span id="cb66-121"><a href="#cb66-121"></a></span>
+<span id="cb66-122"><a href="#cb66-122"></a>:::</span>
+<span id="cb66-123"><a href="#cb66-123"></a></span>
+<span id="cb66-124"><a href="#cb66-124"></a></span>
+<span id="cb66-125"><a href="#cb66-125"></a><span class="fu">### Exercise 3: Check Data {.unnumbered}</span></span>
+<span id="cb66-126"><a href="#cb66-126"></a></span>
+<span id="cb66-127"><a href="#cb66-127"></a>After importing new data into RStudio, you MUST do some quick checks of the data. Here are two first steps that are especially useful.</span>
+<span id="cb66-128"><a href="#cb66-128"></a></span>
+<span id="cb66-129"><a href="#cb66-129"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-130"><a href="#cb66-130"></a></span>
+<span id="cb66-131"><a href="#cb66-131"></a>Open <span class="in">`imdb_messy`</span> in the spreadsheet-like viewer by typing <span class="in">`View(imdb_messy)`</span> in the console. Sort this "spreadsheet" by different variables by clicking on the arrows next to the variable names. Do you notice anything unexpected?</span>
+<span id="cb66-132"><a href="#cb66-132"></a></span>
+<span id="cb66-133"><a href="#cb66-133"></a>The arrows help sort by least to most or opposite, or alphabetical. Whichever arrow you click determines how the rest of the data is sorted. </span>
+<span id="cb66-134"><a href="#cb66-134"></a></span>
+<span id="cb66-135"><a href="#cb66-135"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-136"><a href="#cb66-136"></a></span>
+<span id="cb66-137"><a href="#cb66-137"></a>Do a quick <span class="in">`summary()`</span> of each variable in the dataset. *One* way to do this is below:</span>
+<span id="cb66-138"><a href="#cb66-138"></a></span>
+<span id="cb66-141"><a href="#cb66-141"></a><span class="in">```{r}</span></span>
+<span id="cb66-142"><a href="#cb66-142"></a> imdb_messy <span class="sc">|&gt;</span></span>
+<span id="cb66-143"><a href="#cb66-143"></a>   <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
+<span id="cb66-144"><a href="#cb66-144"></a>   <span class="fu">summary</span>()</span>
+<span id="cb66-145"><a href="#cb66-145"></a><span class="in">```</span></span>
+<span id="cb66-146"><a href="#cb66-146"></a></span>
+<span id="cb66-147"><a href="#cb66-147"></a>Follow-up:</span>
+<span id="cb66-148"><a href="#cb66-148"></a></span>
+<span id="cb66-149"><a href="#cb66-149"></a><span class="ss">-   </span>What type of info is provided on quantitative variables?</span>
+<span id="cb66-150"><a href="#cb66-150"></a>minimum, median, mean, max, NAs.</span>
+<span id="cb66-151"><a href="#cb66-151"></a><span class="ss">-   </span>What type of info is provided on categorical variables?</span>
+<span id="cb66-152"><a href="#cb66-152"></a>The categories, like country, language, names</span>
+<span id="cb66-153"><a href="#cb66-153"></a><span class="ss">-   </span>What stands out to you in these summaries? Is there anything you'd need to clean before using this data? </span>
+<span id="cb66-154"><a href="#cb66-154"></a>Lots of NAs, the genre category seems messy, stuff like that. </span>
+<span id="cb66-155"><a href="#cb66-155"></a></span>
+<span id="cb66-156"><a href="#cb66-156"></a></span>
+<span id="cb66-157"><a href="#cb66-157"></a></span>
+<span id="cb66-158"><a href="#cb66-158"></a><span class="fu">### Exercise 4: Clean Data: Factor Variables 1 {.unnumbered}</span></span>
+<span id="cb66-159"><a href="#cb66-159"></a></span>
+<span id="cb66-160"><a href="#cb66-160"></a>If you didn't already in Exercise 3, check out the <span class="in">`color`</span> variable in the <span class="in">`imdb_messy`</span> dataset.</span>
+<span id="cb66-161"><a href="#cb66-161"></a></span>
+<span id="cb66-162"><a href="#cb66-162"></a><span class="ss">-   </span>What's goofy about this / what do we need to fix?</span>
+<span id="cb66-163"><a href="#cb66-163"></a><span class="ss">-   </span>More specifically, what different categories does the <span class="in">`color`</span> variable take, and how many movies fall into each of these categories?</span>
+<span id="cb66-164"><a href="#cb66-164"></a></span>
+<span id="cb66-167"><a href="#cb66-167"></a><span class="in">```{r}</span></span>
+<span id="cb66-168"><a href="#cb66-168"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-169"><a href="#cb66-169"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-170"><a href="#cb66-170"></a><span class="co">#There are in reality, three categories, but the difference in caps and spelling makes way more catgories, so that needs to be combined. </span></span>
+<span id="cb66-171"><a href="#cb66-171"></a><span class="in">```</span></span>
+<span id="cb66-172"><a href="#cb66-172"></a></span>
+<span id="cb66-173"><a href="#cb66-173"></a></span>
+<span id="cb66-174"><a href="#cb66-174"></a></span>
+<span id="cb66-175"><a href="#cb66-175"></a><span class="fu">### Exercise 5: Clean Data: Factor Variables 2 {.unnumbered}</span></span>
+<span id="cb66-176"><a href="#cb66-176"></a></span>
+<span id="cb66-177"><a href="#cb66-177"></a>When working with categorical variables like <span class="in">`color`</span>, the categories must be "clean", i.e. consistent and in the correct format. Let's make that happen.</span>
+<span id="cb66-178"><a href="#cb66-178"></a></span>
+<span id="cb66-179"><a href="#cb66-179"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-180"><a href="#cb66-180"></a></span>
+<span id="cb66-181"><a href="#cb66-181"></a>We *could* open the .csv file in, say, Excel or Google sheets, clean up the <span class="in">`color`</span> variable, save a clean copy, and then reimport that into RStudio. BUT that would be the wrong thing to do. Why is it important to use R code, which we then save inside this qmd, to clean our data?</span>
+<span id="cb66-182"><a href="#cb66-182"></a></span>
+<span id="cb66-183"><a href="#cb66-183"></a>So that the original data is untouched and others can reproduce the steps we make.</span>
+<span id="cb66-184"><a href="#cb66-184"></a></span>
+<span id="cb66-185"><a href="#cb66-185"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-186"><a href="#cb66-186"></a></span>
+<span id="cb66-187"><a href="#cb66-187"></a>Let's use R code to change the <span class="in">`color`</span> variable so that it appropriately combines the various categories into only 2: <span class="in">`Color`</span> and <span class="in">`Black_White`</span>. We've learned a couple sets of string-related tools that could be handy here. First, starting with the <span class="in">`imdb_messy`</span> data, change the <span class="in">`color`</span> variable using one of the functions we learned in the **Factors** lesson.</span>
+<span id="cb66-188"><a href="#cb66-188"></a></span>
+<span id="cb66-189"><a href="#cb66-189"></a><span class="in">`fct_relevel()`</span>, <span class="in">`fct_recode()`</span>, <span class="in">`fct_reorder()`</span></span>
+<span id="cb66-190"><a href="#cb66-190"></a></span>
+<span id="cb66-191"><a href="#cb66-191"></a>Store your results in <span class="in">`imdb_temp`</span> (don't overwrite <span class="in">`imdb_messy`</span>). To check your work, print out a <span class="in">`count()`</span> table of the <span class="in">`color`</span> variable in <span class="in">`imdb_temp`</span>.</span>
+<span id="cb66-192"><a href="#cb66-192"></a></span>
+<span id="cb66-195"><a href="#cb66-195"></a><span class="in">```{r}</span></span>
+<span id="cb66-196"><a href="#cb66-196"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-197"><a href="#cb66-197"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
+<span id="cb66-198"><a href="#cb66-198"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
+<span id="cb66-199"><a href="#cb66-199"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
+<span id="cb66-200"><a href="#cb66-200"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
+<span id="cb66-201"><a href="#cb66-201"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
+<span id="cb66-202"><a href="#cb66-202"></a></span>
+<span id="cb66-203"><a href="#cb66-203"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-204"><a href="#cb66-204"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-205"><a href="#cb66-205"></a><span class="in">```</span></span>
+<span id="cb66-206"><a href="#cb66-206"></a></span>
+<span id="cb66-207"><a href="#cb66-207"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-208"><a href="#cb66-208"></a></span>
+<span id="cb66-209"><a href="#cb66-209"></a>Repeat Part b using one of our string functions from the **String** lesson:</span>
+<span id="cb66-210"><a href="#cb66-210"></a></span>
+<span id="cb66-211"><a href="#cb66-211"></a><span class="in">`str_replace()`</span>, <span class="in">`str_replace_all()`</span>, <span class="in">`str_to_lower()`</span>, <span class="in">`str_sub()`</span>, <span class="in">`str_length()`</span>, <span class="in">`str_detect()`</span></span>
+<span id="cb66-212"><a href="#cb66-212"></a></span>
+<span id="cb66-215"><a href="#cb66-215"></a><span class="in">```{r}</span></span>
+<span id="cb66-216"><a href="#cb66-216"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-217"><a href="#cb66-217"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb66-218"><a href="#cb66-218"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb66-219"><a href="#cb66-219"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
+<span id="cb66-220"><a href="#cb66-220"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
+<span id="cb66-221"><a href="#cb66-221"></a></span>
+<span id="cb66-222"><a href="#cb66-222"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-223"><a href="#cb66-223"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-224"><a href="#cb66-224"></a><span class="in">```</span></span>
+<span id="cb66-225"><a href="#cb66-225"></a></span>
+<span id="cb66-226"><a href="#cb66-226"></a></span>
+<span id="cb66-227"><a href="#cb66-227"></a><span class="fu">### Exercise 6: Clean Data: Missing Data 1 {.unnumbered}</span></span>
+<span id="cb66-228"><a href="#cb66-228"></a></span>
+<span id="cb66-229"><a href="#cb66-229"></a>Throughout these exercises, you've probably noticed that there's a bunch of missing data. This is encoded as <span class="in">`NA`</span> (not available) in R. There are a few questions to address about missing data:</span>
+<span id="cb66-230"><a href="#cb66-230"></a></span>
+<span id="cb66-231"><a href="#cb66-231"></a><span class="ss">-   </span>*How many* values are missing data? What's the volume of the missingness?</span>
+<span id="cb66-232"><a href="#cb66-232"></a><span class="ss">-   </span>*Why* are some values missing?</span>
+<span id="cb66-233"><a href="#cb66-233"></a><span class="ss">-   </span>*What* should we do about the missing values?</span>
+<span id="cb66-234"><a href="#cb66-234"></a></span>
+<span id="cb66-235"><a href="#cb66-235"></a>Let's consider the first 2 questions in this exercise.</span>
+<span id="cb66-236"><a href="#cb66-236"></a></span>
+<span id="cb66-237"><a href="#cb66-237"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-238"><a href="#cb66-238"></a></span>
+<span id="cb66-239"><a href="#cb66-239"></a>As a first step, let's simply understand the *volume* of NAs. Specifically:</span>
+<span id="cb66-240"><a href="#cb66-240"></a></span>
+<span id="cb66-243"><a href="#cb66-243"></a><span class="in">```{r}</span></span>
+<span id="cb66-244"><a href="#cb66-244"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
+<span id="cb66-245"><a href="#cb66-245"></a><span class="co">#___(imdb_messy)</span></span>
+<span id="cb66-246"><a href="#cb66-246"></a><span class="fu">nrow</span>(imdb_messy)</span>
+<span id="cb66-247"><a href="#cb66-247"></a></span>
+<span id="cb66-248"><a href="#cb66-248"></a><span class="co"># Then count the number of NAs in each column</span></span>
+<span id="cb66-249"><a href="#cb66-249"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span>
+<span id="cb66-250"><a href="#cb66-250"></a></span>
+<span id="cb66-251"><a href="#cb66-251"></a><span class="co"># Then count the number of NAs in a specific column</span></span>
+<span id="cb66-252"><a href="#cb66-252"></a><span class="co">#imdb_messy |&gt; </span></span>
+<span id="cb66-253"><a href="#cb66-253"></a><span class="co">#  ___(___(is.na(actor_1_facebook_likes)))</span></span>
+<span id="cb66-254"><a href="#cb66-254"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-255"><a href="#cb66-255"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
+<span id="cb66-256"><a href="#cb66-256"></a><span class="in">```</span></span>
+<span id="cb66-257"><a href="#cb66-257"></a></span>
+<span id="cb66-258"><a href="#cb66-258"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-259"><a href="#cb66-259"></a></span>
+<span id="cb66-260"><a href="#cb66-260"></a>As a second step, let's think about *why* some values are missing. Study the individual observations with NAs carefully. Why do you think they are missing? Are certain films more likely to have more NAs than others?</span>
+<span id="cb66-261"><a href="#cb66-261"></a>Some categories that don't have data or are more likely to have NAs, like budget is more like to contain NAs than movie title - all the movies in the data set have a title, else they wouldn't be listed.</span>
+<span id="cb66-262"><a href="#cb66-262"></a></span>
+<span id="cb66-263"><a href="#cb66-263"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-264"><a href="#cb66-264"></a></span>
+<span id="cb66-265"><a href="#cb66-265"></a>Consider a more specific example. Obtain a dataset of movies that are missing data on <span class="in">`actor_1_facebook_likes`</span>. Then explain why you think there are NAs. HINT: <span class="in">`is.na(___)`</span></span>
+<span id="cb66-266"><a href="#cb66-266"></a></span>
+<span id="cb66-269"><a href="#cb66-269"></a><span class="in">```{r}</span></span>
+<span id="cb66-270"><a href="#cb66-270"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-271"><a href="#cb66-271"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
+<span id="cb66-272"><a href="#cb66-272"></a><span class="in">```</span></span>
+<span id="cb66-273"><a href="#cb66-273"></a></span>
+<span id="cb66-274"><a href="#cb66-274"></a></span>
+<span id="cb66-275"><a href="#cb66-275"></a></span>
+<span id="cb66-276"><a href="#cb66-276"></a><span class="fu">### Exercise 7: Clean Data: Missing Data 2 {.unnumbered}</span></span>
+<span id="cb66-277"><a href="#cb66-277"></a></span>
+<span id="cb66-278"><a href="#cb66-278"></a>Next, let's think about what to *do* about the missing values. There is no perfect or universal approach here. Rather, we must think carefully about...</span>
+<span id="cb66-279"><a href="#cb66-279"></a></span>
+<span id="cb66-280"><a href="#cb66-280"></a><span class="ss">-   </span>Why the values are missing?</span>
+<span id="cb66-281"><a href="#cb66-281"></a><span class="ss">-   </span>What we want to do with our data?</span>
+<span id="cb66-282"><a href="#cb66-282"></a><span class="ss">-   </span>What is the impact of removing or replacing missing data on our work / conclusions?</span>
+<span id="cb66-283"><a href="#cb66-283"></a></span>
+<span id="cb66-284"><a href="#cb66-284"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-285"><a href="#cb66-285"></a></span>
+<span id="cb66-286"><a href="#cb66-286"></a>Calculate the average duration of a film. THINK: How can we deal with the NA's?</span>
+<span id="cb66-287"><a href="#cb66-287"></a></span>
+<span id="cb66-290"><a href="#cb66-290"></a><span class="in">```{r}</span></span>
+<span id="cb66-291"><a href="#cb66-291"></a> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-292"><a href="#cb66-292"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb66-293"><a href="#cb66-293"></a><span class="in">```</span></span>
+<span id="cb66-294"><a href="#cb66-294"></a></span>
+<span id="cb66-295"><a href="#cb66-295"></a>Follow-up:</span>
+<span id="cb66-296"><a href="#cb66-296"></a></span>
+<span id="cb66-297"><a href="#cb66-297"></a>How are the NAs dealt with here? Did we have to create and save a new dataset in order to do this analysis?</span>
+<span id="cb66-298"><a href="#cb66-298"></a>We just removed the NAs from the data calculations.</span>
+<span id="cb66-299"><a href="#cb66-299"></a></span>
+<span id="cb66-300"><a href="#cb66-300"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-301"><a href="#cb66-301"></a></span>
+<span id="cb66-302"><a href="#cb66-302"></a>Try out the <span class="in">`drop_na()`</span> function:</span>
+<span id="cb66-303"><a href="#cb66-303"></a></span>
+<span id="cb66-306"><a href="#cb66-306"></a><span class="in">```{r}</span></span>
+<span id="cb66-307"><a href="#cb66-307"></a><span class="co"># imdb_temp &lt;- drop_na(imdb_messy)</span></span>
+<span id="cb66-308"><a href="#cb66-308"></a></span>
+<span id="cb66-309"><a href="#cb66-309"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
+<span id="cb66-310"><a href="#cb66-310"></a><span class="fu">nrow</span>(imdb_temp)</span>
+<span id="cb66-311"><a href="#cb66-311"></a></span>
+<span id="cb66-312"><a href="#cb66-312"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span>
+<span id="cb66-313"><a href="#cb66-313"></a></span>
+<span id="cb66-314"><a href="#cb66-314"></a><span class="in">```</span></span>
+<span id="cb66-315"><a href="#cb66-315"></a></span>
+<span id="cb66-316"><a href="#cb66-316"></a>Follow-up questions:</span>
+<span id="cb66-317"><a href="#cb66-317"></a></span>
+<span id="cb66-318"><a href="#cb66-318"></a><span class="ss">-   </span>What did <span class="in">`drop_na()`</span> do? How many data points are left?</span>
+<span id="cb66-319"><a href="#cb66-319"></a>Gets rid of all movies with an NA which only leaves 3756 movies. </span>
+<span id="cb66-320"><a href="#cb66-320"></a><span class="ss">-   </span>In what situations might this function be a good idea?</span>
+<span id="cb66-321"><a href="#cb66-321"></a>When we need complete analysis but it's very harsh.</span>
+<span id="cb66-322"><a href="#cb66-322"></a><span class="ss">-   </span>In what situations might this function be a bad idea?</span>
+<span id="cb66-323"><a href="#cb66-323"></a>When the data can still be used even when incomplete.</span>
+<span id="cb66-324"><a href="#cb66-324"></a></span>
+<span id="cb66-325"><a href="#cb66-325"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-326"><a href="#cb66-326"></a></span>
+<span id="cb66-327"><a href="#cb66-327"></a><span class="in">`drop_na()`</span> removes data points that have *any* NA values, even if we don't care about the variable(s) for which data is missing. This can result in losing a lot of data points that *do* have data on the variables we actually care about! For example, suppose we only want to explore the relationship between film <span class="in">`duration`</span> and whether it's in <span class="in">`color`</span>. Check out a plot:</span>
+<span id="cb66-328"><a href="#cb66-328"></a></span>
+<span id="cb66-331"><a href="#cb66-331"></a><span class="in">```{r}</span></span>
+<span id="cb66-332"><a href="#cb66-332"></a> <span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
+<span id="cb66-333"><a href="#cb66-333"></a>   <span class="fu">geom_density</span>()</span>
+<span id="cb66-334"><a href="#cb66-334"></a><span class="in">```</span></span>
+<span id="cb66-335"><a href="#cb66-335"></a></span>
+<span id="cb66-336"><a href="#cb66-336"></a>Follow-up:</span>
+<span id="cb66-337"><a href="#cb66-337"></a></span>
+<span id="cb66-338"><a href="#cb66-338"></a><span class="ss">-   </span>Create a new dataset with *only* and *all* movies that have complete info on <span class="in">`duration`</span> and <span class="in">`color`</span>. HINT: You could use <span class="in">`!is.na(___)`</span> or <span class="in">`drop_na()`</span> (differently than above)</span>
+<span id="cb66-339"><a href="#cb66-339"></a><span class="ss">-   </span>Use this new dataset to create a new and improved plot.</span>
+<span id="cb66-340"><a href="#cb66-340"></a><span class="ss">-   </span>How many movies remain in your new dataset? Hence why this is better than using the dataset from part b?</span>
+<span id="cb66-341"><a href="#cb66-341"></a></span>
+<span id="cb66-344"><a href="#cb66-344"></a><span class="in">```{r}</span></span>
+<span id="cb66-345"><a href="#cb66-345"></a><span class="co"># 1</span></span>
+<span id="cb66-346"><a href="#cb66-346"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-347"><a href="#cb66-347"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
+<span id="cb66-348"><a href="#cb66-348"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb66-349"><a href="#cb66-349"></a><span class="fu">dim</span>(imdb_temp)</span>
+<span id="cb66-350"><a href="#cb66-350"></a></span>
+<span id="cb66-351"><a href="#cb66-351"></a><span class="co"># 2</span></span>
+<span id="cb66-352"><a href="#cb66-352"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-353"><a href="#cb66-353"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
+<span id="cb66-354"><a href="#cb66-354"></a><span class="fu">dim</span>(imdb_temp)</span>
+<span id="cb66-355"><a href="#cb66-355"></a></span>
+<span id="cb66-356"><a href="#cb66-356"></a><span class="co"># Plot it</span></span>
+<span id="cb66-357"><a href="#cb66-357"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb66-358"><a href="#cb66-358"></a>  <span class="fu">geom_density</span>()</span>
+<span id="cb66-359"><a href="#cb66-359"></a><span class="in">```</span></span>
+<span id="cb66-360"><a href="#cb66-360"></a></span>
+<span id="cb66-361"><a href="#cb66-361"></a><span class="fu">#### Part d {.unnumbered}</span></span>
+<span id="cb66-362"><a href="#cb66-362"></a></span>
+<span id="cb66-363"><a href="#cb66-363"></a>In some cases, missing data is more *non*-data than *unknown* data. For example, the films with NAs for `actor_1_facebook_likes` actually have *0* Facebook likes--they don't even have actors! In these cases, we can *replace* the NAs with a 0. Use the <span class="in">`replace_na()`</span> function to create a new dataset (<span class="in">`imdb_temp`</span>) that replaces the NAs in <span class="in">`actor_1_facebook_likes`</span> with 0. You'll have to check out the help file for this function.</span>
+<span id="cb66-364"><a href="#cb66-364"></a></span>
+<span id="cb66-367"><a href="#cb66-367"></a><span class="in">```{r}</span></span>
+<span id="cb66-368"><a href="#cb66-368"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-369"><a href="#cb66-369"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
+<span id="cb66-370"><a href="#cb66-370"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
+<span id="cb66-371"><a href="#cb66-371"></a></span>
+<span id="cb66-372"><a href="#cb66-372"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-373"><a href="#cb66-373"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span>
+<span id="cb66-374"><a href="#cb66-374"></a><span class="in">```</span></span>
+<span id="cb66-375"><a href="#cb66-375"></a></span>
+<span id="cb66-376"><a href="#cb66-376"></a></span>
+<span id="cb66-377"><a href="#cb66-377"></a><span class="fu">### Exercise 8: New Data + Projects {.unnumbered}</span></span>
+<span id="cb66-378"><a href="#cb66-378"></a></span>
+<span id="cb66-379"><a href="#cb66-379"></a>Let's practice the above ideas while also planting some seeds for the course project. Each group will pick and analyze their own dataset. The people you're sitting with today aren't necessarily your project groups! BUT do some brainstorming together:</span>
+<span id="cb66-380"><a href="#cb66-380"></a></span>
+<span id="cb66-381"><a href="#cb66-381"></a><span class="ss">-   </span>Share with each other: What are some personal hobbies or passions or things you've been thinking about or things you'd like to learn more about? Don't think too hard about this! Just share what's at the top of mind today.</span>
+<span id="cb66-382"><a href="#cb66-382"></a></span>
+<span id="cb66-383"><a href="#cb66-383"></a><span class="ss">-   </span>Each individual: Find a dataset online that's related to one of the topics you shared in the above prompt.</span>
+<span id="cb66-384"><a href="#cb66-384"></a><span class="ss">-   </span>Discuss what data you found with your group!</span>
+<span id="cb66-385"><a href="#cb66-385"></a><span class="ss">-   </span>Load the data into RStudio, perform some basic checks, and perform some preliminary cleaning, as necessary.</span>
+<span id="cb66-386"><a href="#cb66-386"></a></span>
+<span id="cb66-387"><a href="#cb66-387"></a></span>
+<span id="cb66-388"><a href="#cb66-388"></a></span>
+<span id="cb66-389"><a href="#cb66-389"></a><span class="fu">## Solutions</span></span>
+<span id="cb66-390"><a href="#cb66-390"></a></span>
+<span id="cb66-391"><a href="#cb66-391"></a>&lt;details&gt;</span>
+<span id="cb66-392"><a href="#cb66-392"></a></span>
+<span id="cb66-393"><a href="#cb66-393"></a>&lt;summary&gt;Click for Solutions&lt;/summary&gt;</span>
+<span id="cb66-394"><a href="#cb66-394"></a></span>
+<span id="cb66-395"><a href="#cb66-395"></a><span class="in">```{r echo = FALSE}</span></span>
+<span id="cb66-396"><a href="#cb66-396"></a><span class="in">imdb_messy &lt;- read_csv("../data/imdb_5000_messy.csv")</span></span>
+<span id="cb66-397"><a href="#cb66-397"></a><span class="in">```</span></span>
+<span id="cb66-398"><a href="#cb66-398"></a></span>
+<span id="cb66-399"><a href="#cb66-399"></a><span class="fu">### Exercise 3: Check Data {.unnumbered}</span></span>
+<span id="cb66-400"><a href="#cb66-400"></a></span>
+<span id="cb66-401"><a href="#cb66-401"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-402"><a href="#cb66-402"></a></span>
+<span id="cb66-403"><a href="#cb66-403"></a>There are many NA's, the <span class="in">`color`</span> variable is goofy...</span>
+<span id="cb66-404"><a href="#cb66-404"></a></span>
+<span id="cb66-407"><a href="#cb66-407"></a><span class="in">```{r}</span></span>
+<span id="cb66-408"><a href="#cb66-408"></a>imdb_messy <span class="sc">|&gt;</span></span>
+<span id="cb66-409"><a href="#cb66-409"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), as.factor)) <span class="sc">|&gt;</span>  <span class="co"># convert characters to factors in order to summarize</span></span>
+<span id="cb66-410"><a href="#cb66-410"></a>  <span class="fu">summary</span>()</span>
+<span id="cb66-411"><a href="#cb66-411"></a><span class="in">```</span></span>
+<span id="cb66-412"><a href="#cb66-412"></a></span>
+<span id="cb66-413"><a href="#cb66-413"></a></span>
+<span id="cb66-414"><a href="#cb66-414"></a></span>
+<span id="cb66-415"><a href="#cb66-415"></a><span class="fu">### Exercise 4: Clean Data: Factor Variables 1 {.unnumbered}</span></span>
+<span id="cb66-416"><a href="#cb66-416"></a></span>
+<span id="cb66-419"><a href="#cb66-419"></a><span class="in">```{r}</span></span>
+<span id="cb66-420"><a href="#cb66-420"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-421"><a href="#cb66-421"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-422"><a href="#cb66-422"></a><span class="in">```</span></span>
+<span id="cb66-423"><a href="#cb66-423"></a></span>
+<span id="cb66-424"><a href="#cb66-424"></a></span>
+<span id="cb66-425"><a href="#cb66-425"></a></span>
+<span id="cb66-426"><a href="#cb66-426"></a><span class="fu">### Exercise 5: Clean Data: Factor Variables 2 {.unnumbered}</span></span>
+<span id="cb66-427"><a href="#cb66-427"></a></span>
+<span id="cb66-428"><a href="#cb66-428"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-429"><a href="#cb66-429"></a></span>
+<span id="cb66-430"><a href="#cb66-430"></a>That wouldn't be **reproducible**. It's important to log all steps in our data cleaning, so that we and others know and could reproduce those steps.</span>
+<span id="cb66-431"><a href="#cb66-431"></a></span>
+<span id="cb66-432"><a href="#cb66-432"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-433"><a href="#cb66-433"></a></span>
+<span id="cb66-436"><a href="#cb66-436"></a><span class="in">```{r}</span></span>
+<span id="cb66-437"><a href="#cb66-437"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-438"><a href="#cb66-438"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">fct_recode</span>(color,</span>
+<span id="cb66-439"><a href="#cb66-439"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"COLOR"</span>,</span>
+<span id="cb66-440"><a href="#cb66-440"></a>                            <span class="st">"Color"</span> <span class="ot">=</span> <span class="st">"color"</span>,</span>
+<span id="cb66-441"><a href="#cb66-441"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"B&amp;W"</span>,</span>
+<span id="cb66-442"><a href="#cb66-442"></a>                            <span class="st">"Black_White"</span> <span class="ot">=</span> <span class="st">"Black and White"</span>))</span>
+<span id="cb66-443"><a href="#cb66-443"></a></span>
+<span id="cb66-444"><a href="#cb66-444"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-445"><a href="#cb66-445"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-446"><a href="#cb66-446"></a><span class="in">```</span></span>
+<span id="cb66-447"><a href="#cb66-447"></a></span>
+<span id="cb66-448"><a href="#cb66-448"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-449"><a href="#cb66-449"></a></span>
+<span id="cb66-452"><a href="#cb66-452"></a><span class="in">```{r}</span></span>
+<span id="cb66-453"><a href="#cb66-453"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-454"><a href="#cb66-454"></a>  <span class="fu">mutate</span>(<span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"COLOR"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb66-455"><a href="#cb66-455"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"color"</span>, <span class="st">"Color"</span>),</span>
+<span id="cb66-456"><a href="#cb66-456"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"B&amp;W"</span>, <span class="st">"Black_White"</span>),</span>
+<span id="cb66-457"><a href="#cb66-457"></a>         <span class="at">color =</span> <span class="fu">str_replace</span>(color, <span class="st">"Black and White"</span>, <span class="st">"Black_White"</span>))</span>
+<span id="cb66-458"><a href="#cb66-458"></a></span>
+<span id="cb66-459"><a href="#cb66-459"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-460"><a href="#cb66-460"></a>  <span class="fu">count</span>(color)</span>
+<span id="cb66-461"><a href="#cb66-461"></a><span class="in">```</span></span>
+<span id="cb66-462"><a href="#cb66-462"></a></span>
+<span id="cb66-463"><a href="#cb66-463"></a></span>
+<span id="cb66-464"><a href="#cb66-464"></a></span>
+<span id="cb66-465"><a href="#cb66-465"></a><span class="fu">### Exercise 6: Clean Data: Missing Data 1 {.unnumbered}</span></span>
+<span id="cb66-466"><a href="#cb66-466"></a></span>
+<span id="cb66-467"><a href="#cb66-467"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-468"><a href="#cb66-468"></a></span>
+<span id="cb66-471"><a href="#cb66-471"></a><span class="in">```{r}</span></span>
+<span id="cb66-472"><a href="#cb66-472"></a><span class="co"># Count the total number of rows in imdb_messy</span></span>
+<span id="cb66-473"><a href="#cb66-473"></a><span class="fu">nrow</span>(imdb_messy)</span>
+<span id="cb66-474"><a href="#cb66-474"></a></span>
+<span id="cb66-475"><a href="#cb66-475"></a><span class="co"># Then count the number of NAs in each column</span></span>
+<span id="cb66-476"><a href="#cb66-476"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_messy))</span>
+<span id="cb66-477"><a href="#cb66-477"></a><span class="in">```</span></span>
+<span id="cb66-478"><a href="#cb66-478"></a></span>
+<span id="cb66-479"><a href="#cb66-479"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-480"><a href="#cb66-480"></a></span>
+<span id="cb66-481"><a href="#cb66-481"></a>These are all documentaries that don't have any actors.</span>
+<span id="cb66-482"><a href="#cb66-482"></a></span>
+<span id="cb66-485"><a href="#cb66-485"></a><span class="in">```{r}</span></span>
+<span id="cb66-486"><a href="#cb66-486"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-487"><a href="#cb66-487"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(actor_1_facebook_likes))</span>
+<span id="cb66-488"><a href="#cb66-488"></a><span class="in">```</span></span>
+<span id="cb66-489"><a href="#cb66-489"></a></span>
+<span id="cb66-490"><a href="#cb66-490"></a></span>
+<span id="cb66-491"><a href="#cb66-491"></a></span>
+<span id="cb66-492"><a href="#cb66-492"></a><span class="fu">### Exercise 7: Clean: Missing Data 2 {.unnumbered}</span></span>
+<span id="cb66-493"><a href="#cb66-493"></a></span>
+<span id="cb66-494"><a href="#cb66-494"></a><span class="fu">#### Part a {.unnumbered}</span></span>
+<span id="cb66-495"><a href="#cb66-495"></a></span>
+<span id="cb66-498"><a href="#cb66-498"></a><span class="in">```{r}</span></span>
+<span id="cb66-499"><a href="#cb66-499"></a>imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-500"><a href="#cb66-500"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(duration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb66-501"><a href="#cb66-501"></a><span class="in">```</span></span>
+<span id="cb66-502"><a href="#cb66-502"></a></span>
+<span id="cb66-503"><a href="#cb66-503"></a>Follow-up:</span>
+<span id="cb66-504"><a href="#cb66-504"></a></span>
+<span id="cb66-505"><a href="#cb66-505"></a>We just remove the NAs from the calculation. No need to entirely remove the related movies from the dataset.</span>
+<span id="cb66-506"><a href="#cb66-506"></a></span>
+<span id="cb66-507"><a href="#cb66-507"></a><span class="fu">#### Part b {.unnumbered}</span></span>
+<span id="cb66-508"><a href="#cb66-508"></a></span>
+<span id="cb66-509"><a href="#cb66-509"></a>This gets rid of any movie with any NAs. There are only 3756 movies left! This approach is heavy-handed. It's typically only a good idea when we need complete info on every variable for every part of our analysis.</span>
+<span id="cb66-510"><a href="#cb66-510"></a></span>
+<span id="cb66-513"><a href="#cb66-513"></a><span class="in">```{r}</span></span>
+<span id="cb66-514"><a href="#cb66-514"></a>imdb_temp <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(imdb_messy)</span>
+<span id="cb66-515"><a href="#cb66-515"></a><span class="fu">nrow</span>(imdb_temp)</span>
+<span id="cb66-516"><a href="#cb66-516"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(imdb_temp))</span>
+<span id="cb66-517"><a href="#cb66-517"></a><span class="in">```</span></span>
+<span id="cb66-518"><a href="#cb66-518"></a></span>
+<span id="cb66-519"><a href="#cb66-519"></a><span class="fu">#### Part c {.unnumbered}</span></span>
+<span id="cb66-520"><a href="#cb66-520"></a></span>
+<span id="cb66-523"><a href="#cb66-523"></a><span class="in">```{r}</span></span>
+<span id="cb66-524"><a href="#cb66-524"></a><span class="fu">ggplot</span>(imdb_messy, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb66-525"><a href="#cb66-525"></a>  <span class="fu">geom_density</span>()</span>
+<span id="cb66-526"><a href="#cb66-526"></a><span class="in">```</span></span>
+<span id="cb66-527"><a href="#cb66-527"></a></span>
+<span id="cb66-528"><a href="#cb66-528"></a>We keep most of the movies!</span>
+<span id="cb66-529"><a href="#cb66-529"></a></span>
+<span id="cb66-532"><a href="#cb66-532"></a><span class="in">```{r}</span></span>
+<span id="cb66-533"><a href="#cb66-533"></a><span class="co"># Approach 1</span></span>
+<span id="cb66-534"><a href="#cb66-534"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-535"><a href="#cb66-535"></a>  <span class="fu">select</span>(duration, color) <span class="sc">|&gt;</span> </span>
+<span id="cb66-536"><a href="#cb66-536"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb66-537"><a href="#cb66-537"></a><span class="fu">dim</span>(imdb_temp)</span>
+<span id="cb66-538"><a href="#cb66-538"></a></span>
+<span id="cb66-539"><a href="#cb66-539"></a><span class="co"># Approach 2</span></span>
+<span id="cb66-540"><a href="#cb66-540"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-541"><a href="#cb66-541"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(duration), <span class="sc">!</span><span class="fu">is.na</span>(color))</span>
+<span id="cb66-542"><a href="#cb66-542"></a><span class="fu">dim</span>(imdb_temp)</span>
+<span id="cb66-543"><a href="#cb66-543"></a></span>
+<span id="cb66-544"><a href="#cb66-544"></a><span class="co"># Plot</span></span>
+<span id="cb66-545"><a href="#cb66-545"></a><span class="fu">ggplot</span>(imdb_temp, <span class="fu">aes</span>(<span class="at">x =</span> duration, <span class="at">fill =</span> color)) <span class="sc">+</span></span>
+<span id="cb66-546"><a href="#cb66-546"></a>  <span class="fu">geom_density</span>()</span>
+<span id="cb66-547"><a href="#cb66-547"></a><span class="in">```</span></span>
+<span id="cb66-548"><a href="#cb66-548"></a></span>
+<span id="cb66-549"><a href="#cb66-549"></a><span class="fu">#### Part d {.unnumbered}</span></span>
+<span id="cb66-550"><a href="#cb66-550"></a></span>
+<span id="cb66-553"><a href="#cb66-553"></a><span class="in">```{r}</span></span>
+<span id="cb66-554"><a href="#cb66-554"></a>imdb_temp <span class="ot">&lt;-</span> imdb_messy <span class="sc">|&gt;</span> </span>
+<span id="cb66-555"><a href="#cb66-555"></a>  <span class="fu">mutate</span>(<span class="at">actor_1_facebook_likes =</span></span>
+<span id="cb66-556"><a href="#cb66-556"></a>         <span class="fu">replace_na</span>(actor_1_facebook_likes, <span class="dv">0</span>))</span>
+<span id="cb66-557"><a href="#cb66-557"></a></span>
+<span id="cb66-558"><a href="#cb66-558"></a>imdb_temp <span class="sc">|&gt;</span> </span>
+<span id="cb66-559"><a href="#cb66-559"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(actor_1_facebook_likes)))</span>
+<span id="cb66-560"><a href="#cb66-560"></a><span class="in">```</span></span>
+<span id="cb66-561"><a href="#cb66-561"></a></span>
+<span id="cb66-562"><a href="#cb66-562"></a>&lt;/details&gt;</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
