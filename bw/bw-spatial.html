@@ -351,62 +351,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#Load packaages</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(<span class="st">"tibble"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(ggmap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>ℹ Google's Terms of Service: &lt;https://mapsplatform.google.com&gt;
-  Stadia Maps' Terms of Service: &lt;https://stadiamaps.com/terms-of-service/&gt;
-  OpenStreetMap's Tile Usage Policy: &lt;https://operations.osmfoundation.org/policies/tiles/&gt;
-ℹ Please cite ggmap if you use it! Use `citation("ggmap")` for details.</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'
-
-The following objects are masked from 'package:stats':
-
-    filter, lag
-
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(<span class="st">"rnaturalearth"</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">library</span>(ggmap)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">library</span>(<span class="st">"rnaturalearth"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">addMarkers</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Assuming "long" and "lat" are longitude and latitude, respectively</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-2dd13cd8d8abfbf020e7" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-2dd13cd8d8abfbf020e7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,33.047826,32.754349,39.689367,45.518796,35.098119,39.996407,39.729449,39.587974,41.400873],[-93.1712321,-116.910632,-117.196867,-104.980954,-122.707993,-106.618545,-105.308957,-105.248476,-105.64186,-124.065181],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[32.754349,45.518796],"lng":[-124.065181,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">addMarkers</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-5956e4c58dceb3d83edc" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5956e4c58dceb3d83edc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,33.047826,32.754349,39.689367,45.518796,35.098119,39.996407,39.729449,39.587974,41.400873],[-93.1712321,-116.910632,-117.196867,-104.980954,-122.707993,-106.618545,-105.308957,-105.248476,-105.64186,-124.065181],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[32.754349,45.518796],"lng":[-124.065181,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">addMarkers</span>(<span class="at">popup =</span> <span class="sc">~</span>place, <span class="at">label =</span> <span class="sc">~</span>place) <span class="sc">|&gt;</span> </span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">addControl</span>(</span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="at">html =</span> <span class="st">"&lt;h2 style='font-family: Times New Roman; text-align: center; color: purple;'&gt;Rachel's Favorite Places Map&lt;/h2&gt;"</span>, </span>
-<span id="cb9-6"><a href="#cb9-6"></a>    <span class="at">position =</span> <span class="st">"topleft"</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a>  ) <span class="sc">|&gt;</span>  </span>
-<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">addLegend</span>(</span>
-<span id="cb9-9"><a href="#cb9-9"></a>    <span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
-<span id="cb9-10"><a href="#cb9-10"></a>    <span class="at">title =</span> <span class="st">"Legend"</span>,</span>
-<span id="cb9-11"><a href="#cb9-11"></a>    <span class="at">labels =</span> <span class="st">"Favorite Places"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12"></a>    <span class="at">colors =</span> <span class="st">"blue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Assuming "long" and "lat" are longitude and latitude, respectively</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-c3c1925497cc0c9590b2" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-c3c1925497cc0c9590b2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,33.047826,32.754349,39.689367,45.518796,35.098119,39.996407,39.729449,39.587974,41.400873],[-93.1712321,-116.910632,-117.196867,-104.980954,-122.707993,-106.618545,-105.308957,-105.248476,-105.64186,-124.065181],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Macalester College","Ramona California","Old Town San Diego","Ototo","Portland Japanese Garden","ABQ Golf Course","Boulder Hiking","Lookout Mountain","Mt Blue Sky","Fern Canyon"],null,null,null,["Macalester College","Ramona California","Old Town San Diego","Ototo","Portland Japanese Garden","ABQ Golf Course","Boulder Hiking","Lookout Mountain","Mt Blue Sky","Fern Canyon"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addControl","args":["<h2 style='font-family: Times New Roman; text-align: center; color: purple;'>Rachel's Favorite Places Map<\/h2>","topleft",null,"info legend"]},{"method":"addLegend","args":[{"colors":["blue"],"labels":["Favorite Places"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"unknown","title":"Legend","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[32.754349,45.518796],"lng":[-124.065181,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">addMarkers</span>(<span class="at">popup =</span> <span class="sc">~</span>place, <span class="at">label =</span> <span class="sc">~</span>place) <span class="sc">|&gt;</span> </span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">addControl</span>(</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="at">html =</span> <span class="st">"&lt;h2 style='font-family: Times New Roman; text-align: center; color: purple;'&gt;Rachel's Favorite Places Map&lt;/h2&gt;"</span>, </span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="at">position =</span> <span class="st">"topleft"</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  ) <span class="sc">|&gt;</span>  </span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">addLegend</span>(</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    <span class="at">title =</span> <span class="st">"Legend"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="at">labels =</span> <span class="st">"Favorite Places"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="at">colors =</span> <span class="st">"blue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-d52ed0ee4b12be9db4ac" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d52ed0ee4b12be9db4ac">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[44.9378965,33.047826,32.754349,39.689367,45.518796,35.098119,39.996407,39.729449,39.587974,41.400873],[-93.1712321,-116.910632,-117.196867,-104.980954,-122.707993,-106.618545,-105.308957,-105.248476,-105.64186,-124.065181],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Macalester College","Ramona California","Old Town San Diego","Ototo","Portland Japanese Garden","ABQ Golf Course","Boulder Hiking","Lookout Mountain","Mt Blue Sky","Fern Canyon"],null,null,null,["Macalester College","Ramona California","Old Town San Diego","Ototo","Portland Japanese Garden","ABQ Golf Course","Boulder Hiking","Lookout Mountain","Mt Blue Sky","Fern Canyon"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addControl","args":["<h2 style='font-family: Times New Roman; text-align: center; color: purple;'>Rachel's Favorite Places Map<\/h2>","topleft",null,"info legend"]},{"method":"addLegend","args":[{"colors":["blue"],"labels":["Favorite Places"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"unknown","title":"Legend","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[32.754349,45.518796],"lng":[-124.065181,-93.1712321]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -1044,68 +1020,68 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">---</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="an">title:</span><span class="co"> "Spatial Viz"</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="co">---</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a>Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</span>
-<span id="cb11-6"><a href="#cb11-6"></a></span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="in">```{r}</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="co">#Rachel's favorite places in the U.S. - used google maps for coordinates</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a></span>
-<span id="cb11-12"><a href="#cb11-12"></a>favorite_stp <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span> (</span>
-<span id="cb11-13"><a href="#cb11-13"></a>  <span class="sc">~</span>place, <span class="sc">~</span>long, <span class="sc">~</span>lat, <span class="sc">~</span>favorite,</span>
-<span id="cb11-14"><a href="#cb11-14"></a>  <span class="st">"Macalester College"</span>, <span class="sc">-</span><span class="fl">93.1712321</span>, <span class="fl">44.9378965</span>, <span class="st">"no"</span>,</span>
-<span id="cb11-15"><a href="#cb11-15"></a>  <span class="st">"Ramona California"</span>, <span class="sc">-</span><span class="fl">116.910632</span>, <span class="fl">33.047826</span>, <span class="st">"yes"</span>,</span>
-<span id="cb11-16"><a href="#cb11-16"></a>  <span class="st">"Old Town San Diego"</span>, <span class="sc">-</span><span class="fl">117.196867</span>, <span class="fl">32.754349</span>, <span class="st">"no"</span>,</span>
-<span id="cb11-17"><a href="#cb11-17"></a>  <span class="st">"Ototo"</span>, <span class="sc">-</span><span class="fl">104.980954</span>, <span class="fl">39.689367</span>, <span class="st">"yes"</span>, </span>
-<span id="cb11-18"><a href="#cb11-18"></a>  <span class="st">"Portland Japanese Garden"</span>,<span class="sc">-</span><span class="fl">122.707993</span>, <span class="fl">45.518796</span>, <span class="st">"no"</span>,</span>
-<span id="cb11-19"><a href="#cb11-19"></a>  <span class="st">"ABQ Golf Course"</span>, <span class="sc">-</span><span class="fl">106.618545</span>, <span class="fl">35.098119</span>, <span class="st">"yes"</span>, </span>
-<span id="cb11-20"><a href="#cb11-20"></a>  <span class="st">"Boulder Hiking"</span>, <span class="sc">-</span><span class="fl">105.308957</span>, <span class="fl">39.996407</span>, <span class="st">"no"</span>, </span>
-<span id="cb11-21"><a href="#cb11-21"></a>  <span class="st">"Lookout Mountain"</span>, <span class="sc">-</span><span class="fl">105.248476</span>, <span class="fl">39.729449</span>, <span class="st">"no"</span>,</span>
-<span id="cb11-22"><a href="#cb11-22"></a>  <span class="st">"Mt Blue Sky"</span>, <span class="sc">-</span><span class="fl">105.641860</span>, <span class="fl">39.587974</span>, <span class="st">"no"</span>,</span>
-<span id="cb11-23"><a href="#cb11-23"></a>  <span class="st">"Fern Canyon"</span>, <span class="sc">-</span><span class="fl">124.065181</span>, <span class="fl">41.400873</span>, <span class="st">"no"</span>)</span>
-<span id="cb11-24"><a href="#cb11-24"></a></span>
-<span id="cb11-25"><a href="#cb11-25"></a><span class="in">```</span></span>
-<span id="cb11-26"><a href="#cb11-26"></a></span>
-<span id="cb11-29"><a href="#cb11-29"></a><span class="in">```{r}</span></span>
-<span id="cb11-30"><a href="#cb11-30"></a><span class="co">#Load packaages</span></span>
-<span id="cb11-31"><a href="#cb11-31"></a><span class="fu">library</span>(<span class="st">"tibble"</span>)</span>
-<span id="cb11-32"><a href="#cb11-32"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb11-33"><a href="#cb11-33"></a><span class="fu">library</span>(ggmap)</span>
-<span id="cb11-34"><a href="#cb11-34"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb11-35"><a href="#cb11-35"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb11-36"><a href="#cb11-36"></a><span class="fu">library</span>(<span class="st">"rnaturalearth"</span>)</span>
-<span id="cb11-37"><a href="#cb11-37"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb11-38"><a href="#cb11-38"></a></span>
-<span id="cb11-39"><a href="#cb11-39"></a><span class="in">```</span></span>
-<span id="cb11-40"><a href="#cb11-40"></a></span>
-<span id="cb11-41"><a href="#cb11-41"></a></span>
-<span id="cb11-42"><a href="#cb11-42"></a></span>
-<span id="cb11-43"><a href="#cb11-43"></a></span>
-<span id="cb11-44"><a href="#cb11-44"></a></span>
-<span id="cb11-47"><a href="#cb11-47"></a><span class="in">```{r}</span></span>
-<span id="cb11-48"><a href="#cb11-48"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
-<span id="cb11-49"><a href="#cb11-49"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb11-50"><a href="#cb11-50"></a>  <span class="fu">addMarkers</span>()</span>
-<span id="cb11-51"><a href="#cb11-51"></a><span class="in">```</span></span>
-<span id="cb11-52"><a href="#cb11-52"></a></span>
-<span id="cb11-53"><a href="#cb11-53"></a></span>
-<span id="cb11-56"><a href="#cb11-56"></a><span class="in">```{r}</span></span>
-<span id="cb11-57"><a href="#cb11-57"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
-<span id="cb11-58"><a href="#cb11-58"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb11-59"><a href="#cb11-59"></a>  <span class="fu">addMarkers</span>(<span class="at">popup =</span> <span class="sc">~</span>place, <span class="at">label =</span> <span class="sc">~</span>place) <span class="sc">|&gt;</span> </span>
-<span id="cb11-60"><a href="#cb11-60"></a>  <span class="fu">addControl</span>(</span>
-<span id="cb11-61"><a href="#cb11-61"></a>    <span class="at">html =</span> <span class="st">"&lt;h2 style='font-family: Times New Roman; text-align: center; color: purple;'&gt;Rachel's Favorite Places Map&lt;/h2&gt;"</span>, </span>
-<span id="cb11-62"><a href="#cb11-62"></a>    <span class="at">position =</span> <span class="st">"topleft"</span></span>
-<span id="cb11-63"><a href="#cb11-63"></a>  ) <span class="sc">|&gt;</span>  </span>
-<span id="cb11-64"><a href="#cb11-64"></a>  <span class="fu">addLegend</span>(</span>
-<span id="cb11-65"><a href="#cb11-65"></a>    <span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
-<span id="cb11-66"><a href="#cb11-66"></a>    <span class="at">title =</span> <span class="st">"Legend"</span>,</span>
-<span id="cb11-67"><a href="#cb11-67"></a>    <span class="at">labels =</span> <span class="st">"Favorite Places"</span>,</span>
-<span id="cb11-68"><a href="#cb11-68"></a>    <span class="at">colors =</span> <span class="st">"blue"</span>) </span>
-<span id="cb11-69"><a href="#cb11-69"></a></span>
-<span id="cb11-70"><a href="#cb11-70"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> "Spatial Viz"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">---</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="in">```{r}</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co">#Rachel's favorite places in the U.S. - used google maps for coordinates</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a></span>
+<span id="cb5-12"><a href="#cb5-12"></a>favorite_stp <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span> (</span>
+<span id="cb5-13"><a href="#cb5-13"></a>  <span class="sc">~</span>place, <span class="sc">~</span>long, <span class="sc">~</span>lat, <span class="sc">~</span>favorite,</span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="st">"Macalester College"</span>, <span class="sc">-</span><span class="fl">93.1712321</span>, <span class="fl">44.9378965</span>, <span class="st">"no"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15"></a>  <span class="st">"Ramona California"</span>, <span class="sc">-</span><span class="fl">116.910632</span>, <span class="fl">33.047826</span>, <span class="st">"yes"</span>,</span>
+<span id="cb5-16"><a href="#cb5-16"></a>  <span class="st">"Old Town San Diego"</span>, <span class="sc">-</span><span class="fl">117.196867</span>, <span class="fl">32.754349</span>, <span class="st">"no"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17"></a>  <span class="st">"Ototo"</span>, <span class="sc">-</span><span class="fl">104.980954</span>, <span class="fl">39.689367</span>, <span class="st">"yes"</span>, </span>
+<span id="cb5-18"><a href="#cb5-18"></a>  <span class="st">"Portland Japanese Garden"</span>,<span class="sc">-</span><span class="fl">122.707993</span>, <span class="fl">45.518796</span>, <span class="st">"no"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19"></a>  <span class="st">"ABQ Golf Course"</span>, <span class="sc">-</span><span class="fl">106.618545</span>, <span class="fl">35.098119</span>, <span class="st">"yes"</span>, </span>
+<span id="cb5-20"><a href="#cb5-20"></a>  <span class="st">"Boulder Hiking"</span>, <span class="sc">-</span><span class="fl">105.308957</span>, <span class="fl">39.996407</span>, <span class="st">"no"</span>, </span>
+<span id="cb5-21"><a href="#cb5-21"></a>  <span class="st">"Lookout Mountain"</span>, <span class="sc">-</span><span class="fl">105.248476</span>, <span class="fl">39.729449</span>, <span class="st">"no"</span>,</span>
+<span id="cb5-22"><a href="#cb5-22"></a>  <span class="st">"Mt Blue Sky"</span>, <span class="sc">-</span><span class="fl">105.641860</span>, <span class="fl">39.587974</span>, <span class="st">"no"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23"></a>  <span class="st">"Fern Canyon"</span>, <span class="sc">-</span><span class="fl">124.065181</span>, <span class="fl">41.400873</span>, <span class="st">"no"</span>)</span>
+<span id="cb5-24"><a href="#cb5-24"></a></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="in">```</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="in">```{r}</span></span>
+<span id="cb5-30"><a href="#cb5-30"></a><span class="co">#Load packaages</span></span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="fu">library</span>(<span class="st">"tibble"</span>)</span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="fu">library</span>(ggmap)</span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-35"><a href="#cb5-35"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="fu">library</span>(<span class="st">"rnaturalearth"</span>)</span>
+<span id="cb5-37"><a href="#cb5-37"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb5-38"><a href="#cb5-38"></a></span>
+<span id="cb5-39"><a href="#cb5-39"></a><span class="in">```</span></span>
+<span id="cb5-40"><a href="#cb5-40"></a></span>
+<span id="cb5-41"><a href="#cb5-41"></a></span>
+<span id="cb5-42"><a href="#cb5-42"></a></span>
+<span id="cb5-43"><a href="#cb5-43"></a></span>
+<span id="cb5-44"><a href="#cb5-44"></a></span>
+<span id="cb5-47"><a href="#cb5-47"></a><span class="in">```{r}</span></span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
+<span id="cb5-49"><a href="#cb5-49"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-50"><a href="#cb5-50"></a>  <span class="fu">addMarkers</span>()</span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="in">```</span></span>
+<span id="cb5-52"><a href="#cb5-52"></a></span>
+<span id="cb5-53"><a href="#cb5-53"></a></span>
+<span id="cb5-56"><a href="#cb5-56"></a><span class="in">```{r}</span></span>
+<span id="cb5-57"><a href="#cb5-57"></a><span class="fu">leaflet</span>(<span class="at">data =</span> favorite_stp) <span class="sc">|&gt;</span> </span>
+<span id="cb5-58"><a href="#cb5-58"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-59"><a href="#cb5-59"></a>  <span class="fu">addMarkers</span>(<span class="at">popup =</span> <span class="sc">~</span>place, <span class="at">label =</span> <span class="sc">~</span>place) <span class="sc">|&gt;</span> </span>
+<span id="cb5-60"><a href="#cb5-60"></a>  <span class="fu">addControl</span>(</span>
+<span id="cb5-61"><a href="#cb5-61"></a>    <span class="at">html =</span> <span class="st">"&lt;h2 style='font-family: Times New Roman; text-align: center; color: purple;'&gt;Rachel's Favorite Places Map&lt;/h2&gt;"</span>, </span>
+<span id="cb5-62"><a href="#cb5-62"></a>    <span class="at">position =</span> <span class="st">"topleft"</span></span>
+<span id="cb5-63"><a href="#cb5-63"></a>  ) <span class="sc">|&gt;</span>  </span>
+<span id="cb5-64"><a href="#cb5-64"></a>  <span class="fu">addLegend</span>(</span>
+<span id="cb5-65"><a href="#cb5-65"></a>    <span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb5-66"><a href="#cb5-66"></a>    <span class="at">title =</span> <span class="st">"Legend"</span>,</span>
+<span id="cb5-67"><a href="#cb5-67"></a>    <span class="at">labels =</span> <span class="st">"Favorite Places"</span>,</span>
+<span id="cb5-68"><a href="#cb5-68"></a>    <span class="at">colors =</span> <span class="st">"blue"</span>) </span>
+<span id="cb5-69"><a href="#cb5-69"></a></span>
+<span id="cb5-70"><a href="#cb5-70"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
