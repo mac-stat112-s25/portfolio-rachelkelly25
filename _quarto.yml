@@ -73,7 +73,7 @@ format:
 
 execute:
   cache: false
-  freeze: auto
+  freeze: false
   echo: true
   warning: false
   error: false
