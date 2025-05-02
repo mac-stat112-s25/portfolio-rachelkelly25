@@ -3,7 +3,7 @@ title: "Wrangling"
 format: html
 ---
 
-#Summary Sheet
+#Wrangling Summary Sheet
 
 ![Summary Sheet](../bw/Exam2_summary_sheet.jpg)
 

@@ -3,11 +3,8 @@ title: "Visualization"
 format: html
 ---
 
-## Original Summary Sheet
 
-![Original summary sheet](../bw/Summary_sheet_original.jpg)
-
-## Revised Summary Sheet
+## Visualization Summary Sheet
 
 ![Revised summary sheet](../bw/Summary_sheet_revised.jpg)
 
