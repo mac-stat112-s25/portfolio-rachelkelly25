@@ -434,7 +434,7 @@ $ geometry &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-109.0603 3..., MULTIPOLYGO
 </div>
 </div>
 </div>
-<p>I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/</p>
+<p>I used this website to walk me through some of the steps to get my census data imported <a href="https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/">Steps to Import Census</a></p>
 </section><section id="observations" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="observations">
 <span class="header-section-number">8.3</span> Observations</h2>
 <p>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes.</p>
@@ -1195,47 +1195,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-81"><a href="#cb14-81"></a><span class="in">```</span></span>
 <span id="cb14-82"><a href="#cb14-82"></a></span>
 <span id="cb14-83"><a href="#cb14-83"></a></span>
-<span id="cb14-84"><a href="#cb14-84"></a>I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/ </span>
-<span id="cb14-85"><a href="#cb14-85"></a></span>
-<span id="cb14-86"><a href="#cb14-86"></a><span class="fu">## Observations</span></span>
-<span id="cb14-87"><a href="#cb14-87"></a></span>
-<span id="cb14-88"><a href="#cb14-88"></a>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. </span>
-<span id="cb14-89"><a href="#cb14-89"></a></span>
+<span id="cb14-84"><a href="#cb14-84"></a>I used this website to walk me through some of the steps to get my census data imported</span>
+<span id="cb14-85"><a href="#cb14-85"></a><span class="co">[</span><span class="ot">Steps to Import Census</span><span class="co">](https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/)</span></span>
+<span id="cb14-86"><a href="#cb14-86"></a></span>
+<span id="cb14-87"><a href="#cb14-87"></a><span class="fu">## Observations</span></span>
+<span id="cb14-88"><a href="#cb14-88"></a></span>
+<span id="cb14-89"><a href="#cb14-89"></a>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. </span>
 <span id="cb14-90"><a href="#cb14-90"></a></span>
-<span id="cb14-91"><a href="#cb14-91"></a><span class="fu">## Additional Mapping (because it's fun)</span></span>
-<span id="cb14-92"><a href="#cb14-92"></a></span>
-<span id="cb14-95"><a href="#cb14-95"></a><span class="in">```{r}</span></span>
-<span id="cb14-96"><a href="#cb14-96"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
-<span id="cb14-97"><a href="#cb14-97"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
-<span id="cb14-98"><a href="#cb14-98"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
-<span id="cb14-99"><a href="#cb14-99"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
-<span id="cb14-100"><a href="#cb14-100"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
-<span id="cb14-101"><a href="#cb14-101"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
-<span id="cb14-102"><a href="#cb14-102"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
-<span id="cb14-103"><a href="#cb14-103"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-104"><a href="#cb14-104"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb14-105"><a href="#cb14-105"></a></span>
-<span id="cb14-106"><a href="#cb14-106"></a><span class="fu">head</span>(tx_income)</span>
-<span id="cb14-107"><a href="#cb14-107"></a><span class="in">```</span></span>
-<span id="cb14-108"><a href="#cb14-108"></a></span>
-<span id="cb14-111"><a href="#cb14-111"></a><span class="in">```{r}</span></span>
-<span id="cb14-112"><a href="#cb14-112"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
-<span id="cb14-113"><a href="#cb14-113"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb14-114"><a href="#cb14-114"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb14-115"><a href="#cb14-115"></a>  <span class="fu">labs</span>(</span>
-<span id="cb14-116"><a href="#cb14-116"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
-<span id="cb14-117"><a href="#cb14-117"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
-<span id="cb14-118"><a href="#cb14-118"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
-<span id="cb14-119"><a href="#cb14-119"></a>  ) <span class="sc">+</span></span>
-<span id="cb14-120"><a href="#cb14-120"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb14-121"><a href="#cb14-121"></a><span class="in">```</span></span>
-<span id="cb14-122"><a href="#cb14-122"></a></span>
-<span id="cb14-123"><a href="#cb14-123"></a><span class="fu">## Observations</span></span>
-<span id="cb14-124"><a href="#cb14-124"></a></span>
-<span id="cb14-125"><a href="#cb14-125"></a>Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it's important to point out Loving, Texas, a county in the west that's really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier. </span>
-<span id="cb14-126"><a href="#cb14-126"></a></span>
-<span id="cb14-127"><a href="#cb14-127"></a>More information on Loving here: </span>
-<span id="cb14-128"><a href="#cb14-128"></a><span class="co">[</span><span class="ot">Loving, Texas Information</span><span class="co">](https://datausa.io/profile/geo/loving-county-tx )</span> </span>
+<span id="cb14-91"><a href="#cb14-91"></a></span>
+<span id="cb14-92"><a href="#cb14-92"></a><span class="fu">## Additional Mapping (because it's fun)</span></span>
+<span id="cb14-93"><a href="#cb14-93"></a></span>
+<span id="cb14-96"><a href="#cb14-96"></a><span class="in">```{r}</span></span>
+<span id="cb14-97"><a href="#cb14-97"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
+<span id="cb14-98"><a href="#cb14-98"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
+<span id="cb14-99"><a href="#cb14-99"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
+<span id="cb14-100"><a href="#cb14-100"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
+<span id="cb14-101"><a href="#cb14-101"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
+<span id="cb14-102"><a href="#cb14-102"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
+<span id="cb14-103"><a href="#cb14-103"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
+<span id="cb14-104"><a href="#cb14-104"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb14-105"><a href="#cb14-105"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-106"><a href="#cb14-106"></a></span>
+<span id="cb14-107"><a href="#cb14-107"></a><span class="fu">head</span>(tx_income)</span>
+<span id="cb14-108"><a href="#cb14-108"></a><span class="in">```</span></span>
+<span id="cb14-109"><a href="#cb14-109"></a></span>
+<span id="cb14-112"><a href="#cb14-112"></a><span class="in">```{r}</span></span>
+<span id="cb14-113"><a href="#cb14-113"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
+<span id="cb14-114"><a href="#cb14-114"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb14-115"><a href="#cb14-115"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb14-116"><a href="#cb14-116"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-117"><a href="#cb14-117"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
+<span id="cb14-118"><a href="#cb14-118"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
+<span id="cb14-119"><a href="#cb14-119"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
+<span id="cb14-120"><a href="#cb14-120"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-121"><a href="#cb14-121"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb14-122"><a href="#cb14-122"></a><span class="in">```</span></span>
+<span id="cb14-123"><a href="#cb14-123"></a></span>
+<span id="cb14-124"><a href="#cb14-124"></a><span class="fu">## Observations</span></span>
+<span id="cb14-125"><a href="#cb14-125"></a></span>
+<span id="cb14-126"><a href="#cb14-126"></a>Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it's important to point out Loving, Texas, a county in the west that's really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier. </span>
+<span id="cb14-127"><a href="#cb14-127"></a></span>
+<span id="cb14-128"><a href="#cb14-128"></a>More information on Loving here: </span>
+<span id="cb14-129"><a href="#cb14-129"></a><span class="co">[</span><span class="ot">Loving, Texas Information</span><span class="co">](https://datausa.io/profile/geo/loving-county-tx )</span> </span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
