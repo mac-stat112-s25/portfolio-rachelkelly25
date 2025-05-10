@@ -5,6 +5,8 @@ format: html
 
 Research Question: What is the relationship between country, consumption, and food type?
 
+## Getting Set Up
+
 ```{r}
 library(tidytuesdayR)
 library(tidyverse)
@@ -22,7 +24,7 @@ str(fc)
 head(fc, 22)
 ```
 
-#Clean the data
+## Cleaning the data
 
 ```{r}
 fcc <- fc |>
@@ -35,7 +37,7 @@ fcc <- fc |>
 view(fcc$food_category)
 ```
 
-#Research Question 1
+## Research Question 1
 Which five countries consume the most food?
 
 ```{r}
@@ -60,7 +62,7 @@ ggplot(top_countries, aes(x = reorder(country, total_consumption), y = total_con
   theme_minimal()
 
 ```
-#Research Question 2
+## Research Question 2
 Which top five countries consume each food?
 
 ```{r}
@@ -79,6 +81,10 @@ top_countries_per_food <- fcc |>
 
 #| fig-height: 22
 #| fig-width: 11
+#| message: false
+#| warning: false
+#| echo: false
+#| results: 'hide'
 
 ggplot(top_countries_per_food, aes(x = reorder(country, total_consumption), y = total_consumption, fill = country)) +
   geom_bar(stat = "identity") +
@@ -93,10 +99,16 @@ ggplot(top_countries_per_food, aes(x = reorder(country, total_consumption), y = 
   theme(legend.position = "none")
 ```
 
-#Research Question 3
+## Research Question 3
 What does the consumption of each food look like?
 
 ```{r}
+#| message: false
+#| warning: false
+#| echo: false
+#| results: 'hide'
+#Visualization attempt 1
+
 food_map_data <- fcc|>
   group_by(country, food_category) |>
   summarize(total_consumption = sum(consumption, na.rm = TRUE), .groups = "drop")
@@ -121,7 +133,7 @@ ggplot(map_data) +
   
 ```
 ```{r}
-#Viz Attempt 2
+#Visualization Attempt 2
 
 ne_countries(returnclass = "sf") |>
   select(name, geometry) |>

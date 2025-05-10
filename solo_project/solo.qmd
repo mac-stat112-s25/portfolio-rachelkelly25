@@ -3,6 +3,8 @@ title: "Solo Project"
 format: html
 ---
 
+## Setting Up the Project
+
 ```{r}
 library(tidytuesdayR)
 ```
@@ -34,7 +36,8 @@ co_income <- get_acs(
   variables = "B19013_001",
   year = 2022,
   survey = "acs5",
-  geometry = TRUE)
+  geometry = TRUE, 
+  progress_bar = FALSE)
 
 
 # variable category is the median household income variable name
@@ -44,6 +47,8 @@ co_income <- get_acs(
 head(co_income)
 glimpse(co_income)
 ```
+
+## Colorado Median Income Mapping
 
 ```{r}
 ggplot(co_income) +
@@ -65,14 +70,15 @@ ggplot(co_income) +
 ```
 
 
-I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/ 
+I used this website to walk me through some of the steps to get my census data imported
+[Steps to Import Census](https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/)
 
-#Observations
+## Observations
 
 The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. 
 
 
-##Additional Mapping (because it's fun)
+## Additional Mapping (because it's fun)
 
 ```{r}
 tx_income <- get_acs(
@@ -82,7 +88,8 @@ tx_income <- get_acs(
   year = 2009,
   survey = "acs5",
   output = "wide",
-  geometry = TRUE)
+  geometry = TRUE, 
+  progress_bar = FALSE)
 
 head(tx_income)
 ```
@@ -99,8 +106,9 @@ ggplot(tx_income) +
   theme_minimal()
 ```
 
-#Observations
+## Observations
 
 Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it's important to point out Loving, Texas, a county in the west that's really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier. 
 
-More information on Loving here: https://datausa.io/profile/geo/loving-county-tx 
+More information on Loving here: 
+[Loving, Texas Information](https://datausa.io/profile/geo/loving-county-tx ) 
