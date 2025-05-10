@@ -304,8 +304,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#getting-set-up" id="toc-getting-set-up" class="nav-link active" data-scroll-target="#getting-set-up"><span class="header-section-number">7.1</span> Getting Set Up</a></li>
+  <li><a href="#cleaning-the-data" id="toc-cleaning-the-data" class="nav-link" data-scroll-target="#cleaning-the-data"><span class="header-section-number">7.2</span> Cleaning the data</a></li>
+  <li><a href="#research-question-1" id="toc-research-question-1" class="nav-link" data-scroll-target="#research-question-1"><span class="header-section-number">7.3</span> Research Question 1</a></li>
+  <li><a href="#research-question-2" id="toc-research-question-2" class="nav-link" data-scroll-target="#research-question-2"><span class="header-section-number">7.4</span> Research Question 2</a></li>
+  <li><a href="#research-question-3" id="toc-research-question-3" class="nav-link" data-scroll-target="#research-question-3"><span class="header-section-number">7.5</span> Research Question 3</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/Exam2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 2</span></a></li></ol></nav><div class="quarto-title">
@@ -326,6 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><p>Research Question: What is the relationship between country, consumption, and food type?</p>
+<section id="getting-set-up" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="getting-set-up">
+<span class="header-section-number">7.1</span> Getting Set Up</h2>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidytuesdayR)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -373,7 +383,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 12 more rows</code></pre>
 </div>
 </div>
-<p>#Clean the data</p>
+</section><section id="cleaning-the-data" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="cleaning-the-data">
+<span class="header-section-number">7.2</span> Cleaning the data</h2>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>fcc <span class="ot">&lt;-</span> fc <span class="sc">|&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(<span class="at">food_category =</span> <span class="fu">fct_recode</span>(food_category,</span>
@@ -385,7 +396,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-8"><a href="#cb7-8"></a><span class="fu">view</span>(fcc<span class="sc">$</span>food_category)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>#Research Question 1 Which five countries consume the most food?</p>
+</section><section id="research-question-1" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="research-question-1">
+<span class="header-section-number">7.3</span> Research Question 1</h2>
+<p>Which five countries consume the most food?</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>top_countries <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
@@ -412,7 +425,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>#Research Question 2 Which top five countries consume each food?</p>
+</section><section id="research-question-2" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="research-question-2">
+<span class="header-section-number">7.4</span> Research Question 2</h2>
+<p>Which top five countries consume each food?</p>
 <div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Clean the data - Find top 5 consuming countries for each food category</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>top_countries_per_food <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
@@ -428,18 +443,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="co">#| fig-height: 22</span></span>
 <span id="cb11-4"><a href="#cb11-4"></a><span class="co">#| fig-width: 11</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a></span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="fu">ggplot</span>(top_countries_per_food, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>  <span class="co">#Hard to see countries the other way</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category, <span class="at">scales =</span> <span class="st">"free_y"</span>, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-11"><a href="#cb11-11"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Food Consumption per Category"</span>,</span>
-<span id="cb11-12"><a href="#cb11-12"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
-<span id="cb11-13"><a href="#cb11-13"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
-<span id="cb11-14"><a href="#cb11-14"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb11-16"><a href="#cb11-16"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co">#| message: false</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="co">#| warning: false</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="co">#| echo: false</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#| results: 'hide'</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="fu">ggplot</span>(top_countries_per_food, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>  <span class="co">#Hard to see countries the other way</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category, <span class="at">scales =</span> <span class="st">"free_y"</span>, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-15"><a href="#cb11-15"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Food Consumption per Category"</span>,</span>
+<span id="cb11-16"><a href="#cb11-16"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
+<span id="cb11-17"><a href="#cb11-17"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
+<span id="cb11-18"><a href="#cb11-18"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
+<span id="cb11-19"><a href="#cb11-19"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb11-20"><a href="#cb11-20"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="Exam2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
@@ -447,30 +466,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>#Research Question 3 What does the consumption of each food look like?</p>
+</section><section id="research-question-3" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="research-question-3">
+<span class="header-section-number">7.5</span> Research Question 3</h2>
+<p>What does the consumption of each food look like?</p>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>food_map_data <span class="ot">&lt;-</span> fcc<span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">group_by</span>(country, food_category) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="co"># Plot a choropleth - load map data</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">"medium"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
-<span id="cb12-7"><a href="#cb12-7"></a></span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="co"># Join food consumption data with world map data</span></span>
-<span id="cb12-9"><a href="#cb12-9"></a>map_data <span class="ot">&lt;-</span> world <span class="sc">|&gt;</span></span>
-<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">left_join</span>(food_map_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name"</span> <span class="ot">=</span> <span class="st">"country"</span>))</span>
-<span id="cb12-11"><a href="#cb12-11"></a></span>
-<span id="cb12-12"><a href="#cb12-12"></a><span class="co"># Plot choropleth map</span></span>
-<span id="cb12-13"><a href="#cb12-13"></a><span class="fu">ggplot</span>(map_data) <span class="sc">+</span></span>
-<span id="cb12-14"><a href="#cb12-14"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> total_consumption), <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
-<span id="cb12-15"><a href="#cb12-15"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"magma"</span>, <span class="at">na.value =</span> <span class="st">"white"</span>) <span class="sc">+</span>  </span>
-<span id="cb12-16"><a href="#cb12-16"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category) <span class="sc">+</span> </span>
-<span id="cb12-17"><a href="#cb12-17"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-18"><a href="#cb12-18"></a>    <span class="at">title =</span> <span class="st">"Food Consumption by Country"</span>,</span>
-<span id="cb12-19"><a href="#cb12-19"></a>    <span class="at">fill =</span> <span class="st">"Total Consumption (kg per capita)"</span>) <span class="sc">+</span></span>
-<span id="cb12-20"><a href="#cb12-20"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb12-21"><a href="#cb12-21"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="Exam2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -478,26 +478,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#Viz Attempt 2</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>  <span class="fu">left_join</span>(fcc <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>co2_emmission), </span>
-<span id="cb13-10"><a href="#cb13-10"></a>            <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
-<span id="cb13-12"><a href="#cb13-12"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-14"><a href="#cb13-14"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
-<span id="cb13-15"><a href="#cb13-15"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
-<span id="cb13-16"><a href="#cb13-16"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-17"><a href="#cb13-17"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb13-20"><a href="#cb13-20"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">#Visualization Attempt 2</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  <span class="fu">left_join</span>(fcc <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>co2_emmission), </span>
+<span id="cb12-10"><a href="#cb12-10"></a>            <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
+<span id="cb12-12"><a href="#cb12-12"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
+<span id="cb12-15"><a href="#cb12-15"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
+<span id="cb12-16"><a href="#cb12-16"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="Exam2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
@@ -506,31 +506,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">#Visualization Attempt 3</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a>  <span class="fu">left_join</span>(</span>
-<span id="cb14-10"><a href="#cb14-10"></a>    fcc <span class="sc">|&gt;</span> </span>
-<span id="cb14-11"><a href="#cb14-11"></a>      <span class="fu">select</span>(<span class="sc">-</span>co2_emmission) <span class="sc">|&gt;</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a>      <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
-<span id="cb14-13"><a href="#cb14-13"></a>      <span class="fu">mutate</span>(<span class="at">consumption =</span> (consumption <span class="sc">-</span> <span class="fu">mean</span>(consumption))<span class="sc">/</span><span class="fu">sd</span>(consumption)),</span>
-<span id="cb14-14"><a href="#cb14-14"></a>    <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
-<span id="cb14-15"><a href="#cb14-15"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
-<span id="cb14-16"><a href="#cb14-16"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
-<span id="cb14-17"><a href="#cb14-17"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
-<span id="cb14-19"><a href="#cb14-19"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
-<span id="cb14-20"><a href="#cb14-20"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb14-21"><a href="#cb14-21"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#Visualization Attempt 3</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    fcc <span class="sc">|&gt;</span> </span>
+<span id="cb13-11"><a href="#cb13-11"></a>      <span class="fu">select</span>(<span class="sc">-</span>co2_emmission) <span class="sc">|&gt;</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>      <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>      <span class="fu">mutate</span>(<span class="at">consumption =</span> (consumption <span class="sc">-</span> <span class="fu">mean</span>(consumption))<span class="sc">/</span><span class="fu">sd</span>(consumption)),</span>
+<span id="cb13-14"><a href="#cb13-14"></a>    <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
+<span id="cb13-16"><a href="#cb13-16"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
+<span id="cb13-17"><a href="#cb13-17"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
+<span id="cb13-19"><a href="#cb13-19"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
+<span id="cb13-20"><a href="#cb13-20"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-21"><a href="#cb13-21"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
+<span id="cb13-23"><a href="#cb13-23"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb13-25"><a href="#cb13-25"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="Exam2_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
@@ -542,8 +542,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1173,177 +1172,189 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">---</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="an">title:</span><span class="co"> "Exam 2"</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="co">---</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a></span>
-<span id="cb15-6"><a href="#cb15-6"></a>Research Question: What is the relationship between country, consumption, and food type?</span>
-<span id="cb15-7"><a href="#cb15-7"></a></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="in">```{r}</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="fu">library</span>(tidytuesdayR)</span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb15-13"><a href="#cb15-13"></a><span class="fu">library</span>(rnaturalearth)</span>
-<span id="cb15-14"><a href="#cb15-14"></a><span class="fu">library</span>(sf)</span>
-<span id="cb15-15"><a href="#cb15-15"></a><span class="in">```</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="in">```{r}</span></span>
-<span id="cb15-20"><a href="#cb15-20"></a>tuesdata <span class="ot">&lt;-</span> <span class="fu">tt_load</span>(<span class="st">'2020-02-18'</span>)</span>
-<span id="cb15-21"><a href="#cb15-21"></a>fc <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>food_consumption</span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="in">```</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a></span>
-<span id="cb15-26"><a href="#cb15-26"></a><span class="in">```{r}</span></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="fu">str</span>(fc)</span>
-<span id="cb15-28"><a href="#cb15-28"></a><span class="fu">head</span>(fc, <span class="dv">22</span>)</span>
-<span id="cb15-29"><a href="#cb15-29"></a><span class="in">```</span></span>
-<span id="cb15-30"><a href="#cb15-30"></a></span>
-<span id="cb15-31"><a href="#cb15-31"></a>#Clean the data</span>
-<span id="cb15-32"><a href="#cb15-32"></a></span>
-<span id="cb15-35"><a href="#cb15-35"></a><span class="in">```{r}</span></span>
-<span id="cb15-36"><a href="#cb15-36"></a>fcc <span class="ot">&lt;-</span> fc <span class="sc">|&gt;</span></span>
-<span id="cb15-37"><a href="#cb15-37"></a>  <span class="fu">mutate</span>(<span class="at">food_category =</span> <span class="fu">fct_recode</span>(food_category,</span>
-<span id="cb15-38"><a href="#cb15-38"></a>    <span class="st">"Lamb"</span> <span class="ot">=</span> <span class="st">"Lamb &amp; Goat"</span>,</span>
-<span id="cb15-39"><a href="#cb15-39"></a>    <span class="st">"Dairy"</span> <span class="ot">=</span> <span class="st">"Milk - inc. cheese"</span>,</span>
-<span id="cb15-40"><a href="#cb15-40"></a>    <span class="st">"Wheat"</span> <span class="ot">=</span> <span class="st">"Wheat and Wheat Products"</span>,</span>
-<span id="cb15-41"><a href="#cb15-41"></a>    <span class="st">"Nuts"</span> <span class="ot">=</span> <span class="st">"Nuts inc. Peanut Butter"</span>))</span>
-<span id="cb15-42"><a href="#cb15-42"></a></span>
-<span id="cb15-43"><a href="#cb15-43"></a><span class="fu">view</span>(fcc<span class="sc">$</span>food_category)</span>
-<span id="cb15-44"><a href="#cb15-44"></a><span class="in">```</span></span>
-<span id="cb15-45"><a href="#cb15-45"></a></span>
-<span id="cb15-46"><a href="#cb15-46"></a>#Research Question 1</span>
-<span id="cb15-47"><a href="#cb15-47"></a>Which five countries consume the most food?</span>
-<span id="cb15-48"><a href="#cb15-48"></a></span>
-<span id="cb15-51"><a href="#cb15-51"></a><span class="in">```{r}</span></span>
-<span id="cb15-52"><a href="#cb15-52"></a>top_countries <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
-<span id="cb15-53"><a href="#cb15-53"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
-<span id="cb15-54"><a href="#cb15-54"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb15-55"><a href="#cb15-55"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_consumption)) <span class="sc">|&gt;</span></span>
-<span id="cb15-56"><a href="#cb15-56"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>)  </span>
-<span id="cb15-57"><a href="#cb15-57"></a></span>
-<span id="cb15-58"><a href="#cb15-58"></a><span class="in">```</span></span>
-<span id="cb15-59"><a href="#cb15-59"></a></span>
-<span id="cb15-62"><a href="#cb15-62"></a><span class="in">```{r}</span></span>
-<span id="cb15-63"><a href="#cb15-63"></a><span class="co">#Plot it, bar graph stylzzz</span></span>
-<span id="cb15-64"><a href="#cb15-64"></a></span>
-<span id="cb15-65"><a href="#cb15-65"></a><span class="fu">ggplot</span>(top_countries, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
-<span id="cb15-66"><a href="#cb15-66"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> </span>
-<span id="cb15-67"><a href="#cb15-67"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-68"><a href="#cb15-68"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Total Food Consumption"</span>,</span>
-<span id="cb15-69"><a href="#cb15-69"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
-<span id="cb15-70"><a href="#cb15-70"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
-<span id="cb15-71"><a href="#cb15-71"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
-<span id="cb15-72"><a href="#cb15-72"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb15-73"><a href="#cb15-73"></a></span>
-<span id="cb15-74"><a href="#cb15-74"></a><span class="in">```</span></span>
-<span id="cb15-75"><a href="#cb15-75"></a>#Research Question 2</span>
-<span id="cb15-76"><a href="#cb15-76"></a>Which top five countries consume each food?</span>
-<span id="cb15-77"><a href="#cb15-77"></a></span>
-<span id="cb15-80"><a href="#cb15-80"></a><span class="in">```{r}</span></span>
-<span id="cb15-81"><a href="#cb15-81"></a><span class="co"># Clean the data - Find top 5 consuming countries for each food category</span></span>
-<span id="cb15-82"><a href="#cb15-82"></a>top_countries_per_food <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
-<span id="cb15-83"><a href="#cb15-83"></a>  <span class="fu">group_by</span>(food_category, country) <span class="sc">|&gt;</span></span>
-<span id="cb15-84"><a href="#cb15-84"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-85"><a href="#cb15-85"></a>  <span class="fu">arrange</span>(food_category, <span class="fu">desc</span>(total_consumption)) <span class="sc">|&gt;</span></span>
-<span id="cb15-86"><a href="#cb15-86"></a>  <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
-<span id="cb15-87"><a href="#cb15-87"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>) </span>
-<span id="cb15-88"><a href="#cb15-88"></a></span>
-<span id="cb15-89"><a href="#cb15-89"></a><span class="in">```</span></span>
-<span id="cb15-90"><a href="#cb15-90"></a></span>
-<span id="cb15-93"><a href="#cb15-93"></a><span class="in">```{r}</span></span>
-<span id="cb15-94"><a href="#cb15-94"></a><span class="co">#Plot it</span></span>
-<span id="cb15-95"><a href="#cb15-95"></a></span>
-<span id="cb15-96"><a href="#cb15-96"></a><span class="co">#| fig-height: 22</span></span>
-<span id="cb15-97"><a href="#cb15-97"></a><span class="co">#| fig-width: 11</span></span>
-<span id="cb15-98"><a href="#cb15-98"></a></span>
-<span id="cb15-99"><a href="#cb15-99"></a><span class="fu">ggplot</span>(top_countries_per_food, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
-<span id="cb15-100"><a href="#cb15-100"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb15-101"><a href="#cb15-101"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>  <span class="co">#Hard to see countries the other way</span></span>
-<span id="cb15-102"><a href="#cb15-102"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category, <span class="at">scales =</span> <span class="st">"free_y"</span>, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb15-103"><a href="#cb15-103"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-104"><a href="#cb15-104"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Food Consumption per Category"</span>,</span>
-<span id="cb15-105"><a href="#cb15-105"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
-<span id="cb15-106"><a href="#cb15-106"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
-<span id="cb15-107"><a href="#cb15-107"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
-<span id="cb15-108"><a href="#cb15-108"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb15-109"><a href="#cb15-109"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
-<span id="cb15-110"><a href="#cb15-110"></a><span class="in">```</span></span>
-<span id="cb15-111"><a href="#cb15-111"></a></span>
-<span id="cb15-112"><a href="#cb15-112"></a>#Research Question 3</span>
-<span id="cb15-113"><a href="#cb15-113"></a>What does the consumption of each food look like?</span>
-<span id="cb15-114"><a href="#cb15-114"></a></span>
-<span id="cb15-117"><a href="#cb15-117"></a><span class="in">```{r}</span></span>
-<span id="cb15-118"><a href="#cb15-118"></a>food_map_data <span class="ot">&lt;-</span> fcc<span class="sc">|&gt;</span></span>
-<span id="cb15-119"><a href="#cb15-119"></a>  <span class="fu">group_by</span>(country, food_category) <span class="sc">|&gt;</span></span>
-<span id="cb15-120"><a href="#cb15-120"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb15-121"><a href="#cb15-121"></a></span>
-<span id="cb15-122"><a href="#cb15-122"></a><span class="co"># Plot a choropleth - load map data</span></span>
-<span id="cb15-123"><a href="#cb15-123"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">"medium"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
-<span id="cb15-124"><a href="#cb15-124"></a></span>
-<span id="cb15-125"><a href="#cb15-125"></a><span class="co"># Join food consumption data with world map data</span></span>
-<span id="cb15-126"><a href="#cb15-126"></a>map_data <span class="ot">&lt;-</span> world <span class="sc">|&gt;</span></span>
-<span id="cb15-127"><a href="#cb15-127"></a>  <span class="fu">left_join</span>(food_map_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name"</span> <span class="ot">=</span> <span class="st">"country"</span>))</span>
-<span id="cb15-128"><a href="#cb15-128"></a></span>
-<span id="cb15-129"><a href="#cb15-129"></a><span class="co"># Plot choropleth map</span></span>
-<span id="cb15-130"><a href="#cb15-130"></a><span class="fu">ggplot</span>(map_data) <span class="sc">+</span></span>
-<span id="cb15-131"><a href="#cb15-131"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> total_consumption), <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
-<span id="cb15-132"><a href="#cb15-132"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"magma"</span>, <span class="at">na.value =</span> <span class="st">"white"</span>) <span class="sc">+</span>  </span>
-<span id="cb15-133"><a href="#cb15-133"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category) <span class="sc">+</span> </span>
-<span id="cb15-134"><a href="#cb15-134"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-135"><a href="#cb15-135"></a>    <span class="at">title =</span> <span class="st">"Food Consumption by Country"</span>,</span>
-<span id="cb15-136"><a href="#cb15-136"></a>    <span class="at">fill =</span> <span class="st">"Total Consumption (kg per capita)"</span>) <span class="sc">+</span></span>
-<span id="cb15-137"><a href="#cb15-137"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb15-138"><a href="#cb15-138"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb15-139"><a href="#cb15-139"></a>  </span>
-<span id="cb15-140"><a href="#cb15-140"></a><span class="in">```</span></span>
-<span id="cb15-143"><a href="#cb15-143"></a><span class="in">```{r}</span></span>
-<span id="cb15-144"><a href="#cb15-144"></a><span class="co">#Viz Attempt 2</span></span>
-<span id="cb15-145"><a href="#cb15-145"></a></span>
-<span id="cb15-146"><a href="#cb15-146"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-147"><a href="#cb15-147"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
-<span id="cb15-148"><a href="#cb15-148"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-149"><a href="#cb15-149"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-150"><a href="#cb15-150"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-151"><a href="#cb15-151"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-152"><a href="#cb15-152"></a>  <span class="fu">left_join</span>(fcc <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>co2_emmission), </span>
-<span id="cb15-153"><a href="#cb15-153"></a>            <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
-<span id="cb15-154"><a href="#cb15-154"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
-<span id="cb15-155"><a href="#cb15-155"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
-<span id="cb15-156"><a href="#cb15-156"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-157"><a href="#cb15-157"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
-<span id="cb15-158"><a href="#cb15-158"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
-<span id="cb15-159"><a href="#cb15-159"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-160"><a href="#cb15-160"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb15-161"><a href="#cb15-161"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
-<span id="cb15-162"><a href="#cb15-162"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb15-163"><a href="#cb15-163"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb15-164"><a href="#cb15-164"></a><span class="in">```</span></span>
-<span id="cb15-167"><a href="#cb15-167"></a><span class="in">```{r}</span></span>
-<span id="cb15-168"><a href="#cb15-168"></a><span class="co">#Visualization Attempt 3</span></span>
-<span id="cb15-169"><a href="#cb15-169"></a></span>
-<span id="cb15-170"><a href="#cb15-170"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-171"><a href="#cb15-171"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
-<span id="cb15-172"><a href="#cb15-172"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-173"><a href="#cb15-173"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-174"><a href="#cb15-174"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-175"><a href="#cb15-175"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
-<span id="cb15-176"><a href="#cb15-176"></a>  <span class="fu">left_join</span>(</span>
-<span id="cb15-177"><a href="#cb15-177"></a>    fcc <span class="sc">|&gt;</span> </span>
-<span id="cb15-178"><a href="#cb15-178"></a>      <span class="fu">select</span>(<span class="sc">-</span>co2_emmission) <span class="sc">|&gt;</span></span>
-<span id="cb15-179"><a href="#cb15-179"></a>      <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
-<span id="cb15-180"><a href="#cb15-180"></a>      <span class="fu">mutate</span>(<span class="at">consumption =</span> (consumption <span class="sc">-</span> <span class="fu">mean</span>(consumption))<span class="sc">/</span><span class="fu">sd</span>(consumption)),</span>
-<span id="cb15-181"><a href="#cb15-181"></a>    <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
-<span id="cb15-182"><a href="#cb15-182"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
-<span id="cb15-183"><a href="#cb15-183"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
-<span id="cb15-184"><a href="#cb15-184"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-185"><a href="#cb15-185"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
-<span id="cb15-186"><a href="#cb15-186"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
-<span id="cb15-187"><a href="#cb15-187"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-188"><a href="#cb15-188"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb15-189"><a href="#cb15-189"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
-<span id="cb15-190"><a href="#cb15-190"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb15-191"><a href="#cb15-191"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb15-192"><a href="#cb15-192"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb15-193"><a href="#cb15-193"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Exam 2"</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6"></a>Research Question: What is the relationship between country, consumption, and food type?</span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="fu">## Getting Set Up</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="in">```{r}</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="fu">library</span>(tidytuesdayR)</span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="fu">library</span>(sf)</span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="in">```</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="in">```{r}</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a>tuesdata <span class="ot">&lt;-</span> <span class="fu">tt_load</span>(<span class="st">'2020-02-18'</span>)</span>
+<span id="cb14-23"><a href="#cb14-23"></a>fc <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>food_consumption</span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="in">```</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="in">```{r}</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="fu">str</span>(fc)</span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="fu">head</span>(fc, <span class="dv">22</span>)</span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="in">```</span></span>
+<span id="cb14-32"><a href="#cb14-32"></a></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="fu">## Cleaning the data</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a></span>
+<span id="cb14-37"><a href="#cb14-37"></a><span class="in">```{r}</span></span>
+<span id="cb14-38"><a href="#cb14-38"></a>fcc <span class="ot">&lt;-</span> fc <span class="sc">|&gt;</span></span>
+<span id="cb14-39"><a href="#cb14-39"></a>  <span class="fu">mutate</span>(<span class="at">food_category =</span> <span class="fu">fct_recode</span>(food_category,</span>
+<span id="cb14-40"><a href="#cb14-40"></a>    <span class="st">"Lamb"</span> <span class="ot">=</span> <span class="st">"Lamb &amp; Goat"</span>,</span>
+<span id="cb14-41"><a href="#cb14-41"></a>    <span class="st">"Dairy"</span> <span class="ot">=</span> <span class="st">"Milk - inc. cheese"</span>,</span>
+<span id="cb14-42"><a href="#cb14-42"></a>    <span class="st">"Wheat"</span> <span class="ot">=</span> <span class="st">"Wheat and Wheat Products"</span>,</span>
+<span id="cb14-43"><a href="#cb14-43"></a>    <span class="st">"Nuts"</span> <span class="ot">=</span> <span class="st">"Nuts inc. Peanut Butter"</span>))</span>
+<span id="cb14-44"><a href="#cb14-44"></a></span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="fu">view</span>(fcc<span class="sc">$</span>food_category)</span>
+<span id="cb14-46"><a href="#cb14-46"></a><span class="in">```</span></span>
+<span id="cb14-47"><a href="#cb14-47"></a></span>
+<span id="cb14-48"><a href="#cb14-48"></a><span class="fu">## Research Question 1</span></span>
+<span id="cb14-49"><a href="#cb14-49"></a>Which five countries consume the most food?</span>
+<span id="cb14-50"><a href="#cb14-50"></a></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="in">```{r}</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a>top_countries <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_consumption)) <span class="sc">|&gt;</span></span>
+<span id="cb14-58"><a href="#cb14-58"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>)  </span>
+<span id="cb14-59"><a href="#cb14-59"></a></span>
+<span id="cb14-60"><a href="#cb14-60"></a><span class="in">```</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a></span>
+<span id="cb14-64"><a href="#cb14-64"></a><span class="in">```{r}</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a><span class="co">#Plot it, bar graph stylzzz</span></span>
+<span id="cb14-66"><a href="#cb14-66"></a></span>
+<span id="cb14-67"><a href="#cb14-67"></a><span class="fu">ggplot</span>(top_countries, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb14-68"><a href="#cb14-68"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> </span>
+<span id="cb14-69"><a href="#cb14-69"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-70"><a href="#cb14-70"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Total Food Consumption"</span>,</span>
+<span id="cb14-71"><a href="#cb14-71"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
+<span id="cb14-72"><a href="#cb14-72"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
+<span id="cb14-73"><a href="#cb14-73"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
+<span id="cb14-74"><a href="#cb14-74"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb14-75"><a href="#cb14-75"></a></span>
+<span id="cb14-76"><a href="#cb14-76"></a><span class="in">```</span></span>
+<span id="cb14-77"><a href="#cb14-77"></a><span class="fu">## Research Question 2</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a>Which top five countries consume each food?</span>
+<span id="cb14-79"><a href="#cb14-79"></a></span>
+<span id="cb14-82"><a href="#cb14-82"></a><span class="in">```{r}</span></span>
+<span id="cb14-83"><a href="#cb14-83"></a><span class="co"># Clean the data - Find top 5 consuming countries for each food category</span></span>
+<span id="cb14-84"><a href="#cb14-84"></a>top_countries_per_food <span class="ot">&lt;-</span> fcc <span class="sc">|&gt;</span></span>
+<span id="cb14-85"><a href="#cb14-85"></a>  <span class="fu">group_by</span>(food_category, country) <span class="sc">|&gt;</span></span>
+<span id="cb14-86"><a href="#cb14-86"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-87"><a href="#cb14-87"></a>  <span class="fu">arrange</span>(food_category, <span class="fu">desc</span>(total_consumption)) <span class="sc">|&gt;</span></span>
+<span id="cb14-88"><a href="#cb14-88"></a>  <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
+<span id="cb14-89"><a href="#cb14-89"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>) </span>
+<span id="cb14-90"><a href="#cb14-90"></a></span>
+<span id="cb14-91"><a href="#cb14-91"></a><span class="in">```</span></span>
+<span id="cb14-92"><a href="#cb14-92"></a></span>
+<span id="cb14-95"><a href="#cb14-95"></a><span class="in">```{r}</span></span>
+<span id="cb14-96"><a href="#cb14-96"></a><span class="co">#Plot it</span></span>
+<span id="cb14-97"><a href="#cb14-97"></a></span>
+<span id="cb14-98"><a href="#cb14-98"></a><span class="co">#| fig-height: 22</span></span>
+<span id="cb14-99"><a href="#cb14-99"></a><span class="co">#| fig-width: 11</span></span>
+<span id="cb14-100"><a href="#cb14-100"></a><span class="co">#| message: false</span></span>
+<span id="cb14-101"><a href="#cb14-101"></a><span class="co">#| warning: false</span></span>
+<span id="cb14-102"><a href="#cb14-102"></a><span class="co">#| echo: false</span></span>
+<span id="cb14-103"><a href="#cb14-103"></a><span class="co">#| results: 'hide'</span></span>
+<span id="cb14-104"><a href="#cb14-104"></a></span>
+<span id="cb14-105"><a href="#cb14-105"></a><span class="fu">ggplot</span>(top_countries_per_food, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country, total_consumption), <span class="at">y =</span> total_consumption, <span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb14-106"><a href="#cb14-106"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb14-107"><a href="#cb14-107"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>  <span class="co">#Hard to see countries the other way</span></span>
+<span id="cb14-108"><a href="#cb14-108"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category, <span class="at">scales =</span> <span class="st">"free_y"</span>, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb14-109"><a href="#cb14-109"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-110"><a href="#cb14-110"></a>    <span class="at">title =</span> <span class="st">"Top 5 Countries by Food Consumption per Category"</span>,</span>
+<span id="cb14-111"><a href="#cb14-111"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
+<span id="cb14-112"><a href="#cb14-112"></a>    <span class="at">y =</span> <span class="st">"Total Food Consumption (kg per capita)"</span>,</span>
+<span id="cb14-113"><a href="#cb14-113"></a>    <span class="at">fill =</span> <span class="st">"Country"</span>) <span class="sc">+</span></span>
+<span id="cb14-114"><a href="#cb14-114"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb14-115"><a href="#cb14-115"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
+<span id="cb14-116"><a href="#cb14-116"></a><span class="in">```</span></span>
+<span id="cb14-117"><a href="#cb14-117"></a></span>
+<span id="cb14-118"><a href="#cb14-118"></a><span class="fu">## Research Question 3</span></span>
+<span id="cb14-119"><a href="#cb14-119"></a>What does the consumption of each food look like?</span>
+<span id="cb14-120"><a href="#cb14-120"></a></span>
+<span id="cb14-123"><a href="#cb14-123"></a><span class="in">```{r}</span></span>
+<span id="cb14-124"><a href="#cb14-124"></a><span class="co">#| message: false</span></span>
+<span id="cb14-125"><a href="#cb14-125"></a><span class="co">#| warning: false</span></span>
+<span id="cb14-126"><a href="#cb14-126"></a><span class="co">#| echo: false</span></span>
+<span id="cb14-127"><a href="#cb14-127"></a><span class="co">#| results: 'hide'</span></span>
+<span id="cb14-128"><a href="#cb14-128"></a><span class="co">#Visualization attempt 1</span></span>
+<span id="cb14-129"><a href="#cb14-129"></a></span>
+<span id="cb14-130"><a href="#cb14-130"></a>food_map_data <span class="ot">&lt;-</span> fcc<span class="sc">|&gt;</span></span>
+<span id="cb14-131"><a href="#cb14-131"></a>  <span class="fu">group_by</span>(country, food_category) <span class="sc">|&gt;</span></span>
+<span id="cb14-132"><a href="#cb14-132"></a>  <span class="fu">summarize</span>(<span class="at">total_consumption =</span> <span class="fu">sum</span>(consumption, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb14-133"><a href="#cb14-133"></a></span>
+<span id="cb14-134"><a href="#cb14-134"></a><span class="co"># Plot a choropleth - load map data</span></span>
+<span id="cb14-135"><a href="#cb14-135"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">"medium"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
+<span id="cb14-136"><a href="#cb14-136"></a></span>
+<span id="cb14-137"><a href="#cb14-137"></a><span class="co"># Join food consumption data with world map data</span></span>
+<span id="cb14-138"><a href="#cb14-138"></a>map_data <span class="ot">&lt;-</span> world <span class="sc">|&gt;</span></span>
+<span id="cb14-139"><a href="#cb14-139"></a>  <span class="fu">left_join</span>(food_map_data, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name"</span> <span class="ot">=</span> <span class="st">"country"</span>))</span>
+<span id="cb14-140"><a href="#cb14-140"></a></span>
+<span id="cb14-141"><a href="#cb14-141"></a><span class="co"># Plot choropleth map</span></span>
+<span id="cb14-142"><a href="#cb14-142"></a><span class="fu">ggplot</span>(map_data) <span class="sc">+</span></span>
+<span id="cb14-143"><a href="#cb14-143"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> total_consumption), <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
+<span id="cb14-144"><a href="#cb14-144"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"magma"</span>, <span class="at">na.value =</span> <span class="st">"white"</span>) <span class="sc">+</span>  </span>
+<span id="cb14-145"><a href="#cb14-145"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> food_category) <span class="sc">+</span> </span>
+<span id="cb14-146"><a href="#cb14-146"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-147"><a href="#cb14-147"></a>    <span class="at">title =</span> <span class="st">"Food Consumption by Country"</span>,</span>
+<span id="cb14-148"><a href="#cb14-148"></a>    <span class="at">fill =</span> <span class="st">"Total Consumption (kg per capita)"</span>) <span class="sc">+</span></span>
+<span id="cb14-149"><a href="#cb14-149"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb14-150"><a href="#cb14-150"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb14-151"><a href="#cb14-151"></a>  </span>
+<span id="cb14-152"><a href="#cb14-152"></a><span class="in">```</span></span>
+<span id="cb14-155"><a href="#cb14-155"></a><span class="in">```{r}</span></span>
+<span id="cb14-156"><a href="#cb14-156"></a><span class="co">#Visualization Attempt 2</span></span>
+<span id="cb14-157"><a href="#cb14-157"></a></span>
+<span id="cb14-158"><a href="#cb14-158"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-159"><a href="#cb14-159"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
+<span id="cb14-160"><a href="#cb14-160"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-161"><a href="#cb14-161"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-162"><a href="#cb14-162"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-163"><a href="#cb14-163"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-164"><a href="#cb14-164"></a>  <span class="fu">left_join</span>(fcc <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>co2_emmission), </span>
+<span id="cb14-165"><a href="#cb14-165"></a>            <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
+<span id="cb14-166"><a href="#cb14-166"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
+<span id="cb14-167"><a href="#cb14-167"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
+<span id="cb14-168"><a href="#cb14-168"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-169"><a href="#cb14-169"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
+<span id="cb14-170"><a href="#cb14-170"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
+<span id="cb14-171"><a href="#cb14-171"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-172"><a href="#cb14-172"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb14-173"><a href="#cb14-173"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
+<span id="cb14-174"><a href="#cb14-174"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb14-175"><a href="#cb14-175"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb14-176"><a href="#cb14-176"></a><span class="in">```</span></span>
+<span id="cb14-179"><a href="#cb14-179"></a><span class="in">```{r}</span></span>
+<span id="cb14-180"><a href="#cb14-180"></a><span class="co">#Visualization Attempt 3</span></span>
+<span id="cb14-181"><a href="#cb14-181"></a></span>
+<span id="cb14-182"><a href="#cb14-182"></a><span class="fu">ne_countries</span>(<span class="at">returnclass =</span> <span class="st">"sf"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-183"><a href="#cb14-183"></a>  <span class="fu">select</span>(name, geometry) <span class="sc">|&gt;</span></span>
+<span id="cb14-184"><a href="#cb14-184"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"United States of America"</span>, <span class="st">"USA"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-185"><a href="#cb14-185"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Bosnia and Herz."</span>, <span class="st">"Bosnia and Herzegovina"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-186"><a href="#cb14-186"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Czechia"</span>, <span class="st">"Czech Republic"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-187"><a href="#cb14-187"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(name <span class="sc">==</span> <span class="st">"Taiwan"</span>, <span class="st">"Taiwan. ROC"</span>, name)) <span class="sc">|&gt;</span></span>
+<span id="cb14-188"><a href="#cb14-188"></a>  <span class="fu">left_join</span>(</span>
+<span id="cb14-189"><a href="#cb14-189"></a>    fcc <span class="sc">|&gt;</span> </span>
+<span id="cb14-190"><a href="#cb14-190"></a>      <span class="fu">select</span>(<span class="sc">-</span>co2_emmission) <span class="sc">|&gt;</span></span>
+<span id="cb14-191"><a href="#cb14-191"></a>      <span class="fu">group_by</span>(food_category) <span class="sc">|&gt;</span></span>
+<span id="cb14-192"><a href="#cb14-192"></a>      <span class="fu">mutate</span>(<span class="at">consumption =</span> (consumption <span class="sc">-</span> <span class="fu">mean</span>(consumption))<span class="sc">/</span><span class="fu">sd</span>(consumption)),</span>
+<span id="cb14-193"><a href="#cb14-193"></a>    <span class="fu">join_by</span>(name <span class="sc">==</span> country)) <span class="sc">|&gt;</span></span>
+<span id="cb14-194"><a href="#cb14-194"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> food_category,</span>
+<span id="cb14-195"><a href="#cb14-195"></a>              <span class="at">values_from =</span> consumption) <span class="sc">|&gt;</span></span>
+<span id="cb14-196"><a href="#cb14-196"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"NA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-197"><a href="#cb14-197"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="sc">-</span>name, <span class="sc">-</span>geometry),</span>
+<span id="cb14-198"><a href="#cb14-198"></a>               <span class="at">names_to =</span> <span class="st">"food_category"</span>, </span>
+<span id="cb14-199"><a href="#cb14-199"></a>               <span class="at">values_to =</span> <span class="st">"consumption"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-200"><a href="#cb14-200"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb14-201"><a href="#cb14-201"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> consumption)) <span class="sc">+</span></span>
+<span id="cb14-202"><a href="#cb14-202"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb14-203"><a href="#cb14-203"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>food_category, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb14-204"><a href="#cb14-204"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb14-205"><a href="#cb14-205"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

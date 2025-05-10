@@ -304,8 +304,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#setting-up-the-project" id="toc-setting-up-the-project" class="nav-link active" data-scroll-target="#setting-up-the-project"><span class="header-section-number">8.1</span> Setting Up the Project</a></li>
+  <li><a href="#colorado-median-income-mapping" id="toc-colorado-median-income-mapping" class="nav-link" data-scroll-target="#colorado-median-income-mapping"><span class="header-section-number">8.2</span> Colorado Median Income Mapping</a></li>
+  <li><a href="#observations" id="toc-observations" class="nav-link" data-scroll-target="#observations"><span class="header-section-number">8.3</span> Observations</a></li>
+  <li><a href="#additional-mapping-because-its-fun" id="toc-additional-mapping-because-its-fun" class="nav-link" data-scroll-target="#additional-mapping-because-its-fun"><span class="header-section-number">8.4</span> Additional Mapping (because it’s fun)</a></li>
+  <li><a href="#observations-1" id="toc-observations-1" class="nav-link" data-scroll-target="#observations-1"><span class="header-section-number">8.5</span> Observations</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../solo_project/solo.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project</span></a></li></ol></nav><div class="quarto-title">
@@ -325,7 +333,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><div class="cell">
+</header><section id="setting-up-the-project" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="setting-up-the-project">
+<span class="header-section-number">8.1</span> Setting Up the Project</h2>
+<div class="cell">
 <details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidytuesdayR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -356,1587 +366,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-5"><a href="#cb6-5"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>,</span>
 <span id="cb6-6"><a href="#cb6-6"></a>  <span class="at">year =</span> <span class="dv">2022</span>,</span>
 <span id="cb6-7"><a href="#cb6-7"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>
-Downloading: 2.7 kB     
-Downloading: 2.7 kB     
-Downloading: 6.8 kB     
-Downloading: 6.8 kB     
-Downloading: 24 kB     
-Downloading: 24 kB     
-Downloading: 38 kB     
-Downloading: 38 kB     
-Downloading: 42 kB     
-Downloading: 42 kB     
-Downloading: 48 kB     
-Downloading: 48 kB     
-Downloading: 53 kB     
-Downloading: 53 kB     
-Downloading: 66 kB     
-Downloading: 66 kB     
-Downloading: 66 kB     
-Downloading: 66 kB     
-Downloading: 66 kB     
-Downloading: 66 kB     
-Downloading: 84 kB     
-Downloading: 84 kB     
-Downloading: 93 kB     
-Downloading: 93 kB     
-Downloading: 110 kB     
-Downloading: 110 kB     
-Downloading: 120 kB     
-Downloading: 120 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 130 kB     
-Downloading: 140 kB     
-Downloading: 140 kB     
-Downloading: 160 kB     
-Downloading: 160 kB     
-Downloading: 170 kB     
-Downloading: 170 kB     
-Downloading: 180 kB     
-Downloading: 180 kB     
-Downloading: 190 kB     
-Downloading: 190 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 210 kB     
-Downloading: 230 kB     
-Downloading: 230 kB     
-Downloading: 230 kB     
-Downloading: 230 kB     
-Downloading: 230 kB     
-Downloading: 230 kB     
-Downloading: 240 kB     
-Downloading: 240 kB     
-Downloading: 260 kB     
-Downloading: 260 kB     
-Downloading: 280 kB     
-Downloading: 280 kB     
-Downloading: 280 kB     
-Downloading: 280 kB     
-Downloading: 290 kB     
-Downloading: 290 kB     
-Downloading: 290 kB     
-Downloading: 290 kB     
-Downloading: 310 kB     
-Downloading: 310 kB     
-Downloading: 330 kB     
-Downloading: 330 kB     
-Downloading: 340 kB     
-Downloading: 340 kB     
-Downloading: 340 kB     
-Downloading: 340 kB     
-Downloading: 360 kB     
-Downloading: 360 kB     
-Downloading: 370 kB     
-Downloading: 370 kB     
-Downloading: 390 kB     
-Downloading: 390 kB     
-Downloading: 410 kB     
-Downloading: 410 kB     
-Downloading: 410 kB     
-Downloading: 410 kB     
-Downloading: 410 kB     
-Downloading: 410 kB     
-Downloading: 420 kB     
-Downloading: 420 kB     
-Downloading: 440 kB     
-Downloading: 440 kB     
-Downloading: 460 kB     
-Downloading: 460 kB     
-Downloading: 470 kB     
-Downloading: 470 kB     
-Downloading: 490 kB     
-Downloading: 490 kB     
-Downloading: 510 kB     
-Downloading: 510 kB     
-Downloading: 510 kB     
-Downloading: 510 kB     
-Downloading: 510 kB     
-Downloading: 510 kB     
-Downloading: 540 kB     
-Downloading: 540 kB     
-Downloading: 550 kB     
-Downloading: 550 kB     
-Downloading: 550 kB     
-Downloading: 550 kB     
-Downloading: 570 kB     
-Downloading: 570 kB     
-Downloading: 590 kB     
-Downloading: 590 kB     
-Downloading: 600 kB     
-Downloading: 600 kB     
-Downloading: 620 kB     
-Downloading: 620 kB     
-Downloading: 640 kB     
-Downloading: 640 kB     
-Downloading: 640 kB     
-Downloading: 640 kB     
-Downloading: 640 kB     
-Downloading: 640 kB     
-Downloading: 650 kB     
-Downloading: 650 kB     
-Downloading: 670 kB     
-Downloading: 670 kB     
-Downloading: 690 kB     
-Downloading: 690 kB     
-Downloading: 690 kB     
-Downloading: 690 kB     
-Downloading: 700 kB     
-Downloading: 700 kB     
-Downloading: 700 kB     
-Downloading: 700 kB     
-Downloading: 720 kB     
-Downloading: 720 kB     
-Downloading: 740 kB     
-Downloading: 740 kB     
-Downloading: 750 kB     
-Downloading: 750 kB     
-Downloading: 770 kB     
-Downloading: 770 kB     
-Downloading: 780 kB     
-Downloading: 780 kB     
-Downloading: 800 kB     
-Downloading: 800 kB     
-Downloading: 820 kB     
-Downloading: 820 kB     
-Downloading: 830 kB     
-Downloading: 830 kB     
-Downloading: 830 kB     
-Downloading: 830 kB     
-Downloading: 850 kB     
-Downloading: 850 kB     
-Downloading: 870 kB     
-Downloading: 870 kB     
-Downloading: 880 kB     
-Downloading: 880 kB     
-Downloading: 900 kB     
-Downloading: 900 kB     
-Downloading: 920 kB     
-Downloading: 920 kB     
-Downloading: 930 kB     
-Downloading: 930 kB     
-Downloading: 950 kB     
-Downloading: 950 kB     
-Downloading: 950 kB     
-Downloading: 950 kB     
-Downloading: 950 kB     
-Downloading: 950 kB     
-Downloading: 960 kB     
-Downloading: 960 kB     
-Downloading: 980 kB     
-Downloading: 980 kB     
-Downloading: 980 kB     
-Downloading: 980 kB     
-Downloading: 1,000 kB     
-Downloading: 1,000 kB     
-Downloading: 1 MB     
-Downloading: 1 MB     
-Downloading: 1 MB     
-Downloading: 1 MB     
-Downloading: 1 MB     
-Downloading: 1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.1 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.2 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.3 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.4 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.5 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.6 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.7 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.8 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 1.9 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.1 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.2 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.3 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.4 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.5 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.6 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.7 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.8 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 2.9 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.1 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.2 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.3 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.4 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.5 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.6 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.7 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.8 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 3.9 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.1 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.2 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.3 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.4 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.5 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.6 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.7 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.8 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 4.9 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.1 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.2 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.3 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.4 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.5 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.6 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.7 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.8 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 5.9 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.1 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.2 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.3 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.4 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.5 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.6 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.7 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.8 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 6.9 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.1 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.2 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.3 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.4 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.5 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.6 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.7 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.8 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 7.9 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.1 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.2 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.3 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.4 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.5 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.6 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.7 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.8 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 8.9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.1 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.2 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.3 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.4 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.5 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.6 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.7 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.8 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 9.9 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 10 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 11 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     
-Downloading: 12 MB     </code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># variable category is the median household income variable name</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="co"># the geometry load county boundaries</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="co">#the survey chooses the data coded</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">head</span>(co_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="co"># variable category is the median household income variable name</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co"># the geometry load county boundaries</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co">#the survey chooses the data coded</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="fu">head</span>(co_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>Simple feature collection with 6 features and 5 fields
 Geometry type: MULTIPOLYGON
@@ -1958,7 +396,7 @@ Geodetic CRS:  NAD83
 5 MULTIPOLYGON (((-105.927 39...
 6 MULTIPOLYGON (((-105.5013 3...</code></pre>
 </div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">glimpse</span>(co_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">glimpse</span>(co_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>Rows: 64
 Columns: 6
@@ -1970,23 +408,25 @@ $ moe      &lt;dbl&gt; 2075, 5216, 2984, 1295, 19629, 5676, 14026, 4773, 10647, 
 $ geometry &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-109.0603 3..., MULTIPOLYGON (((…</code></pre>
 </div>
 </div>
+</section><section id="colorado-median-income-mapping" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="colorado-median-income-mapping">
+<span class="header-section-number">8.2</span> Colorado Median Income Mapping</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(co_income) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> estimate), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Colorado, 2022)"</span>,</span>
-<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>,</span>
-<span id="cb12-8"><a href="#cb12-8"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span>) <span class="sc">+</span></span>
-<span id="cb12-9"><a href="#cb12-9"></a>  <span class="fu">theme</span>(</span>
-<span id="cb12-10"><a href="#cb12-10"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb12-11"><a href="#cb12-11"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
-<span id="cb12-12"><a href="#cb12-12"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb12-13"><a href="#cb12-13"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb12-14"><a href="#cb12-14"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb12-15"><a href="#cb12-15"></a>  )<span class="sc">+</span></span>
-<span id="cb12-16"><a href="#cb12-16"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(co_income) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> estimate), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-6"><a href="#cb10-6"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Colorado, 2022)"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="fu">theme</span>(</span>
+<span id="cb10-10"><a href="#cb10-10"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-13"><a href="#cb10-13"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-14"><a href="#cb10-14"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb10-15"><a href="#cb10-15"></a>  )<span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="solo_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
@@ -1995,338 +435,23 @@ $ geometry &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-109.0603 3..., MULTIPOLYGO
 </div>
 </div>
 <p>I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/</p>
-<p>#Observations</p>
+</section><section id="observations" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="observations">
+<span class="header-section-number">8.3</span> Observations</h2>
 <p>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes.</p>
-<p>##Additional Mapping (because it’s fun)</p>
+</section><section id="additional-mapping-because-its-fun" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="additional-mapping-because-its-fun">
+<span class="header-section-number">8.4</span> Additional Mapping (because it’s fun)</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
-<span id="cb13-7"><a href="#cb13-7"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>
-  |                                                                            
-  |                                                                      |   0%
-  |                                                                            
-  |                                                                      |   1%
-  |                                                                            
-  |=                                                                     |   1%
-  |                                                                            
-  |=                                                                     |   2%
-  |                                                                            
-  |==                                                                    |   2%
-  |                                                                            
-  |==                                                                    |   3%
-  |                                                                            
-  |===                                                                   |   4%
-  |                                                                            
-  |===                                                                   |   5%
-  |                                                                            
-  |====                                                                  |   5%
-  |                                                                            
-  |====                                                                  |   6%
-  |                                                                            
-  |=====                                                                 |   6%
-  |                                                                            
-  |=====                                                                 |   7%
-  |                                                                            
-  |=====                                                                 |   8%
-  |                                                                            
-  |======                                                                |   8%
-  |                                                                            
-  |======                                                                |   9%
-  |                                                                            
-  |=======                                                               |   9%
-  |                                                                            
-  |=======                                                               |  10%
-  |                                                                            
-  |=======                                                               |  11%
-  |                                                                            
-  |========                                                              |  11%
-  |                                                                            
-  |========                                                              |  12%
-  |                                                                            
-  |=========                                                             |  12%
-  |                                                                            
-  |=========                                                             |  13%
-  |                                                                            
-  |==========                                                            |  14%
-  |                                                                            
-  |==========                                                            |  15%
-  |                                                                            
-  |===========                                                           |  15%
-  |                                                                            
-  |===========                                                           |  16%
-  |                                                                            
-  |============                                                          |  17%
-  |                                                                            
-  |============                                                          |  18%
-  |                                                                            
-  |=============                                                         |  18%
-  |                                                                            
-  |=============                                                         |  19%
-  |                                                                            
-  |==============                                                        |  19%
-  |                                                                            
-  |==============                                                        |  20%
-  |                                                                            
-  |==============                                                        |  21%
-  |                                                                            
-  |===============                                                       |  21%
-  |                                                                            
-  |===============                                                       |  22%
-  |                                                                            
-  |================                                                      |  22%
-  |                                                                            
-  |================                                                      |  23%
-  |                                                                            
-  |================                                                      |  24%
-  |                                                                            
-  |=================                                                     |  24%
-  |                                                                            
-  |=================                                                     |  25%
-  |                                                                            
-  |==================                                                    |  25%
-  |                                                                            
-  |==================                                                    |  26%
-  |                                                                            
-  |===================                                                   |  27%
-  |                                                                            
-  |===================                                                   |  28%
-  |                                                                            
-  |====================                                                  |  28%
-  |                                                                            
-  |====================                                                  |  29%
-  |                                                                            
-  |=====================                                                 |  29%
-  |                                                                            
-  |=====================                                                 |  30%
-  |                                                                            
-  |=====================                                                 |  31%
-  |                                                                            
-  |======================                                                |  31%
-  |                                                                            
-  |======================                                                |  32%
-  |                                                                            
-  |=======================                                               |  32%
-  |                                                                            
-  |=======================                                               |  33%
-  |                                                                            
-  |=======================                                               |  34%
-  |                                                                            
-  |========================                                              |  34%
-  |                                                                            
-  |========================                                              |  35%
-  |                                                                            
-  |=========================                                             |  35%
-  |                                                                            
-  |=========================                                             |  36%
-  |                                                                            
-  |==========================                                            |  36%
-  |                                                                            
-  |==========================                                            |  37%
-  |                                                                            
-  |==========================                                            |  38%
-  |                                                                            
-  |===========================                                           |  38%
-  |                                                                            
-  |===========================                                           |  39%
-  |                                                                            
-  |============================                                          |  39%
-  |                                                                            
-  |============================                                          |  40%
-  |                                                                            
-  |============================                                          |  41%
-  |                                                                            
-  |=============================                                         |  41%
-  |                                                                            
-  |=============================                                         |  42%
-  |                                                                            
-  |==============================                                        |  42%
-  |                                                                            
-  |==============================                                        |  43%
-  |                                                                            
-  |===============================                                       |  44%
-  |                                                                            
-  |===============================                                       |  45%
-  |                                                                            
-  |================================                                      |  45%
-  |                                                                            
-  |================================                                      |  46%
-  |                                                                            
-  |=================================                                     |  47%
-  |                                                                            
-  |=================================                                     |  48%
-  |                                                                            
-  |==================================                                    |  48%
-  |                                                                            
-  |==================================                                    |  49%
-  |                                                                            
-  |===================================                                   |  49%
-  |                                                                            
-  |===================================                                   |  50%
-  |                                                                            
-  |===================================                                   |  51%
-  |                                                                            
-  |====================================                                  |  51%
-  |                                                                            
-  |====================================                                  |  52%
-  |                                                                            
-  |=====================================                                 |  52%
-  |                                                                            
-  |=====================================                                 |  53%
-  |                                                                            
-  |======================================                                |  54%
-  |                                                                            
-  |======================================                                |  55%
-  |                                                                            
-  |=======================================                               |  55%
-  |                                                                            
-  |=======================================                               |  56%
-  |                                                                            
-  |========================================                              |  57%
-  |                                                                            
-  |========================================                              |  58%
-  |                                                                            
-  |=========================================                             |  58%
-  |                                                                            
-  |=========================================                             |  59%
-  |                                                                            
-  |==========================================                            |  59%
-  |                                                                            
-  |==========================================                            |  60%
-  |                                                                            
-  |==========================================                            |  61%
-  |                                                                            
-  |===========================================                           |  61%
-  |                                                                            
-  |===========================================                           |  62%
-  |                                                                            
-  |============================================                          |  62%
-  |                                                                            
-  |============================================                          |  63%
-  |                                                                            
-  |============================================                          |  64%
-  |                                                                            
-  |=============================================                         |  64%
-  |                                                                            
-  |=============================================                         |  65%
-  |                                                                            
-  |==============================================                        |  65%
-  |                                                                            
-  |==============================================                        |  66%
-  |                                                                            
-  |===============================================                       |  67%
-  |                                                                            
-  |===============================================                       |  68%
-  |                                                                            
-  |================================================                      |  68%
-  |                                                                            
-  |================================================                      |  69%
-  |                                                                            
-  |=================================================                     |  69%
-  |                                                                            
-  |=================================================                     |  70%
-  |                                                                            
-  |=================================================                     |  71%
-  |                                                                            
-  |==================================================                    |  71%
-  |                                                                            
-  |==================================================                    |  72%
-  |                                                                            
-  |===================================================                   |  72%
-  |                                                                            
-  |===================================================                   |  73%
-  |                                                                            
-  |===================================================                   |  74%
-  |                                                                            
-  |====================================================                  |  74%
-  |                                                                            
-  |====================================================                  |  75%
-  |                                                                            
-  |=====================================================                 |  75%
-  |                                                                            
-  |=====================================================                 |  76%
-  |                                                                            
-  |======================================================                |  76%
-  |                                                                            
-  |======================================================                |  77%
-  |                                                                            
-  |======================================================                |  78%
-  |                                                                            
-  |=======================================================               |  78%
-  |                                                                            
-  |=======================================================               |  79%
-  |                                                                            
-  |========================================================              |  79%
-  |                                                                            
-  |========================================================              |  80%
-  |                                                                            
-  |========================================================              |  81%
-  |                                                                            
-  |=========================================================             |  81%
-  |                                                                            
-  |=========================================================             |  82%
-  |                                                                            
-  |==========================================================            |  82%
-  |                                                                            
-  |==========================================================            |  83%
-  |                                                                            
-  |===========================================================           |  84%
-  |                                                                            
-  |===========================================================           |  85%
-  |                                                                            
-  |============================================================          |  85%
-  |                                                                            
-  |============================================================          |  86%
-  |                                                                            
-  |=============================================================         |  87%
-  |                                                                            
-  |=============================================================         |  88%
-  |                                                                            
-  |==============================================================        |  88%
-  |                                                                            
-  |==============================================================        |  89%
-  |                                                                            
-  |===============================================================       |  89%
-  |                                                                            
-  |===============================================================       |  90%
-  |                                                                            
-  |===============================================================       |  91%
-  |                                                                            
-  |================================================================      |  91%
-  |                                                                            
-  |================================================================      |  92%
-  |                                                                            
-  |=================================================================     |  92%
-  |                                                                            
-  |=================================================================     |  93%
-  |                                                                            
-  |==================================================================    |  94%
-  |                                                                            
-  |==================================================================    |  95%
-  |                                                                            
-  |===================================================================   |  95%
-  |                                                                            
-  |===================================================================   |  96%
-  |                                                                            
-  |====================================================================  |  97%
-  |                                                                            
-  |====================================================================  |  98%
-  |                                                                            
-  |===================================================================== |  98%
-  |                                                                            
-  |===================================================================== |  99%
-  |                                                                            
-  |======================================================================|  99%
-  |                                                                            
-  |======================================================================| 100%</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">head</span>(tx_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb11-9"><a href="#cb11-9"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="fu">head</span>(tx_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>Simple feature collection with 6 features and 4 fields
 Geometry type: MULTIPOLYGON
@@ -2345,15 +470,15 @@ Geodetic CRS:  +proj=longlat +datum=NAD83 +no_defs
 </div>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-5"><a href="#cb17-5"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
-<span id="cb17-6"><a href="#cb17-6"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
-<span id="cb17-7"><a href="#cb17-7"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a>  ) <span class="sc">+</span></span>
-<span id="cb17-9"><a href="#cb17-9"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="solo_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
@@ -2361,15 +486,15 @@ Geodetic CRS:  +proj=longlat +datum=NAD83 +no_defs
 </div>
 </div>
 </div>
-<p>#Observations</p>
+</section><section id="observations-1" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="observations-1">
+<span class="header-section-number">8.5</span> Observations</h2>
 <p>Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it’s important to point out Loving, Texas, a county in the west that’s really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier.</p>
-<p>More information on Loving here: https://datausa.io/profile/geo/loving-county-tx</p>
+<p>More information on Loving here: <a href="https://datausa.io/profile/geo/loving-county-tx">Loving, Texas Information</a></p>
 
 
 <!-- -->
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -2999,111 +1124,118 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">---</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a><span class="an">title:</span><span class="co"> "Solo Project"</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a><span class="co">---</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a></span>
-<span id="cb18-8"><a href="#cb18-8"></a><span class="in">```{r}</span></span>
-<span id="cb18-9"><a href="#cb18-9"></a><span class="fu">library</span>(tidytuesdayR)</span>
-<span id="cb18-10"><a href="#cb18-10"></a><span class="in">```</span></span>
-<span id="cb18-11"><a href="#cb18-11"></a></span>
-<span id="cb18-14"><a href="#cb18-14"></a><span class="in">```{r}</span></span>
-<span id="cb18-15"><a href="#cb18-15"></a><span class="fu">library</span>(tidycensus)</span>
-<span id="cb18-16"><a href="#cb18-16"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb18-17"><a href="#cb18-17"></a><span class="fu">library</span>(sf)</span>
-<span id="cb18-18"><a href="#cb18-18"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb18-19"><a href="#cb18-19"></a><span class="in">```</span></span>
-<span id="cb18-20"><a href="#cb18-20"></a></span>
-<span id="cb18-23"><a href="#cb18-23"></a><span class="in">```{r}</span></span>
-<span id="cb18-24"><a href="#cb18-24"></a><span class="co">#This is how I got Census data for CO</span></span>
-<span id="cb18-25"><a href="#cb18-25"></a></span>
-<span id="cb18-26"><a href="#cb18-26"></a><span class="fu">census_api_key</span>(<span class="st">"adf87e468258cd4568fc47061d8b6cf2cfc31b81"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>, <span class="at">install =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-27"><a href="#cb18-27"></a></span>
-<span id="cb18-28"><a href="#cb18-28"></a><span class="in">```</span></span>
-<span id="cb18-31"><a href="#cb18-31"></a><span class="in">```{r}</span></span>
-<span id="cb18-32"><a href="#cb18-32"></a><span class="fu">readRenviron</span>(<span class="st">"~/.Renviron"</span>) </span>
-<span id="cb18-33"><a href="#cb18-33"></a><span class="in">```</span></span>
-<span id="cb18-34"><a href="#cb18-34"></a></span>
-<span id="cb18-35"><a href="#cb18-35"></a></span>
-<span id="cb18-38"><a href="#cb18-38"></a><span class="in">```{r}</span></span>
-<span id="cb18-39"><a href="#cb18-39"></a><span class="co"># Load median household income data for every Colorado county</span></span>
-<span id="cb18-40"><a href="#cb18-40"></a>co_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
-<span id="cb18-41"><a href="#cb18-41"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
-<span id="cb18-42"><a href="#cb18-42"></a>  <span class="at">state =</span> <span class="st">"CO"</span>,</span>
-<span id="cb18-43"><a href="#cb18-43"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>,</span>
-<span id="cb18-44"><a href="#cb18-44"></a>  <span class="at">year =</span> <span class="dv">2022</span>,</span>
-<span id="cb18-45"><a href="#cb18-45"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
-<span id="cb18-46"><a href="#cb18-46"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-47"><a href="#cb18-47"></a></span>
-<span id="cb18-48"><a href="#cb18-48"></a></span>
-<span id="cb18-49"><a href="#cb18-49"></a><span class="co"># variable category is the median household income variable name</span></span>
-<span id="cb18-50"><a href="#cb18-50"></a><span class="co"># the geometry load county boundaries</span></span>
-<span id="cb18-51"><a href="#cb18-51"></a><span class="co">#the survey chooses the data coded</span></span>
-<span id="cb18-52"><a href="#cb18-52"></a></span>
-<span id="cb18-53"><a href="#cb18-53"></a><span class="fu">head</span>(co_income)</span>
-<span id="cb18-54"><a href="#cb18-54"></a><span class="fu">glimpse</span>(co_income)</span>
-<span id="cb18-55"><a href="#cb18-55"></a><span class="in">```</span></span>
-<span id="cb18-56"><a href="#cb18-56"></a></span>
-<span id="cb18-59"><a href="#cb18-59"></a><span class="in">```{r}</span></span>
-<span id="cb18-60"><a href="#cb18-60"></a><span class="fu">ggplot</span>(co_income) <span class="sc">+</span></span>
-<span id="cb18-61"><a href="#cb18-61"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> estimate), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb18-62"><a href="#cb18-62"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb18-63"><a href="#cb18-63"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb18-64"><a href="#cb18-64"></a>  <span class="fu">labs</span>(</span>
-<span id="cb18-65"><a href="#cb18-65"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Colorado, 2022)"</span>,</span>
-<span id="cb18-66"><a href="#cb18-66"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>,</span>
-<span id="cb18-67"><a href="#cb18-67"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span>) <span class="sc">+</span></span>
-<span id="cb18-68"><a href="#cb18-68"></a>  <span class="fu">theme</span>(</span>
-<span id="cb18-69"><a href="#cb18-69"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb18-70"><a href="#cb18-70"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
-<span id="cb18-71"><a href="#cb18-71"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb18-72"><a href="#cb18-72"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb18-73"><a href="#cb18-73"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb18-74"><a href="#cb18-74"></a>  )<span class="sc">+</span></span>
-<span id="cb18-75"><a href="#cb18-75"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb18-76"><a href="#cb18-76"></a><span class="in">```</span></span>
-<span id="cb18-77"><a href="#cb18-77"></a></span>
-<span id="cb18-78"><a href="#cb18-78"></a></span>
-<span id="cb18-79"><a href="#cb18-79"></a>I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/ </span>
-<span id="cb18-80"><a href="#cb18-80"></a></span>
-<span id="cb18-81"><a href="#cb18-81"></a>#Observations</span>
-<span id="cb18-82"><a href="#cb18-82"></a></span>
-<span id="cb18-83"><a href="#cb18-83"></a>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. </span>
-<span id="cb18-84"><a href="#cb18-84"></a></span>
-<span id="cb18-85"><a href="#cb18-85"></a></span>
-<span id="cb18-86"><a href="#cb18-86"></a>##Additional Mapping (because it's fun)</span>
-<span id="cb18-87"><a href="#cb18-87"></a></span>
-<span id="cb18-90"><a href="#cb18-90"></a><span class="in">```{r}</span></span>
-<span id="cb18-91"><a href="#cb18-91"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
-<span id="cb18-92"><a href="#cb18-92"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
-<span id="cb18-93"><a href="#cb18-93"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
-<span id="cb18-94"><a href="#cb18-94"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
-<span id="cb18-95"><a href="#cb18-95"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
-<span id="cb18-96"><a href="#cb18-96"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
-<span id="cb18-97"><a href="#cb18-97"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
-<span id="cb18-98"><a href="#cb18-98"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-99"><a href="#cb18-99"></a></span>
-<span id="cb18-100"><a href="#cb18-100"></a><span class="fu">head</span>(tx_income)</span>
-<span id="cb18-101"><a href="#cb18-101"></a><span class="in">```</span></span>
-<span id="cb18-102"><a href="#cb18-102"></a></span>
-<span id="cb18-105"><a href="#cb18-105"></a><span class="in">```{r}</span></span>
-<span id="cb18-106"><a href="#cb18-106"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
-<span id="cb18-107"><a href="#cb18-107"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb18-108"><a href="#cb18-108"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
-<span id="cb18-109"><a href="#cb18-109"></a>  <span class="fu">labs</span>(</span>
-<span id="cb18-110"><a href="#cb18-110"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
-<span id="cb18-111"><a href="#cb18-111"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
-<span id="cb18-112"><a href="#cb18-112"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
-<span id="cb18-113"><a href="#cb18-113"></a>  ) <span class="sc">+</span></span>
-<span id="cb18-114"><a href="#cb18-114"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb18-115"><a href="#cb18-115"></a><span class="in">```</span></span>
-<span id="cb18-116"><a href="#cb18-116"></a></span>
-<span id="cb18-117"><a href="#cb18-117"></a>#Observations</span>
-<span id="cb18-118"><a href="#cb18-118"></a></span>
-<span id="cb18-119"><a href="#cb18-119"></a>Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it's important to point out Loving, Texas, a county in the west that's really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier. </span>
-<span id="cb18-120"><a href="#cb18-120"></a></span>
-<span id="cb18-121"><a href="#cb18-121"></a>More information on Loving here: https://datausa.io/profile/geo/loving-county-tx </span>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Solo Project"</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="fu">## Setting Up the Project</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="in">```{r}</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="fu">library</span>(tidytuesdayR)</span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="in">```</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="in">```{r}</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="fu">library</span>(sf)</span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="in">```</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="in">```{r}</span></span>
+<span id="cb14-26"><a href="#cb14-26"></a><span class="co">#This is how I got Census data for CO</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="fu">census_api_key</span>(<span class="st">"adf87e468258cd4568fc47061d8b6cf2cfc31b81"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>, <span class="at">install =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-29"><a href="#cb14-29"></a></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="in">```</span></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="in">```{r}</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a><span class="fu">readRenviron</span>(<span class="st">"~/.Renviron"</span>) </span>
+<span id="cb14-35"><a href="#cb14-35"></a><span class="in">```</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a></span>
+<span id="cb14-37"><a href="#cb14-37"></a></span>
+<span id="cb14-40"><a href="#cb14-40"></a><span class="in">```{r}</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a><span class="co"># Load median household income data for every Colorado county</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a>co_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
+<span id="cb14-43"><a href="#cb14-43"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
+<span id="cb14-44"><a href="#cb14-44"></a>  <span class="at">state =</span> <span class="st">"CO"</span>,</span>
+<span id="cb14-45"><a href="#cb14-45"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>,</span>
+<span id="cb14-46"><a href="#cb14-46"></a>  <span class="at">year =</span> <span class="dv">2022</span>,</span>
+<span id="cb14-47"><a href="#cb14-47"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
+<span id="cb14-48"><a href="#cb14-48"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb14-49"><a href="#cb14-49"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-50"><a href="#cb14-50"></a></span>
+<span id="cb14-51"><a href="#cb14-51"></a></span>
+<span id="cb14-52"><a href="#cb14-52"></a><span class="co"># variable category is the median household income variable name</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="co"># the geometry load county boundaries</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a><span class="co">#the survey chooses the data coded</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a></span>
+<span id="cb14-56"><a href="#cb14-56"></a><span class="fu">head</span>(co_income)</span>
+<span id="cb14-57"><a href="#cb14-57"></a><span class="fu">glimpse</span>(co_income)</span>
+<span id="cb14-58"><a href="#cb14-58"></a><span class="in">```</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a></span>
+<span id="cb14-60"><a href="#cb14-60"></a><span class="fu">## Colorado Median Income Mapping</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a></span>
+<span id="cb14-64"><a href="#cb14-64"></a><span class="in">```{r}</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a><span class="fu">ggplot</span>(co_income) <span class="sc">+</span></span>
+<span id="cb14-66"><a href="#cb14-66"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> estimate), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb14-67"><a href="#cb14-67"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb14-68"><a href="#cb14-68"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb14-69"><a href="#cb14-69"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-70"><a href="#cb14-70"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Colorado, 2022)"</span>,</span>
+<span id="cb14-71"><a href="#cb14-71"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>,</span>
+<span id="cb14-72"><a href="#cb14-72"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span>) <span class="sc">+</span></span>
+<span id="cb14-73"><a href="#cb14-73"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-74"><a href="#cb14-74"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb14-75"><a href="#cb14-75"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>,</span>
+<span id="cb14-76"><a href="#cb14-76"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb14-77"><a href="#cb14-77"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb14-78"><a href="#cb14-78"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb14-79"><a href="#cb14-79"></a>  )<span class="sc">+</span></span>
+<span id="cb14-80"><a href="#cb14-80"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb14-81"><a href="#cb14-81"></a><span class="in">```</span></span>
+<span id="cb14-82"><a href="#cb14-82"></a></span>
+<span id="cb14-83"><a href="#cb14-83"></a></span>
+<span id="cb14-84"><a href="#cb14-84"></a>I used this website to walk me through some of the steps to get my census data imported: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/ </span>
+<span id="cb14-85"><a href="#cb14-85"></a></span>
+<span id="cb14-86"><a href="#cb14-86"></a><span class="fu">## Observations</span></span>
+<span id="cb14-87"><a href="#cb14-87"></a></span>
+<span id="cb14-88"><a href="#cb14-88"></a>The highest levels of median household income are in the Denver Metro area and surrounding areas. I think that the eastern part of the state, which is predominantly agriculture and farms for cows (dairy and meat production) make less on average, which is reflected in the data. Boulder and areas around Boulder are also on the higher end of the spectrum. The cost of living is really high in Boulder so it makes sense the average income would also be higher. I also think that the populations in the higher income places are just higher than the places that have lower median incomes. </span>
+<span id="cb14-89"><a href="#cb14-89"></a></span>
+<span id="cb14-90"><a href="#cb14-90"></a></span>
+<span id="cb14-91"><a href="#cb14-91"></a><span class="fu">## Additional Mapping (because it's fun)</span></span>
+<span id="cb14-92"><a href="#cb14-92"></a></span>
+<span id="cb14-95"><a href="#cb14-95"></a><span class="in">```{r}</span></span>
+<span id="cb14-96"><a href="#cb14-96"></a>tx_income <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
+<span id="cb14-97"><a href="#cb14-97"></a>  <span class="at">geography =</span> <span class="st">"county"</span>,</span>
+<span id="cb14-98"><a href="#cb14-98"></a>  <span class="at">state =</span> <span class="st">"TX"</span>,</span>
+<span id="cb14-99"><a href="#cb14-99"></a>  <span class="at">variables =</span> <span class="st">"B19013_001"</span>, </span>
+<span id="cb14-100"><a href="#cb14-100"></a>  <span class="at">year =</span> <span class="dv">2009</span>,</span>
+<span id="cb14-101"><a href="#cb14-101"></a>  <span class="at">survey =</span> <span class="st">"acs5"</span>,</span>
+<span id="cb14-102"><a href="#cb14-102"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
+<span id="cb14-103"><a href="#cb14-103"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb14-104"><a href="#cb14-104"></a>  <span class="at">progress_bar =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-105"><a href="#cb14-105"></a></span>
+<span id="cb14-106"><a href="#cb14-106"></a><span class="fu">head</span>(tx_income)</span>
+<span id="cb14-107"><a href="#cb14-107"></a><span class="in">```</span></span>
+<span id="cb14-108"><a href="#cb14-108"></a></span>
+<span id="cb14-111"><a href="#cb14-111"></a><span class="in">```{r}</span></span>
+<span id="cb14-112"><a href="#cb14-112"></a><span class="fu">ggplot</span>(tx_income) <span class="sc">+</span></span>
+<span id="cb14-113"><a href="#cb14-113"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> B19013_001E), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb14-114"><a href="#cb14-114"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">na.value =</span> <span class="st">"grey90"</span>) <span class="sc">+</span></span>
+<span id="cb14-115"><a href="#cb14-115"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-116"><a href="#cb14-116"></a>    <span class="at">title =</span> <span class="st">"Median Household Income by County (Texas, 2009)"</span>,</span>
+<span id="cb14-117"><a href="#cb14-117"></a>    <span class="at">fill =</span> <span class="st">"Income ($)"</span>, </span>
+<span id="cb14-118"><a href="#cb14-118"></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau, ACS 5-Year Survey, Plot by: Rachel Kelly, 4/11/25"</span></span>
+<span id="cb14-119"><a href="#cb14-119"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-120"><a href="#cb14-120"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb14-121"><a href="#cb14-121"></a><span class="in">```</span></span>
+<span id="cb14-122"><a href="#cb14-122"></a></span>
+<span id="cb14-123"><a href="#cb14-123"></a><span class="fu">## Observations</span></span>
+<span id="cb14-124"><a href="#cb14-124"></a></span>
+<span id="cb14-125"><a href="#cb14-125"></a>Higher levels of income are concentrated in the urban centers of Dallas, Austin, and Houston. This makes sense because there are higher populations there, there is more opportunity for work and increased salary as one works, as well as more industry. However, there are a couple outliers. Generally, I would expect for rural areas to have lower incomes because there are fewer people to average. However, it's important to point out Loving, Texas, a county in the west that's really yellow near the New Mexico border. Loving has a population of 54 people, which means that just as a small number of people can make a lower average, clearly the same can happen in Loving the opposite way. I have no idea what is happening in Loving to bring up the average so much, but they are definitely an outlier. </span>
+<span id="cb14-126"><a href="#cb14-126"></a></span>
+<span id="cb14-127"><a href="#cb14-127"></a>More information on Loving here: </span>
+<span id="cb14-128"><a href="#cb14-128"></a><span class="co">[</span><span class="ot">Loving, Texas Information</span><span class="co">](https://datausa.io/profile/geo/loving-county-tx )</span> </span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
