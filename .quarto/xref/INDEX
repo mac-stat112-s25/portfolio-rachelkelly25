@@ -64,5 +64,8 @@
   },
   "solo_project/solo.qmd": {
     "solo.html": "1afa8fa6"
+  },
+  "ica/ica-factor.qmd": {
+    "ica-factor.html": "e444c6d7"
   }
 }
